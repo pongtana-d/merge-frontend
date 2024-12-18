@@ -1,0 +1,29 @@
+@font-face {
+  font-display: swap;
+  font-family: "IvyStyle Sans";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/assets/fonts/IvyStyleSans-Regular.woff2") format("woff2"),
+    url("/assets/fonts/IvyStyleSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IvyStyle Sans";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url("/assets/fonts/IvyStyleSans-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/IvyStyleSans-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IvyStyle Sans";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    url("/assets/fonts/IvyStyleSans-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/IvyStyleSans-SemiBold.woff") format("woff");
+}

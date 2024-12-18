@@ -1,0 +1,13 @@
+:root {
+  --font-family-base: "IvyStyle Sans", "sans-serif";
+
+  /* color */
+  --color-blue: #07285f;
+  --color-blue-light: #56c9f3;
+  --color-white: #fff;
+  --color-white-10: color-mod(#fff a(10%));
+  --color-black: #231f20;
+  --color-gray: #8e8e8e;
+  --color-gray-2: #e3e3e3;
+  --color-gray-3: #f4f4f4;
+}

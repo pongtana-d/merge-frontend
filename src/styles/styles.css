@@ -1,0 +1,11 @@
+/* mixin */
+@import "./mixin/custom-media.css";
+@import "./mixin/text-style.css";
+
+/* styles */
+@import "./foundation/reset.css";
+@import "./foundation/root.css" layer(root);
+@import "./foundation/base.css" layer(base);
+@import "./components/+.css" layer(components);
+
+@layer reset, tokens, base, components, pages;

@@ -1,0 +1,47 @@
+@define-mixin text-title-1 {
+  font-size: calc(24 / 16 * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: calc(30 / 24);
+}
+
+@define-mixin text-title-2 {
+  font-size: calc(18 / 16 * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: calc(24 / 18);
+}
+
+@define-mixin text-title-3 {
+  font-size: calc(15 / 16 * 1rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: calc(21 / 15);
+}
+
+@define-mixin text-body {
+  font-size: calc(13 / 16 * 1rem);
+  line-height: calc(19 / 13);
+}
+
+@define-mixin text-body-bold {
+  font-size: calc(13 / 16 * 1rem);
+  font-weight: 600;
+  line-height: calc(19 / 13);
+}
+
+@define-mixin text-body-small {
+  font-size: calc(11 / 16 * 1rem);
+  line-height: calc(14 / 11);
+}
+
+@define-mixin text-body-small-2 {
+  font-size: calc(10 / 16 * 1rem);
+  line-height: calc(14 / 10);
+}
+
+@define-mixin text-body-small-2-bold {
+  font-size: calc(10 / 16 * 1rem);
+  font-weight: 600;
+  line-height: calc(14 / 10);
+}
