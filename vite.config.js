@@ -18,11 +18,12 @@ export default defineConfig({
       output: {
         entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: ({ names, originalFileNames }) => {
+          const originalPath = originalFileNames[0].replace(/src\/(images|styles)\//, '');
+
           if (/\.(css)$/.test(names)) {
-            return 'assets/css/[name][extname]';
+            return `assets/css/${originalPath}`;
           }
           if (/\.(jpg|jpeg|svg|png|webp|gif)$/.test(names)) {
-            const originalPath = originalFileNames[0].replace('src/images/', '');
             return `assets/images/${originalPath}`;
           }
 
