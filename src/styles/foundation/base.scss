@@ -1,3 +1,5 @@
+@use "../utilities/index" as *;
+
 *,
 *::before,
 *::after {
@@ -16,7 +18,7 @@ html {
 }
 
 body {
-  @mixin text-body;
+  @include text-body;
 
   font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;

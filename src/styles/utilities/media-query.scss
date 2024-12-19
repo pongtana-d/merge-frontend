@@ -1,0 +1,19 @@
+$breakpoint-sp: 767;
+
+@mixin sm-lte {
+  @media (max-width: #{$breakpoint-sp * 1px}) {
+    @content;
+  }
+}
+
+@mixin sm-gt {
+  @media (max-width: #{($breakpoint-sp + 1) * 1px}) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media screen and (pointer: fine) {
+    @content;
+  }
+}

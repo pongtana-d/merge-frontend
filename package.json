@@ -10,21 +10,17 @@
     "lint:css": "stylelint 'src/styles/**/*.css' --fix --allow-empty-input"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.32",
     "@types/webfontloader": "^1.6.38",
     "@vituum/vite-plugin-pug": "^1.1.0",
     "autoprefixer": "^10.4.20",
-    "postcss-calc": "^10.0.2",
-    "postcss-color-mod-function": "^4.1.1",
-    "postcss-custom-media": "^11.0.5",
-    "postcss-import": "^16.1.0",
-    "postcss-mixins": "^11.0.3",
-    "postcss-nested": "^7.0.2",
+    "image-size": "^1.1.1",
     "postcss-reporter": "^7.1.0",
     "prettier": "^3.4.2",
     "sharp": "^0.33.5",
     "stylelint": "^16.12.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
-    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-recommended-scss": "^14.1.0",
     "svgo": "^3.3.2",
     "typescript": "~5.6.2",
     "vite": "^6.0.1",
@@ -34,6 +30,7 @@
     "webfontloader": "^1.6.28"
   },
   "dependencies": {
-    "destyle.css": "^4.0.1"
+    "destyle.css": "^4.0.1",
+    "jquery": "^3.7.1"
   }
 }

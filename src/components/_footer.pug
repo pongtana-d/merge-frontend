@@ -1,19 +1,35 @@
-footer.footer
+footer.footer#footer
   .footer__inner
     a.footer__logo(href="/")
-      img(src="/src/images/common/logo.svg" decoding="async" loading="lazy" width="146" height="26" alt="MERGE")
+      +img(src="/src/images/common/logo.svg" alt="MERGE")
     nav.footer__nav
       ul.footer__nav-list
         li
           a.footer__nav-link(href="/contact-us") CONTACT US
         li
           button.footer__nav-link(aria-expanded="false") TERM OF USE
-          ul.footer__nav-sub(aria-hidden="true")
-            li: a(href="/terms-and-conditions") TERMS &amp; CONS
-            li: a(href="/private-policy") PRIVATE POLICY
-            li: a(href="/copyright") COPYRIGHT
+          .footer__nav-sub(aria-hidden="true")
+            ul
+              li: a(href="/terms-and-conditions") TERMS &amp; CONS
+              li: a(href="/private-policy") PRIVATE POLICY
+              li: a(href="/copyright") COPYRIGHT
     ul.footer__sns
       li
         a(href="#" target="_blank")
-          img(src="" alt="")
+          +img(src="/src/images/common/ico-line.svg" alt="Line")
+      li
+        a(href="#" target="_blank")
+          +img(src="/src/images/common/ico-facebook.svg" alt="Facebook")
+      li
+        a(href="#" target="_blank")
+          +img(src="/src/images/common/ico-instagram.svg" alt="Instagram")
+      li
+        a(href="#" target="_blank")
+          +img(src="/src/images/common/ico-tiktok.svg" alt="Tiktok")
+    .footer__bottom
+      .footer__lang
+        img.footer__lang-icon(src="/src/images/common/ico-lang.svg" alt="")
+        a(href="/en" aria-selected="true") English
+        a(href="/th" aria-selected="false") Thailand
+      .footer__copyright &copy; 2024 MERGE
 // /.footer

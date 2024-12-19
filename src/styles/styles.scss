@@ -1,0 +1,6 @@
+@use "foundation/reset";
+@import "foundation/root.scss" layer(root);
+@import "foundation/base.scss" layer(base);
+@import "components/+.css" layer(components);
+
+@layer reset, tokens, base, components, pages;
