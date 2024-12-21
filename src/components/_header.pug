@@ -1,2 +1,15 @@
-header
-  p header
+header.header#header
+  .header__container
+    a.header__logo(href="/")
+      +img(src="/src/images/common/logo-header.webp" alt="MERGE")
+    .header__inner
+      button.header__menu(aria-expanded="false" aria-controls="nav-global")
+        span.header__menu-icon
+          span
+          span
+      .header-utils
+        button.header-utils__button(aria-expanded="false")
+          +img(src="/src/images/common/ico-search.svg" alt="Search")
+        a.header-utils__button(href="/cart")
+          +img(src="/src/images/common/ico-cart.svg" alt="Cart")
+          span 2

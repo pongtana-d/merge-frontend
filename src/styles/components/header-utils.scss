@@ -1,0 +1,28 @@
+@use "../utilities" as *;
+
+.header-utils {
+  display: flex;
+  gap: 15px;
+
+  &__button {
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    > span {
+      position: absolute;
+      top: 4px;
+      width: 100%;
+      font-size: calc(9 / 16 * 1rem);
+      font-weight: bold;
+      line-height: calc(14 / 9);
+      text-align: center;
+    }
+  }
+}
