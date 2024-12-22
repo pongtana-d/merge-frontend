@@ -1,0 +1,28 @@
+.header-search#header-search
+  .header-search__container
+    .header-search__header
+      a.header-search__header-logo(href="/")
+        +img(src="/src/images/common/logo-header.webp" alt="MERGE")
+      button.header-search__header-close Close
+
+    form.header-search__form#header-search-form(action="/" method="post")
+      .header-search__input
+        input(type="text" name="search" value="" placeholder="Search")
+        button.header-search__clear(aria-label="Clear Search Input")
+      button.header-search__cancel Cancel
+
+    .header-search__body
+      .search-recent
+        p.search-recent__title Recent searches
+        ul.search-recent__list
+          li.search-recent__item
+            a.search-recent__keyword(href="#") Cora Plunge
+            button.search-recent__delete(aria-label="Delete Keyword")
+          li.search-recent__item
+            a.search-recent__keyword(href="#") Lara Bra
+            button.search-recent__delete(aria-label="Delete Keyword")
+          li.search-recent__item
+            a.search-recent__keyword(href="#") Lara Bra 2
+            button.search-recent__delete(aria-label="Delete Keyword")
+    // /.header-search__body
+// /.header-search

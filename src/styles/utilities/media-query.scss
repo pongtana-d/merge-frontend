@@ -7,7 +7,7 @@ $breakpoint-sp: 767;
 }
 
 @mixin sm-gt {
-  @media (max-width: #{($breakpoint-sp + 1) * 1px}) {
+  @media (min-width: #{($breakpoint-sp + 1) * 1px}) {
     @content;
   }
 }

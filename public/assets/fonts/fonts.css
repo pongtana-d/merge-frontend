@@ -24,6 +24,6 @@
   font-style: normal;
   font-weight: 700;
   src:
-    url("/assets/fonts/IvyStyleSans-SemiBold.woff2") format("woff2"),
-    url("/assets/fonts/IvyStyleSans-SemiBold.woff") format("woff");
+    url("/assets/fonts/IvyStyleSans-Bold.woff2") format("woff2"),
+    url("/assets/fonts/IvyStyleSans-Bold.woff") format("woff");
 }

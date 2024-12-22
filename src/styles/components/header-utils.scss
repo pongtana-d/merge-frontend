@@ -6,8 +6,16 @@
 
   &__button {
     position: relative;
+    overflow: hidden;
     width: 18px;
     height: 18px;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
 
     > img {
       display: block;

@@ -3,13 +3,17 @@ header.header#header
     a.header__logo(href="/")
       +img(src="/src/images/common/logo-header.webp" alt="MERGE")
     .header__inner
-      button.header__menu(aria-expanded="false" aria-controls="nav-global")
+      button.header__menu#btn-header-menu(aria-expanded="false" aria-controls="nav-global")
         span.header__menu-icon
           span
           span
       .header-utils
-        button.header-utils__button(aria-expanded="false")
+        button.header-utils__button#bth-header-search(aria-expanded="false" aria-controls="header-search")
           +img(src="/src/images/common/ico-search.svg" alt="Search")
         a.header-utils__button(href="/cart")
           +img(src="/src/images/common/ico-cart.svg" alt="Cart")
           span 2
+  // /.header-container
+
+  include /src/components/_header-search.pug
+// /.header
