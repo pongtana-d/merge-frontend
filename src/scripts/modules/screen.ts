@@ -19,8 +19,9 @@ const isMacSafari = (): boolean => {
 export function screenLock(): void {
   if (isIOS() || isMacSafari()) {
     const top = $(window).scrollTop() || 0;
-    if (!$('html').hasClass('is-locked')) {
-      $('html').addClass('is-locked').css({ top: -top }).data('top', top);
+
+    if ($('html').attr('data-screen-locked') === 'false') {
+      $('html').attr('data-screen-locked', 'true').css({ top: -top }).data('top', top);
     }
   } else {
     $('body').css({ overflowY: 'hidden' });
@@ -28,10 +29,11 @@ export function screenLock(): void {
 }
 
 export function screenUnlock(): void {
-  if (isIOS()) {
+  if (isIOS() || isMacSafari()) {
     const top = $('html').data('top') || 0;
-    if ($('html').hasClass('is-locked')) {
-      $('html').removeClass('is-locked').css({ top: '' });
+
+    if ($('html').attr('data-screen-locked') === 'true') {
+      $('html').attr('data-screen-locked', 'false').css({ top: '' });
       $(window).scrollTop(top);
     }
   } else {

@@ -13,7 +13,7 @@ const searchMenu = () => {
     $('#main, #footer').attr('inert', '');
     $btnSearch.attr('aria-expanded', 'true');
     $headerSearch.stop().fadeIn(200, function () {
-      $(this).attr('aria-hidden', 'false');
+      $(this).attr('aria-hidden', 'false').removeAttr('inert');
     });
   });
 
@@ -24,7 +24,10 @@ const searchMenu = () => {
     $('#main, #footer').removeAttr('inert');
     $btnSearch.attr('aria-expanded', 'false');
     $headerSearch.stop().fadeOut(200, function () {
-      $(this).attr('aria-hidden', 'true');
+      $(this).attr({
+        'aria-hidden': 'true',
+        inert: '',
+      });
     });
   });
 };
@@ -42,6 +45,10 @@ const searchForm = () => {
     } else {
       $btnClear.hide();
     }
+  });
+
+  $btnClear.on('click', function () {
+    $(this).hide();
   });
 };
 

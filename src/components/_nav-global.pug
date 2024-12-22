@@ -1,0 +1,48 @@
+nav.nav-global#nav-global(aria-hidden="false")
+  .nav-global__container
+    .nav-global__header
+      button.nav-global__btn-close(aria-label="Close Navigation")
+      .nav-global__utils
+        a(href="/my-favorite")
+          +img(src="/src/images/common/ico-favorite-off.svg" alt="My Favorite")
+        a(href="/my-account")
+          +img(src="/src/images/common/ico-profile.svg" alt="My Account")
+    .nav-global__body
+      ul.nav-global__list
+        li
+          a.nav-global__link(href="/products")
+            span DASHING URBANITE
+            span.nav-global__link-new NEW
+        li
+          button.nav-global__btn-main
+            span COLLECTIONS
+        li
+          button.nav-global__btn-main
+            span PRODUCT
+        li
+          a.nav-global__link(href="/merge-men")
+            span MERGE MEN
+        li
+          a.nav-global__link(href="/about-merge")
+            span ABOUT MERGE
+        li
+          a.nav-global__link(href="/store")
+            span STORES
+        li
+          a.nav-global__link(href="/careers")
+            span CAREERS
+        li
+          a.nav-global__link(href="/supplier")
+            span SUPPLIER
+        li
+          .nav-global__favorite
+            .nav-global__link-icon
+              +img(src="/src/images/common/ico-favorite-off.svg" alt="")
+              span MY FAVORITE
+            a.nav-global__favorite-link(href="/my-favorite") SEE ALL
+          p.nav-global__favorite-none You don’t have any favorites
+        li
+          a.nav-global__link-icon(href="/my-account")
+            +img(src="/src/images/common/ico-profile.svg" alt="")
+            span MY ACCOUNT
+      button.nav-global__btn-sign SIGN OUT

@@ -2,6 +2,8 @@ header.header#header
   .header__container
     a.header__logo(href="/")
       +img(src="/src/images/common/logo-header.webp" alt="MERGE")
+    a.header__logo-text(href="/")
+      +img(src="/src/images/common/logo-header-text.svg" alt="MERGE")
     .header__inner
       button.header__menu#btn-header-menu(aria-label="Navigation Menu" aria-controls="nav-global" aria-expanded="false")
         span.header__menu-icon
@@ -13,7 +15,9 @@ header.header#header
         a.header-utils__button(href="/cart")
           +img(src="/src/images/common/ico-cart.svg" alt="Cart")
           span 2
-  // /.header-container
+  // /.header__container
 
   include /src/components/_header-search.pug
+
+  include /src/components/_nav-global.pug
 // /.header
