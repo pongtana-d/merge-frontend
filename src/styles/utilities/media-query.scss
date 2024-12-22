@@ -1,17 +1,42 @@
-$breakpoint-sp: 767;
+$breakpoint-sp: 768;
+$breakpoint-md: 992;
+$breakpoint-lg: 1200;
 
 @mixin sm-lte {
-  @media (max-width: #{$breakpoint-sp * 1px}) {
+  @media (max-width: #{($breakpoint-sp - 1) * 1px}) {
     @content;
   }
 }
 
 @mixin sm-gt {
-  @media (min-width: #{($breakpoint-sp + 1) * 1px}) {
+  @media (min-width: #{$breakpoint-sp * 1px}) {
     @content;
   }
 }
 
+@mixin md-lte {
+  @media (max-width: #{($breakpoint-md - 1) * 1px}) {
+    @content;
+  }
+}
+
+@mixin md-gt {
+  @media (min-width: #{$breakpoint-md * 1px}) {
+    @content;
+  }
+}
+
+@mixin lg-lte {
+  @media (max-width: #{($breakpoint-lg - 1) * 1px}) {
+    @content;
+  }
+}
+
+@mixin lg-gt {
+  @media (min-width: #{$breakpoint-lg * 1px}) {
+    @content;
+  }
+}
 @mixin hover {
   @media screen and (pointer: fine) {
     @content;

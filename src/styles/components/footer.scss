@@ -159,7 +159,7 @@
         }
       }
 
-      &[aria-selected="true"] {
+      &[aria-current="true"] {
         opacity: 1;
         pointer-events: none;
       }

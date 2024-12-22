@@ -1,5 +1,8 @@
+@import "./card-product.scss";
 @import "./footer.scss";
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
+@import "./list-product.scss";
+@import "./search-recent.scss";
 @import "./search-result.scss";

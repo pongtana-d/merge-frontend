@@ -6,8 +6,13 @@
   top: 0;
   bottom: 0;
   left: 0;
+  display: none;
   width: 100%;
   background-color: var(--color-white);
+
+  &[aria-hidden="false"] {
+    display: block;
+  }
 
   &__container {
     display: flex;
@@ -113,6 +118,7 @@
     position: absolute;
     top: 50%;
     right: 10px;
+    display: none;
     width: 10px;
     height: 10px;
     background: url(/src/images/common/ico-delete.svg) no-repeat;

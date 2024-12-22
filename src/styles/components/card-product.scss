@@ -1,0 +1,118 @@
+@use "../utilities" as *;
+
+.card-product {
+  $root: &;
+  position: relative;
+  display: block;
+  height: 100%;
+  background-color: var(--color-white);
+
+  &:hover {
+    @include hover {
+      #{$root}__image > img {
+        transform: scale(1.08);
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 286 / 411;
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: 10px 10px 15px;
+  }
+
+  &__favorite {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px;
+    display: block;
+    cursor: pointer;
+
+    > input {
+      position: absolute;
+      opacity: 0;
+
+      &:checked + #{$root}__favorite-icon::after {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__favorite-icon {
+    position: relative;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    background: url(/src/images/common/ico-favorite-off.svg) no-repeat;
+    background-size: contain;
+
+    &::after {
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: url(/src/images/common/ico-favorite-on.svg) no-repeat;
+      background-size: contain;
+      content: "";
+      transform: scale(0);
+      transition: transform 0.2s ease-out;
+    }
+  }
+
+  &__name {
+    @include text-body;
+    overflow: hidden;
+
+    padding-right: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__price {
+    @include text-body;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    column-gap: 5px;
+  }
+
+  &__price-old {
+    text-decoration: line-through;
+  }
+
+  &__price-new {
+    position: relative;
+    padding: 0 2px;
+    background-color: var(--color-red);
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
