@@ -1,6 +1,9 @@
 @use "foundation/reset";
 @import "foundation/root.scss" layer(root);
 @import "foundation/base.scss" layer(base);
+
+@import "@splidejs/splide/css" layer(libs);
+
 @import "components/+.css" layer(components);
 
-@layer reset, tokens, base, components, pages;
+@layer reset, tokens, base, libs, components, pages;

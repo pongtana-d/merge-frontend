@@ -1,9 +1,11 @@
-@import "./_nav-global.scss";
 @import "./card-product.scss";
 @import "./footer.scss";
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
 @import "./list-product.scss";
+@import "./nav-favorite-slider.scss";
+@import "./nav-global-sub.scss";
+@import "./nav-global.scss";
 @import "./search-recent.scss";
 @import "./search-result.scss";

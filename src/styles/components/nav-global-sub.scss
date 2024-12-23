@@ -1,17 +1,24 @@
 @use "../utilities" as *;
 
-.nav-global {
-  position: fixed;
-  z-index: var(--z-index-nav-global);
+.nav-global-sub {
+  --z-index: 1;
+
+  position: absolute;
+  z-index: var(--z-index);
   top: 0;
   left: 0;
-  // display: none;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   background-color: var(--color-white);
+  transform: translateX(101%);
+  transition-duration: 0.4s;
+  transition-property: transform, visibility;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  visibility: hidden;
 
-  @include sm-gt {
-    max-width: 375px;
+  &[aria-hidden="false"] {
+    transform: translateX(0);
+    visibility: visible;
   }
 
   &__container {
@@ -23,18 +30,16 @@
   &__header {
     display: flex;
     height: 70px;
-    flex-shrink: 0;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
   }
 
-  &__btn-close {
+  &__back {
+    @include text-title-2;
+
+    position: relative;
     display: block;
-    width: 18px;
-    height: 18px;
-    background: url(/src/images/common/ico-close.svg) no-repeat;
-    background-size: contain;
+    padding-left: 23px;
     transition: var(--hover-transition);
 
     &:hover {
@@ -42,22 +47,17 @@
         opacity: var(--hover-opacity);
       }
     }
-  }
 
-  &__utils {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-
-    a {
-      display: block;
-      transition: var(--hover-transition);
-
-      &:hover {
-        @include hover {
-          opacity: var(--hover-opacity);
-        }
-      }
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
+      background-size: contain;
+      content: "";
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 
@@ -67,17 +67,17 @@
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 16px 16px;
+    padding: 10px 16px 20px;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
 
   &__link {
-    @include text-title-2;
+    @include text-title-3;
 
     display: block;
     transition: var(--hover-transition);
@@ -92,7 +92,7 @@
       @include text-body-small;
 
       position: relative;
-      top: 3px;
+      top: 0;
       display: inline-block;
       padding-left: 5px;
       color: var(--color-blue-light);
@@ -101,8 +101,8 @@
     }
   }
 
-  &__btn-main {
-    @include text-title-2;
+  &__link-main {
+    @include text-title-3;
 
     position: relative;
     display: block;
@@ -128,58 +128,8 @@
     }
   }
 
-  &__link-icon {
-    @include text-title-2;
-
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    > img {
-      display: block;
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  a#{&}__link-icon {
-    transition: var(--hover-transition);
-
-    &:hover {
-      @include hover {
-        opacity: var(--hover-opacity);
-      }
-    }
-  }
-
-  &__favorite {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__favorite-none {
-    @include text-body;
-
-    margin-top: 5px;
-    color: var(--color-gray);
-  }
-
-  &__favorite-link {
-    @include text-body;
-
-    display: block;
-    transition: var(--hover-transition);
-
-    &:hover {
-      @include hover {
-        opacity: var(--hover-opacity);
-      }
-    }
-  }
-
-  &__btn-sign {
-    @include text-body-bold;
+  &__btn-close {
+    @include text-body-small;
 
     display: flex;
     height: 38px;
@@ -188,7 +138,7 @@
     justify-content: center;
     border: 1px solid var(--color-black);
     border-radius: 48px;
-    margin-top: 15px;
+    margin-top: 25px;
     background-color: var(--color-white);
     text-align: center;
     transition: var(--hover-transition);

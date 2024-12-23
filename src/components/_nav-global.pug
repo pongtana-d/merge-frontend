@@ -1,4 +1,4 @@
-nav.nav-global#nav-global(aria-hidden="false")
+nav.nav-global#nav-global(inert aria-hidden="true")
   .nav-global__container
     .nav-global__header
       button.nav-global__btn-close(aria-label="Close Navigation")
@@ -14,26 +14,19 @@ nav.nav-global#nav-global(aria-hidden="false")
             span DASHING URBANITE
             span.nav-global__link-new NEW
         li
-          button.nav-global__btn-main
-            span COLLECTIONS
+          button.nav-global__link-main(data-target="collections") COLLECTIONS
         li
-          button.nav-global__btn-main
-            span PRODUCT
+          button.nav-global__link-main(data-target="product") PRODUCT
         li
-          a.nav-global__link(href="/merge-men")
-            span MERGE MEN
+          a.nav-global__link(href="/merge-men") MERGE MEN
         li
-          a.nav-global__link(href="/about-merge")
-            span ABOUT MERGE
+          a.nav-global__link(href="/about-merge") ABOUT MERGE
         li
-          a.nav-global__link(href="/store")
-            span STORES
+          a.nav-global__link(href="/store") STORES
         li
-          a.nav-global__link(href="/careers")
-            span CAREERS
+          a.nav-global__link(href="/careers") CAREERS
         li
-          a.nav-global__link(href="/supplier")
-            span SUPPLIER
+          a.nav-global__link(href="/supplier") SUPPLIER
         li
           .nav-global__favorite
             .nav-global__link-icon
@@ -41,8 +34,121 @@ nav.nav-global#nav-global(aria-hidden="false")
               span MY FAVORITE
             a.nav-global__favorite-link(href="/my-favorite") SEE ALL
           p.nav-global__favorite-none You don’t have any favorites
+          .nav-favorite-slider#nav-favorite-slider
+            .splide
+              .splide__track
+                .splide__list
+                  .splide__slide
+                    a.nav-favorite-slider__card(href="#")
+                      +img(src="/src/images/products/img-product-01.jpg" alt="")
+                  .splide__slide
+                    a.nav-favorite-slider__card(href="#")
+                      +img(src="/src/images/products/img-product-01.jpg" alt="")
+                  .splide__slide
+                    a.nav-favorite-slider__card(href="#")
+                      +img(src="/src/images/products/img-product-01.jpg" alt="")
         li
           a.nav-global__link-icon(href="/my-account")
             +img(src="/src/images/common/ico-profile.svg" alt="")
             span MY ACCOUNT
       button.nav-global__btn-sign SIGN OUT
+    // /.nav-global__body
+
+  .nav-global-sub(inert aria-hidden="true" data-id="collections")
+    .nav-global-sub__container
+      .nav-global-sub__header
+        button.nav-global-sub__back COLLECTIONS
+      .nav-global-sub__body
+        ul.nav-global-sub__list
+          li
+            a.nav-global-sub__link(href="#")
+              span DASHING URBANITE
+              span.nav-global-sub__link-new NEW
+          li
+            a.nav-global-sub__link(href="#") DAZZLING DREAMS
+          li
+            a.nav-global-sub__link(href="#") DOWNTOWN DIVA
+          li
+            a.nav-global-sub__link(href="#") ETERNAL AFFAIR
+          li
+            a.nav-global-sub__link(href="#") MERGE X SABINA
+          li
+            a.nav-global-sub__link(href="#") ROYAL COURT RUNWAY
+          li
+            a.nav-global-sub__link(href="#") SELF-EXPLORATION
+          li
+            a.nav-global-sub__link(href="#") THE KISMET
+          li
+            a.nav-global-sub__link(href="#") UNEXPECTED SUMMER
+        button.nav-global-sub__btn-close CLOSE
+  // /.nav-global-sub
+
+  .nav-global-sub(inert aria-hidden="true" data-id="product")
+    .nav-global-sub__container
+      .nav-global-sub__header
+        button.nav-global-sub__back PRODUCT
+      .nav-global-sub__body
+        ul.nav-global-sub__list
+          li
+            a.nav-global-sub__link(href="#") ALL
+          li
+            a.nav-global-sub__link(href="#") TOPS
+          li
+            button.nav-global-sub__link-main(data-target="product-bottoms") BOTTOMS
+          li
+            a.nav-global-sub__link(href="#") DRESSES
+          li
+            a.nav-global-sub__link(href="#") BAG
+          li
+            button.nav-global-sub__link-main(data-target="product-outerwear") OUTERWEAR
+          li
+            button.nav-global-sub__link-main(data-target="product-accessories") ACCESSORIES
+        button.nav-global-sub__btn-close CLOSE
+  // /.nav-global-sub
+
+  .nav-global-sub(inert aria-hidden="true" data-id="product-bottoms")
+    .nav-global-sub__container
+      .nav-global-sub__header
+        button.nav-global-sub__back BOTTOMS
+      .nav-global-sub__body
+        ul.nav-global-sub__list
+          li
+            a.nav-global-sub__link(href="#") JEANS
+          li
+            a.nav-global-sub__link(href="#") SHORTS
+          li
+            a.nav-global-sub__link(href="#") SKIRT
+          li
+            a.nav-global-sub__link(href="#") SKORTS
+          li
+            a.nav-global-sub__link(href="#") PANTS
+        button.nav-global-sub__btn-close CLOSE
+  // /.nav-global-sub
+
+  .nav-global-sub(inert aria-hidden="true" data-id="product-outerwear")
+    .nav-global-sub__container
+      .nav-global-sub__header
+        button.nav-global-sub__back OUTERWEAR
+      .nav-global-sub__body
+        ul.nav-global-sub__list
+          li
+            a.nav-global-sub__link(href="#") DUMMY
+          li
+            a.nav-global-sub__link(href="#") DUMMY
+        button.nav-global-sub__btn-close CLOSE
+  // /.nav-global-sub
+
+  .nav-global-sub(inert aria-hidden="true" data-id="product-accessories")
+    .nav-global-sub__container
+      .nav-global-sub__header
+        button.nav-global-sub__back ACCESSORIES
+      .nav-global-sub__body
+        ul.nav-global-sub__list
+          li
+            a.nav-global-sub__link(href="#") DUMMY
+          li
+            a.nav-global-sub__link(href="#") DUMMY
+        button.nav-global-sub__btn-close CLOSE
+  // /.nav-global-sub
+
+// /.nav-global

@@ -1,11 +1,15 @@
 import webFontLoader from './modules/web-font-loader';
 import headerSmall from './modules/headerSmall';
 import headerSearch from './modules/headerSearch';
+import navGlobal from './modules/navGlobal';
 import footer from './modules/footer';
+import navFavoriteSlider from './modules/navFavoriteSlider';
 
 document.addEventListener('DOMContentLoaded', () => {
   webFontLoader();
-  headerSearch();
   headerSmall();
+  headerSearch();
+  navGlobal();
   footer();
+  navFavoriteSlider();
 });

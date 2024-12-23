@@ -35,6 +35,7 @@
     "webfontloader": "^1.6.28"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "destyle.css": "^4.0.1",
     "jquery": "^3.7.1"
   }

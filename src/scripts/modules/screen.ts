@@ -16,6 +16,8 @@ const isMacSafari = (): boolean => {
   );
 };
 
+export const isSmLte = () => window.matchMedia('(max-width: 767px)').matches;
+
 export function screenLock(): void {
   if (isIOS() || isMacSafari()) {
     const top = $(window).scrollTop() || 0;
