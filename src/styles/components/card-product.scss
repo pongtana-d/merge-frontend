@@ -49,10 +49,14 @@
   &__favorite {
     position: absolute;
     z-index: 2;
-    top: 10px;
+    top: 13px;
     right: 10px;
     display: block;
     cursor: pointer;
+
+    @include sm-gt {
+      top: 10px;
+    }
 
     > input {
       position: absolute;
@@ -67,17 +71,22 @@
   &__favorite-icon {
     position: relative;
     display: flex;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     align-items: center;
     justify-content: center;
     background: url(/src/images/common/ico-favorite-off.svg) no-repeat;
     background-size: contain;
 
-    &::after {
-      display: block;
+    @include sm-gt {
       width: 18px;
       height: 18px;
+    }
+
+    &::after {
+      display: block;
+      width: 100%;
+      height: 100%;
       background: url(/src/images/common/ico-favorite-on.svg) no-repeat;
       background-size: contain;
       content: "";

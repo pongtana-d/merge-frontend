@@ -4,6 +4,7 @@ import headerSearch from './modules/headerSearch';
 import navGlobal from './modules/navGlobal';
 import footer from './modules/footer';
 import navFavoriteSlider from './modules/navFavoriteSlider';
+import marqueeSlider from './modules/marqueeSlider';
 
 document.addEventListener('DOMContentLoaded', () => {
   webFontLoader();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   navGlobal();
   footer();
   navFavoriteSlider();
+  marqueeSlider();
 });

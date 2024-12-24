@@ -3,6 +3,7 @@
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
+@import "./hero.scss";
 @import "./list-product.scss";
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";

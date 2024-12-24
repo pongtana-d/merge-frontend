@@ -11,4 +11,24 @@ block append scripts
 block modal
 
 block content
-  p content
+  .hero
+    figure.hero__image
+      picture
+        source(media="(min-width:992px)" srcset="/src/images/home/img-hero-merge-sabina-pc.jpg")
+        +img(src="/src/images/home/img-hero-merge-sabina-sp.jpg" alt="")
+    h1.hero__heading
+      span MERGE X SABINA
+      span.hero__heading-sub Collection
+    a.hero__button(href="#") DISCOVER
+    .hero__marquee
+      .splide.js-marquee-slider
+        .splide__track
+          .splide__list
+            .splide__slide
+              .hero__marquee-text
+                p: span 30 DAYS TO RETURN
+                p //  Shop safely from home via #[span LINE @MERGE]
+            .splide__slide
+              .hero__marquee-text
+                p: span 30 DAYS TO RETURN
+                p //  Shop safely from home via #[span LINE @MERGE]

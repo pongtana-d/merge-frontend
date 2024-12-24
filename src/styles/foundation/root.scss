@@ -1,5 +1,7 @@
 :root {
   --font-family-base: "IvyStyle Sans", "sans-serif";
+  --font-family-fanwood: "Fanwood Text", "sans-serif";
+  --font-family-arvo: "Arvo", "sans-serif";
 
   /* hover */
   --hover-opacity: 0.7;
@@ -7,6 +9,7 @@
 
   /* color */
   --color-blue: #07285f;
+  --color-blue-70: #{rgba(#07285f, 0.7)};
   --color-blue-light: #56c9f3;
   --color-white: #fff;
   --color-white-10: #{rgba(#fff, 0.1)};
