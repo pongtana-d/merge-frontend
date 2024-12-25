@@ -64,31 +64,32 @@ block content
   .sec-flash-sale
     .sec-flash-sale__inner
       +img.sec-flash-sale__title(src="/src/images/common/text-flash-sale.svg" alt="FLASH SALE")
-      .sec-flash-sale__time.js-countdown(data-countdown-time="5")
+      - const endTime = new Date(new Date().setDate(new Date().getDate() + 1)).toISOString();
+      .sec-flash-sale__time.js-countdown(data-end-time=endTime)
         .sec-flash-sale__rollers
           .sec-flash-sale__roller.sec-flash-sale__roller--hour
-            .sec-flash-sale__digit.sec-flash-sale__digit--hour-tens
+            .sec-flash-sale__digit.js-h-tens
               each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
                 span= i
-            .sec-flash-sale__digit.sec-flash-sale__digit--hour-ones
+            .sec-flash-sale__digit.js-h-ones
               each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
                 span= i
           p.sec-flash-sale__unit.sec-flash-sale__unit--hour Hour
         .sec-flash-sale__rollers
           .sec-flash-sale__roller
-            .sec-flash-sale__digit.sec-flash-sale__digit--min-tens
+            .sec-flash-sale__digit.js-m-tens
               each i in Array.from({ length: 6 }, (_, i) => i).concat(0).reverse()
                 span= i
-            .sec-flash-sale__digit.sec-flash-sale__digit--min-ones
+            .sec-flash-sale__digit.js-m-ones
               each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
                 span= i
           p.sec-flash-sale__unit Min
         .sec-flash-sale__rollers
           .sec-flash-sale__roller
-            .sec-flash-sale__digit.sec-flash-sale__digit--sec-tens
+            .sec-flash-sale__digit.js-s-tens
               each i in Array.from({ length: 6 }, (_, i) => i).concat(0).reverse()
                 span= i
-            .sec-flash-sale__digit.sec-flash-sale__digit--sec-ones
+            .sec-flash-sale__digit.js-s-ones
               each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
                 span= i
           p.sec-flash-sale__unit Sec
