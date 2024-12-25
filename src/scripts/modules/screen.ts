@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+export const isSmLte = () => window.matchMedia('(max-width: 767px)').matches;
+
+export const isMdLte = () => window.matchMedia('(max-width: 991px)').matches;
+
 const isIOS = (): boolean => {
   return (
     ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||
@@ -15,8 +19,6 @@ const isMacSafari = (): boolean => {
     !navigator.userAgent.includes('Firefox')
   );
 };
-
-export const isSmLte = () => window.matchMedia('(max-width: 767px)').matches;
 
 export function screenLock(): void {
   if (isIOS() || isMacSafari()) {

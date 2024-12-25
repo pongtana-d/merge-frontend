@@ -10,6 +10,7 @@ export default function marqueeSlider() {
   $elements.each(function () {
     const slider = new Splide($(this).get(0) as HTMLElement, {
       type: 'loop',
+      clones: 4,
       drag: false,
       focus: 'center',
       autoWidth: true,
