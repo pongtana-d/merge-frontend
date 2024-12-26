@@ -24,6 +24,14 @@
     column-gap: 5px;
   }
 
+  &__colon {
+    display: block;
+    width: 3px;
+    height: 10px;
+    background: url(/src/images/common/ico-colon-white.svg) no-repeat;
+    background-size: contain;
+  }
+
   &__roller {
     display: flex;
     overflow: hidden;
@@ -47,7 +55,6 @@
     font-size: calc(15 / 16 * 1rem);
     font-weight: 600;
     line-height: 1.4;
-    // transition: transform 0.9s ease-out;
 
     > span {
       display: flex;

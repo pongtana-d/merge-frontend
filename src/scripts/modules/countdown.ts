@@ -6,20 +6,24 @@ export default function countDown() {
 
   if (!$el.length) return;
 
-  const endTime = $el.data('end-time');
+  const endTime = $el.attr('data-end-time') || '';
   let interval: countdown.Timespan | number;
 
   if (!endTime) return;
 
-  const moveDigit = ($target: JQuery<HTMLElement>, units: number, digit: number) => {
-    const y = (units - digit) * -24;
+  const moveDigit = ($target: JQuery<HTMLElement>, units: number, digit: string) => {
+    const current = $target.attr('data-current') || '';
+    const y = (units - Number(digit)) * -24;
 
-    if (digit === 0) {
-      setTimeout(() => {
-        $target.css({ transform: `translateY(0px)`, transition: '' });
-      }, 900);
+    if ((digit === '9' || digit === '5') && current === '0') {
+      $target.removeAttr('style');
     }
-    $target.css({ transform: `translateY(${y}px)`, transition: 'transform 0.9s ease-out' });
+    /** ensure that DOM updates are processed in the correct order */
+    setTimeout(() => {
+      $target.css({ transform: `translateY(${y}px)`, transition: 'transform 0.9s ease-out' });
+    }, 0);
+
+    $target.attr('data-current', digit);
   };
 
   interval = countdown(
@@ -30,12 +34,12 @@ export default function countDown() {
 
       if (ts.value === 0) clearInterval(interval as number);
 
-      moveDigit($el.find('.js-h-tens'), 10, Number(hh.charAt(0)));
-      moveDigit($el.find('.js-h-ones'), 10, Number(hh.charAt(1)));
-      moveDigit($el.find('.js-m-tens'), 6, Number(mm.charAt(0)));
-      moveDigit($el.find('.js-m-ones'), 10, Number(mm.charAt(1)));
-      moveDigit($el.find('.js-s-tens'), 6, Number(ss.charAt(0)));
-      moveDigit($el.find('.js-s-ones'), 10, Number(ss.charAt(1)));
+      moveDigit($el.find('.js-h-tens'), 10, hh.charAt(0));
+      moveDigit($el.find('.js-h-ones'), 10, hh.charAt(1));
+      moveDigit($el.find('.js-m-tens'), 6, mm.charAt(0));
+      moveDigit($el.find('.js-m-ones'), 10, mm.charAt(1));
+      moveDigit($el.find('.js-s-tens'), 6, ss.charAt(0));
+      moveDigit($el.find('.js-s-ones'), 10, ss.charAt(1));
     },
     new Date(endTime),
 
