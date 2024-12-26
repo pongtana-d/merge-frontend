@@ -4,6 +4,10 @@
   padding: 2px 0;
   background-color: var(--color-gray-3);
 
+  &--black {
+    background-color: #2a2828;
+  }
+
   .splide__arrow {
     left: 30px;
     width: 40px;

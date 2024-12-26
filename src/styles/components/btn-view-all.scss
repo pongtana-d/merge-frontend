@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+.btn-view-all {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: var(--color-gray-3);
+  color: var(--color-black);
+
+  @include sm-gt {
+    display: none;
+  }
+
+  > span {
+    @include text-body;
+
+    position: relative;
+    display: block;
+    padding-right: 18px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 18px;
+      height: 18px;
+      background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
+      background-size: contain;
+      content: "";
+      transform: translateY(-50%);
+    }
+  }
+}

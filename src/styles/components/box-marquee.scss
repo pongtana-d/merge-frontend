@@ -1,0 +1,53 @@
+@use "../utilities" as *;
+
+.box-marquee {
+  overflow: hidden;
+  $root: &;
+  width: 100%;
+  padding: 5px 0;
+  border-top: 1px solid var(--color-black);
+  background-color: var(--color-white);
+  white-space: nowrap;
+
+  &__text {
+    position: relative;
+    display: flex;
+    padding-left: 28px;
+    color: var(--color-black);
+    font-family: var(--font-family-arvo);
+    font-size: calc(12 / 16 * 1rem);
+    gap: 13px;
+    letter-spacing: 0.05em;
+    line-height: calc(19 / 12);
+    white-space: nowrap;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 13px;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background-color: var(--color-black);
+      content: "";
+      transform: translateY(-50%);
+    }
+
+    span {
+      color: var(--color-blue-light);
+    }
+  }
+
+  &--mv {
+    border-top: 0;
+    background-color: var(--color-blue-70);
+
+    #{$root}__text {
+      color: var(--color-white);
+
+      &::before {
+        background-color: var(--color-white);
+      }
+    }
+  }
+}

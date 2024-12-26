@@ -1,10 +1,12 @@
+@import "./box-marquee.scss";
+@import "./btn-view-all.scss";
 @import "./card-product.scss";
 @import "./footer.scss";
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
-@import "./hero.scss";
 @import "./list-product.scss";
+@import "./main-visual.scss";
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";
 @import "./nav-global.scss";

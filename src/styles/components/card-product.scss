@@ -17,7 +17,7 @@
 
   &__link {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -123,5 +123,30 @@
     background-color: var(--color-red);
     font-weight: 600;
     text-decoration: none;
+  }
+
+  &__discount {
+    @include text-body-small-2-bold;
+
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding: 0 3px 1px;
+    background: var(--color-black-25);
+    color: var(--color-white);
+  }
+
+  &--black {
+    background-color: #000;
+    color: var(--color-white);
+
+    #{$root}__favorite-icon {
+      background-image: url(/src/images/common/ico-favorite-gray-off.svg);
+
+      &::after {
+        background-image: url(/src/images/common/ico-favorite-gray-on.svg);
+      }
+    }
   }
 }

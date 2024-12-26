@@ -11,7 +11,7 @@ export default function countDown() {
 
   if (!endTime) return;
 
-  const moveDigit = ($target: JQuery<HTMLElement>, units: number, digit: string) => {
+  const moveDigit = ($target: JQuery<HTMLElement>, units: number, digit: string): void => {
     const current = $target.attr('data-current') || '';
     const y = (units - Number(digit)) * -24;
 
@@ -20,8 +20,8 @@ export default function countDown() {
     }
     /** ensure that DOM updates are processed in the correct order */
     setTimeout(() => {
-      $target.css({ transform: `translateY(${y}px)`, transition: 'transform 0.9s ease-out' });
-    }, 0);
+      $target.css({ transform: `translateY(${y}px)`, transition: 'transform 0.8s ease-out' });
+    }, 100);
 
     $target.attr('data-current', digit);
   };
