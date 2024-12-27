@@ -28,6 +28,34 @@ export default function productSlider() {
       },
     });
 
+    let intervalTime: number;
+
+    const checkOverflowItem = () => {
+      slider.Components.Elements.slides.forEach((el) => {
+        const react = el.getBoundingClientRect();
+        const isOverflow = react.right > document.documentElement.clientWidth;
+        $(el).toggleClass('is-overflow', isOverflow);
+      });
+    };
+
+    slider.on('ready resized', function () {
+      checkOverflowItem();
+    });
+
+    slider.on('move drag', function () {
+      if (isMdLte()) return;
+
+      clearInterval(intervalTime);
+      intervalTime = setInterval(() => {
+        console.log('dodo');
+        requestAnimationFrame(checkOverflowItem);
+      }, 100);
+    });
+
+    slider.on('moved dragged active', function () {
+      clearInterval(intervalTime);
+    });
+
     slider.on('overflow', function (isOverflow) {
       slider.go(0);
       slider.options = {
