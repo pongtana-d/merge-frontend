@@ -1,0 +1,99 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  section.main-visual
+    figure.main-visual__image
+      picture
+        source(media="(min-width:992px)" srcset="/src/images/home/img-mv-merge-sabina-pc.jpg")
+        +img(src="/src/images/home/img-mv-merge-sabina-sp.jpg" alt="MERGE X SABINA Collection")
+    h1.main-visual__heading
+      span MERGE X SABINA
+      span.main-visual__heading-sub Collection
+  // /.main-visual
+
+  ul.list-product
+    each i in Array(4)
+      li
+        .card-product
+          a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+          figure.card-product__image
+            +img(src="/src/images/products/img-product-01.jpg" alt="CORA PLUNGE BRALETTE")
+          .card-product__info
+            label.card-product__favorite(aria-label="Add to favorite")
+              input(type="checkbox" name="favorite" value="")
+              span.card-product__favorite-icon
+            p.card-product__name CORA PLUNGE BRALETTE
+            .card-product__price
+              p.card-product__price-normal THB 1,500
+      li
+        .card-product
+          a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+          figure.card-product__image
+            +img(src="/src/images/products/img-product-02.jpg" alt="CORA PLUNGE BRALETTE")
+          .card-product__info
+            label.card-product__favorite(aria-label="Add to favorite")
+              input(type="checkbox" name="favorite" value="")
+              span.card-product__favorite-icon
+            p.card-product__name CORA PLUNGE BRALETTE
+            .card-product__price
+              p.card-product__price-normal THB 1,500
+      li
+        .card-product
+          a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+          figure.card-product__image
+            +img(src="/src/images/products/img-product-02.jpg" alt="CORA PLUNGE BRALETTE")
+          .card-product__info
+            label.card-product__favorite(aria-label="Add to favorite")
+              input(type="checkbox" name="favorite" value="")
+              span.card-product__favorite-icon
+            p.card-product__name CORA PLUNGE BRALETTE
+            .card-product__price
+              p.card-product__price-normal THB 1,500
+      li
+        .card-product
+          a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+          figure.card-product__image
+            +img(src="/src/images/products/img-product-05.jpg" alt="CORA PLUNGE BRALETTE")
+          .card-product__info
+            label.card-product__favorite(aria-label="Add to favorite")
+              input(type="checkbox" name="favorite" value="")
+              span.card-product__favorite-icon
+            p.card-product__name CORA PLUNGE BRALETTE
+            .card-product__price
+              p.card-product__price-normal THB 1,500
+      li
+        .card-product
+          a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+          figure.card-product__image
+            +img(src="/src/images/products/img-product-05.jpg" alt="CORA PLUNGE BRALETTE")
+          .card-product__info
+            label.card-product__favorite(aria-label="Add to favorite")
+              input(type="checkbox" name="favorite" value="")
+              span.card-product__favorite-icon
+            p.card-product__name CORA PLUNGE BRALETTE
+            .card-product__price
+              p.card-product__price-normal THB 1,500
+  // /.list-product
+
+  .loader-icon
+    .loader-icon__inner
+      .loader-icon__spinner
+
+  .box-marquee
+    .splide.js-marquee-slider
+      .splide__track
+        .splide__list
+          .splide__slide
+            .box-marquee__text
+              p: span 30 DAYS TO RETURN
+              p //  Shop safely from home via #[span LINE @MERGE]

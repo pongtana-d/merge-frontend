@@ -6,6 +6,7 @@
 @import "./header-utils.scss";
 @import "./header.scss";
 @import "./list-product.scss";
+@import "./loader-icon.scss";
 @import "./main-visual.scss";
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";
