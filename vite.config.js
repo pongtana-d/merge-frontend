@@ -5,6 +5,7 @@ import nodeFs from 'fs';
 import nodePath from 'path';
 import pug from '@vituum/vite-plugin-pug';
 import sizeOf from 'image-size';
+import stylelint from 'vite-plugin-stylelint';
 import vituum from 'vituum';
 
 export default defineConfig({
@@ -51,6 +52,7 @@ export default defineConfig({
         _sizeOf: sizeOf,
       },
     }),
+    stylelint(),
     ViteImageOptimizer({
       png: { quality: 80 },
       jpeg: { quality: 80 },
