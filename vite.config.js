@@ -13,6 +13,7 @@ export default defineConfig({
   },
   build: {
     assetsInlineLimit: 0,
+    cssMinify: false,
     emptyOutDir: true,
     modulePreload: {
       polyfill: false,
@@ -70,7 +71,7 @@ export default defineConfig({
         enabled: false,
       },
       css: {
-        enabled: false,
+        enabled: true,
       },
     }),
   ],
