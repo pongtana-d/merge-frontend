@@ -1,15 +1,13 @@
 @use "../utilities" as *;
 
 .loader-icon {
-  &__inner {
-    display: flex;
-    height: 18px;
-    box-sizing: content-box;
-    align-items: center;
-    justify-content: center;
-    padding: 21px 0;
-    text-align: center;
-  }
+  display: flex;
+  height: 18px;
+  box-sizing: content-box;
+  align-items: center;
+  justify-content: center;
+  padding: 21px 0;
+  text-align: center;
 
   &__spinner {
     position: relative;
@@ -21,7 +19,6 @@
     animation: loader 0.3s 0.3s linear infinite alternate;
     background: currentColor;
     color: var(--color-black);
-    // transform: scale(0.5);
 
     &::before,
     &::after {
