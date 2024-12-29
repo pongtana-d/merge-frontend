@@ -7,6 +7,7 @@
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
+@import "./list-accordion.scss";
 @import "./list-product.scss";
 @import "./loader-icon.scss";
 @import "./main-visual.scss";
@@ -20,3 +21,4 @@
 @import "./sec-flash-sale.scss";
 @import "./sec-product-detail.scss";
 @import "./sec-product-slider.scss";
+@import "./table-info.scss";

@@ -1,0 +1,67 @@
+@use "../utilities" as *;
+
+.table-info {
+  &__head {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2.5px 10px 2.5px 0;
+    background: var(--color-white);
+    gap: 30px;
+  }
+
+  &__head-text {
+    @include text-body-bold;
+
+    display: block;
+    width: 18px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    margin-top: 19px;
+    gap: 10px;
+  }
+
+  &__row {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__text-body {
+    position: relative;
+    flex: 1 1 auto;
+
+    &--marker {
+      padding-left: 18px;
+
+      &::before {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 14px;
+        height: 15px;
+        background: url(/src/images/common/ico-marker.svg) no-repeat;
+        background-size: contain;
+        content: "";
+      }
+    }
+  }
+
+  &__icon-blank,
+  &__icon-checked {
+    display: block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    background: url(/src/images/common/ico-blank.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &__icon-checked {
+    background-image: url(/src/images/common/ico-checked.svg);
+  }
+}

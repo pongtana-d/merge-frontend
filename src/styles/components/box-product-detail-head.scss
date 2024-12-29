@@ -2,9 +2,12 @@
 
 .box-product-detail-head {
   $root: &;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
   &__name {
     @include text-title-2;

@@ -6,7 +6,7 @@ export default function webFontLoader() {
       families: ['Fanwood+Text:ital@0', 'Arvo:400'],
     },
     custom: {
-      families: ['IvyStyle+Sans:400,600,700', 'FC+Iconic:600'],
+      families: ['IvyStyle+Sans:400,600,700'],
       urls: ['/assets/fonts/fonts.css'],
     },
     timeout: 3000,
