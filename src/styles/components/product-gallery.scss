@@ -23,4 +23,27 @@
       object-fit: cover;
     }
   }
+
+  .splide__pagination {
+    bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .splide__pagination__page {
+      width: 6px;
+      height: 6px;
+      margin: 0;
+      background-color: var(--color-gray);
+      opacity: 1;
+      transform: none;
+      transition: width 0.2s ease-out;
+
+      &.is-active {
+        width: 24px;
+        border-radius: 4px;
+        background-color: var(--color-black);
+      }
+    }
+  }
 }

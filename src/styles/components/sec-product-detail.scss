@@ -55,4 +55,31 @@
   &__review {
     margin-top: 20px;
   }
+
+  &__review-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0;
+  }
+
+  &__review-title {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    > img {
+      display: block;
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__review-score {
+    @include text-title-3;
+  }
+
+  &__review-total {
+    @include text-body-bold;
+  }
 }

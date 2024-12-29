@@ -36,7 +36,7 @@ block content
             button.box-product-detail-head__btn-share.js-btn-share(aria-label="Share SERENE SANCTUARY TOP")
               +img(src="/src/images/common/ico-share.svg" alt="")
             label.box-product-detail-head__btn-favorite(aria-label="Add to favorite")
-              input(type="checkbox" name="favorite" value="")
+              input(type="checkbox" name="favorite" value="" inert)
               span.box-product-detail-head__btn-favorite-icon
         .box-product-detail-head__price
           p THB 1,500
@@ -218,6 +218,44 @@ block content
         // /.list-accordion
 
       .sec-product-detail__review
+        .sec-product-detail__review-heading
+          .sec-product-detail__review-title
+            p.sec-product-detail__review-score 4.9
+            +img(src="/src/images/common/ico-star-blue.svg" alt="")
+            p.sec-product-detail__review-total Review score (21)
+          .sec-product-detail__review-filter
+            .select-review-stars.js-select-review-stars
+              input(type="hidden" name="review" value="all")
+              button.select-review-stars__text(aria-expanded="false") All
+              .select-review-stars__options(aria-hidden="true")
+                ul.select-review-stars__list
+                  li(data-value="all" data-text="ALL") All
+                  li(data-value="5" data-text="5 Stars")
+                    .select-review-stars__stars
+                      each i in Array(5)
+                        span
+                    p (12)
+                  li(data-value="4" data-text="4 Stars")
+                    .select-review-stars__stars
+                      each i in Array(4)
+                        span
+                    p (4)
+                  li(data-value="3" data-text="3 Stars")
+                    .select-review-stars__stars
+                      each i in Array(3)
+                        span
+                    p (3)
+                  li(data-value="2" data-text="2 Stars")
+                    .select-review-stars__stars
+                      each i in Array(2)
+                        span
+                    p (1)
+                  li(data-value="1" data-text="1 Stars")
+                    .select-review-stars__stars
+                      span
+                    p (0)
+      // /.sec-product-detail__review
+
   // /.sec-product-detail
 
   include /src/components/_box-marquee.pug

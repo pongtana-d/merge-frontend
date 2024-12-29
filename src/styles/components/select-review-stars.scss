@@ -1,0 +1,83 @@
+@use "../utilities" as *;
+
+.select-review-stars {
+  position: relative;
+  z-index: 2;
+
+  &__text {
+    @include text-body;
+
+    position: relative;
+    width: 96px;
+    padding: 3px 10px;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 3px;
+    background-color: var(--color-gray-3);
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      width: 16px;
+      height: 16px;
+      background: url(/src/images/common/ico-arrow-down-black.svg) no-repeat;
+      background-size: contain;
+      content: "";
+      transform: translateY(-50%);
+      transition: transform 0.2s ease-out;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    z-index: 1;
+    top: calc(100% - 1px);
+    left: 0;
+    display: none;
+    min-width: 100%;
+    padding: 5px 0;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 0 0 3px 3px;
+    border-top: 0;
+    background-color: var(--color-gray-3);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    > li {
+      display: flex;
+      align-items: center;
+      padding: 2px 10px;
+      cursor: pointer;
+      gap: 1px;
+
+      &:hover {
+        @include hover {
+          background-color: var(--color-gray-2);
+        }
+      }
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    > span {
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: url(/src/images/common/ico-star-blue.svg) no-repeat;
+      background-size: contain;
+    }
+
+    & + * {
+      @include text-body-small;
+    }
+  }
+}

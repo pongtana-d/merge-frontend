@@ -21,7 +21,7 @@ const productGallery = () => {
       perMove: 1,
       omitEnd: true,
       arrows: false,
-      pagination: false,
+      pagination: true,
       breakpoints: {
         767: {
           perPage: 1,
