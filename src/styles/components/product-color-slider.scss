@@ -1,7 +1,12 @@
 @use "../utilities" as *;
 
 .product-color-slider {
+  --padding-inline: 0;
   margin-top: 2px;
+
+  @include sm-lte {
+    padding: 0 var(--padding-inline);
+  }
 
   .splide__arrow {
     left: 12px;
@@ -13,7 +18,7 @@
     opacity: 1;
     transition: background 0.2s ease-out;
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: var(--color-blue);
 
       &::after {
@@ -28,6 +33,7 @@
     &--prev,
     &--next {
       &:disabled {
+        cursor: default;
         opacity: 0.5;
       }
 

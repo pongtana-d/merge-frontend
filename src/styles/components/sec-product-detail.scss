@@ -6,7 +6,7 @@
 
     @include sm-gt {
       max-width: 470px;
-      padding: 0;
+      padding: 46px 0 0;
       margin: 0 auto;
     }
   }
@@ -50,5 +50,9 @@
     @include sm-gt {
       margin-top: 24px;
     }
+  }
+
+  &__review {
+    margin-top: 20px;
   }
 }

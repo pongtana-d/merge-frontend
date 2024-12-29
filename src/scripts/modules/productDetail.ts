@@ -45,6 +45,12 @@ const productColor = () => {
 
   if (!$el.length) return;
 
+  const totalSlide = $el.find('.splide__slide').length;
+
+  if (totalSlide < 3) {
+    $el.css({ '--padding-inline': '16px' });
+  }
+
   const slider = new Splide($el.find('.splide').get(0) as HTMLElement, {
     type: 'slide',
     gap: 2,
@@ -54,7 +60,7 @@ const productColor = () => {
     pagination: false,
     breakpoints: {
       767: {
-        fixedWidth: '30.9333vw',
+        fixedWidth: '31.4667vw',
         perPage: 0,
         arrows: false,
       },
@@ -64,6 +70,14 @@ const productColor = () => {
   slider.on('ready', function () {
     const activeIndex = $(slider.Components.Elements.list).find('[aria-current="true"]').parent().index();
     if (activeIndex >= 0) slider.go(activeIndex);
+  });
+
+  slider.on('overflow', function (isOverflow) {
+    slider.go(0);
+    slider.options = {
+      drag: isOverflow,
+      arrows: isOverflow,
+    };
   });
 
   slider.mount();

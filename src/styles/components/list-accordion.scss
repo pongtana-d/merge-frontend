@@ -15,7 +15,7 @@
     cursor: pointer;
 
     &[aria-expanded="true"]::after {
-      transform: rotates(180deg);
+      transform: rotate(-180deg) translateY(50%);
     }
 
     &::after {
@@ -28,11 +28,12 @@
       background-size: contain;
       content: "";
       transform: translateY(-50%);
-      transition: transform 0.3s ease-out;
+      transition: transform 0.2s ease-out;
     }
   }
 
   &__body {
+    display: none;
     padding-bottom: 17px;
 
     &[aria-hidden="false"] {

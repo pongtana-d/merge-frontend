@@ -109,50 +109,115 @@ block content
           .list-accordion__item
             button.list-accordion__title(aria-expanded="false") Find Item at store
             .list-accordion__body(aria-hidden="true")
-              .table-info
-                .table-info__head
-                  p.table-info__head-text S
-                  p.table-info__head-text M
-                  p.table-info__head-text L
-                  p.table-info__head-text XL
-                .table-info__body
-                  .table-info__row
-                    p.table-info__text-body.table-info__text-body--marker Siam Square Soi 2
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                  .table-info__row
-                    p.table-info__text-body.table-info__text-body--marker Siam Square One
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                    .table-info__icon-checked
-                    .table-info__icon-blank
-                  .table-info__row
-                    p.table-info__text-body.table-info__text-body--marker Mega Bangna
-                    .table-info__icon-blank
-                    .table-info__icon-checked
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                  .table-info__row
-                    p.table-info__text-body.table-info__text-body--marker Central Rama 9
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                    .table-info__icon-checked
-                    .table-info__icon-blank
-                  .table-info__row
-                    p.table-info__text-body.table-info__text-body--marker Central Westville
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                    .table-info__icon-blank
-                    .table-info__icon-blank
+              .table-product-store
+                .table-product-store__head
+                  div
+                  p S
+                  p M
+                  p L
+                  p XL
+                .table-product-store__body
+                  .table-product-store__row
+                    p.table-product-store__text Siam Square Soi 2
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                  .table-product-store__row
+                    p.table-product-store__text Siam Square One
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-checked
+                    i.table-product-store__icon-blank
+                  .table-product-store__row
+                    p.table-product-store__text Mega Bangna
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-checked
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                  .table-product-store__row
+                    p.table-product-store__text Central Rama 9
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-checked
+                    i.table-product-store__icon-blank
+                  .table-product-store__row
+                    p.table-product-store__text Terminal 21
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-checked
+                  .table-product-store__row
+                    p.table-product-store__text Central Westville
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+                    i.table-product-store__icon-blank
+
+          .list-accordion__item
+            button.list-accordion__title(aria-expanded="false") Size &amp; Fit
+            .list-accordion__body(aria-hidden="true")
+              p This style is unisex. For man, take your normal size. For woman, take one size down than your usual size.
+              br
+              p Man model is 1m83 / 6'0" and is wearing a size M.Woman model is 1m79 / 5:10" and is wearing a size XS.
+
+          .list-accordion__item
+            button.list-accordion__title(aria-expanded="false") Size guide
+            .list-accordion__body(aria-hidden="true")
+              .table-product-size
+                .table-product-size__head
+                  div
+                  p S
+                  p M
+                  p L
+                  p XL
+                .table-product-size__body
+                  .table-product-size__row
+                    p BUST
+                    p 32”
+                    p 34”
+                    p 36”
+                    p 38”
+                  .table-product-size__row
+                    p  WAIST
+                    p 32”
+                    p 34”
+                    p 36”
+                    p 38”
+                  .table-product-size__row
+                    p HIP
+                    p 32”
+                    p 34”
+                    p 36”
+                    p 38”
+                  .table-product-size__row
+                    p LENGTH
+                    p 32”
+                    p 34”
+                    p 36”
+                    p 38”
               // /.table-info
 
           .list-accordion__item
-            button.list-accordion__title(aria-expanded="false") Find Item at store
+            button.list-accordion__title(aria-expanded="false") Caring Instructions
             .list-accordion__body(aria-hidden="true")
+              .box-product-instruction
+                ul
+                  li Wash with cold water only.
+                  li Wash inside-out on a gentle cycle or handwash.
+                  li Air Dry inside-out
+                  li Avoid bleach-based products / stain removers and aggressive detergents
+                .box-product-instruction__disclaimer
+                  p.box-product-instruction__titles Care Disclaimers :
+                  ul
+                    li Garment color may fade over time.
+                    li Denim dyes may bleed on other garments or furniture.
+                    li Exposure to direct sunlight may cause discoloration/color fastness (color fade).
+                    li High heat will cause warping and / or shrinkage of garment.
+
         // /.list-accordion
 
+      .sec-product-detail__review
   // /.sec-product-detail
 
   include /src/components/_box-marquee.pug

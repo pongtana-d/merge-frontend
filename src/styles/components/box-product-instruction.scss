@@ -1,0 +1,23 @@
+@use "../utilities" as *;
+
+.box-product-instruction {
+  @include text-body;
+
+  ul {
+    padding-left: 20px;
+    margin-left: 0;
+    list-style: disc;
+
+    > li::marker {
+      font-size: 0.7em;
+    }
+  }
+
+  &__disclaimer {
+    margin-top: 16px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+}

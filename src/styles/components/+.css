@@ -1,6 +1,7 @@
 @import "./box-marquee.scss";
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
+@import "./box-product-instruction.scss";
 @import "./btn-view-all.scss";
 @import "./card-product.scss";
 @import "./footer.scss";
@@ -21,4 +22,5 @@
 @import "./sec-flash-sale.scss";
 @import "./sec-product-detail.scss";
 @import "./sec-product-slider.scss";
-@import "./table-info.scss";
+@import "./table-product-size.scss";
+@import "./table-product-store.scss";
