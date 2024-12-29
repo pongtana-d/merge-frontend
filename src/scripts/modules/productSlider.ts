@@ -47,7 +47,6 @@ export default function productSlider() {
 
       clearInterval(intervalTime);
       intervalTime = setInterval(() => {
-        console.log('dodo');
         requestAnimationFrame(checkOverflowItem);
       }, 100);
     });

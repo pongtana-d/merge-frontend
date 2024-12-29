@@ -1,5 +1,6 @@
+// @ts-nocheck
 import $ from 'jquery';
-import countdown from 'countdown';
+import countdown from '../libs/countdownjs';
 
 export default function countDown() {
   const $el = $('.js-countdown');
