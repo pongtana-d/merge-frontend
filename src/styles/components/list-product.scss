@@ -1,21 +1,24 @@
 @use "../utilities" as *;
 
 .list-product {
-  display: grid;
   padding-top: 2px;
   background-color: var(--color-gray-3);
-  gap: 2px;
-  grid-template-columns: repeat(2, 1fr);
 
-  @include sm-gt {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  &__list {
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(2, 1fr);
 
-  @include md-gt {
-    grid-template-columns: repeat(4, 1fr);
-  }
+    @include sm-gt {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-  @include lg-gt {
-    grid-template-columns: repeat(5, 1fr);
+    @include md-gt {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include lg-gt {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 }

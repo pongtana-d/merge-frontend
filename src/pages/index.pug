@@ -47,7 +47,7 @@ block content
                     span.card-product__favorite-icon
                   p.card-product__name CORA PLUNGE BRALETTE
                   .card-product__price
-                    p.card-product__price-normal THB 1,500
+                    p THB 1,500
             .splide__slide
               .card-product
                 a.card-product__link(href="#" aria-label="View LARA BRA TOP")
@@ -59,7 +59,7 @@ block content
                     span.card-product__favorite-icon
                   p.card-product__name LARA BRA TOP
                   .card-product__price
-                    p.card-product__price-normal THB 1,500
+                    p THB 1,500
   // /sec-product-slider
 
   .sec-flash-sale
@@ -133,7 +133,7 @@ block content
                     ins.card-product__price-new THB 1,133
   // /sec-product-slider
 
-  a.btn-view-all(href="#"): span View All at Flash Sale
+  a.btn-view-all(href="/flashsale/"): span View All at Flash Sale
 
   section.main-visual
     figure.main-visual__image
@@ -162,7 +162,7 @@ block content
                     span.card-product__favorite-icon
                   p.card-product__name MERGE BABY TEE
                   .card-product__price
-                    p.card-product__price-normal THB 1,500
+                    p THB 1,500
             .splide__slide
               .card-product.card-product--black
                 a.card-product__link(href="#" aria-label="View FIZZ MINI SKIRT")
@@ -174,7 +174,7 @@ block content
                     span.card-product__favorite-icon
                   p.card-product__name FIZZ MINI SKIRT
                   .card-product__price
-                    p.card-product__price-normal THB 1,500
+                    p THB 1,500
   // /sec-product-slider
 
   section.main-visual
@@ -204,7 +204,7 @@ block content
                     span.card-product__favorite-icon
                   p.card-product__name CEMMA KNIT TOP
                   .card-product__price
-                    p.card-product__price-normal THB 1,500
+                    p THB 1,500
             .splide__slide
               .card-product
                 a.card-product__link(href="#" aria-label="View DELIGHT BRA TOP")
@@ -216,14 +216,7 @@ block content
                     span.card-product__favorite-icon
                   p.card-product__name DELIGHT BRA TOP
                   .card-product__price
-                    p.card-product__price-normal THB 1,500
+                    p THB 1,500
   // /sec-product-slider
 
-  .box-marquee
-    .splide.js-marquee-slider
-      .splide__track
-        .splide__list
-          .splide__slide
-            .box-marquee__text
-              p: span 30 DAYS TO RETURN
-              p //  Shop safely from home via #[span LINE @MERGE]
+  include /src/components/_box-marquee.pug

@@ -1,0 +1,98 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Product | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  section.sec-product-detail
+    .product-gallery.js-product-gallery
+      .splide
+        .splide__track
+          .splide__list
+            each i in Array(2)
+              .splide__slide
+                figure.product-gallery__image
+                  +img(src="/src/images/products/img-product-gallery-01.jpg" alt="")
+              .splide__slide
+                figure.product-gallery__image
+                  +img(src="/src/images/products/img-product-gallery-02.jpg" alt="")
+              .splide__slide
+                figure.product-gallery__image
+                  +img(src="/src/images/products/img-product-gallery-03.jpg" alt="")
+    .sec-product-detail__inner
+      .sec-product-detail__color
+        .product-color-slider.js-product-color-slider
+          .splide
+            .splide__track
+              .splide__list
+                .splide__slide
+                  figure.product-color-slider__image(aria-current="true")
+                    +img(src="/src/images/products/img-product-color-01.jpg" alt="")
+                each i in Array(2)
+                  .splide__slide
+                    figure.product-color-slider__image
+                      +img(src="/src/images/products/img-product-color-02.jpg" alt="")
+                  .splide__slide
+                    figure.product-color-slider__image
+                      +img(src="/src/images/products/img-product-color-01.jpg" alt="")
+                .splide__slide
+                  figure.product-color-slider__image
+                    +img(src="/src/images/products/img-product-color-01.jpg" alt="")
+      .sec-product-detail__heading
+        .box-product-detail-head
+          h1.box-product-detail-head__name SERENE SANCTUARY TOP
+          .box-product-detail-head__share
+            button.box-product-detail-head__btn-share.js-btn-share(aria-label="Share SERENE SANCTUARY TOP")
+              +img(src="/src/images/common/ico-share.svg" alt="")
+            label.box-product-detail-head__btn-favorite(aria-label="Add to favorite")
+              input(type="checkbox" name="favorite" value="")
+              span.box-product-detail-head__btn-favorite-icon
+        .box-product-detail-head__price
+          p THB 1,500
+        .box-product-detail-head__price
+          del.box-product-detail-head__price-old THB 1,500
+          ins.box-product-detail-head__price-new THB 1,133
+      .sec-product-detail__size
+        .box-product-detail-size
+          p.box-product-detail-size__title Select a Size :
+          .box-product-detail-size__list.js-product-size-slider
+            .splide
+              .splide__track
+                .splide__list
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="XXS")
+                      span.box-product-detail-size__text XXS
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="XS")
+                      span.box-product-detail-size__text XS
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="S")
+                      span.box-product-detail-size__text S
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="M")
+                      span.box-product-detail-size__text M
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="L")
+                      span.box-product-detail-size__text L
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="XL")
+                      span.box-product-detail-size__text XL
+                  .splide__slide
+                    label.box-product-detail-size__label
+                      input(type="radio" name="size" value="XXL")
+                      span.box-product-detail-size__text XXL
+
+  include /src/components/_box-marquee.pug

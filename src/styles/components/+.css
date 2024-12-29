@@ -1,4 +1,6 @@
 @import "./box-marquee.scss";
+@import "./box-product-detail-head.scss";
+@import "./box-product-detail-size.scss";
 @import "./btn-view-all.scss";
 @import "./card-product.scss";
 @import "./footer.scss";
@@ -11,7 +13,10 @@
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";
 @import "./nav-global.scss";
+@import "./product-color-slider.scss";
+@import "./product-gallery.scss";
 @import "./search-recent.scss";
 @import "./search-result.scss";
 @import "./sec-flash-sale.scss";
+@import "./sec-product-detail.scss";
 @import "./sec-product-slider.scss";

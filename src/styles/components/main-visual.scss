@@ -2,13 +2,13 @@
 
 .main-visual {
   position: relative;
-  height: calc(100dvh - 70px);
+  height: calc(100vh - 70px);
   min-height: 500px;
 
   @media (orientation: landscape) and (max-width: 767px) and (pointer: coarse) {
-    height: auto;
-    min-height: 0;
-    aspect-ratio: 375 / 634;
+    // height: auto;
+    // min-height: 0;
+    // aspect-ratio: 375 / 634;
   }
 
   @include md-gt {

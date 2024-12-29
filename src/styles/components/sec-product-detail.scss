@@ -1,0 +1,41 @@
+@use "../utilities" as *;
+
+.sec-product-detail {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+
+    @include sm-gt {
+      max-width: 470px;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &__color {
+    margin: 0 -16px;
+
+    @include sm-gt {
+      order: -1;
+      margin: 34px 0 0;
+    }
+  }
+
+  &__heading {
+    margin-top: 26px;
+
+    @include sm-gt {
+      order: -2;
+      margin-top: 42px;
+    }
+  }
+
+  &__size {
+    margin-top: 24px;
+
+    @include sm-gt {
+      margin-top: 26px;
+    }
+  }
+}

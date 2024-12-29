@@ -5,8 +5,10 @@ import navGlobal from './modules/navGlobal';
 import footer from './modules/footer';
 import navFavoriteSlider from './modules/navFavoriteSlider';
 import marqueeSlider from './modules/marqueeSlider';
-import productSlider from './modules/productSlider';
 import countdown from './modules/countdown';
+import productSlider from './modules/productSlider';
+import productDetail from './modules/productDetail';
+import btnShare from './modules/btnShare';
 
 document.addEventListener('DOMContentLoaded', () => {
   webFontLoader();
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   footer();
   navFavoriteSlider();
   marqueeSlider();
-  productSlider();
   countdown();
+  productSlider();
+  productDetail();
+  btnShare();
 });

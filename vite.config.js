@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import beautify from 'vite-plugin-beautify';
-import nodeFs from 'fs';
-import nodePath from 'path';
+import nodeFs from 'node:fs';
+import nodePath from 'node:path';
 import pug from '@vituum/vite-plugin-pug';
 import sizeOf from 'image-size';
 import stylelint from 'vite-plugin-stylelint';
