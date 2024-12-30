@@ -82,4 +82,10 @@
   &__review-total {
     @include text-body-bold;
   }
+
+  &__review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

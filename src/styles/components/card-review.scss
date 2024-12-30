@@ -1,0 +1,195 @@
+@use "../utilities" as *;
+
+.card-review {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include text-body-bold;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 2px;
+
+    > span {
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url(/src/images/common/ico-review-star-blank.svg) no-repeat;
+      background-size: contain;
+    }
+
+    &[data-score="1"] > span:first-child {
+      background-image: url(/src/images/common/ico-review-star-blue.svg);
+    }
+
+    &[data-score="2"] > span:nth-child(-n + 2) {
+      background-image: url(/src/images/common/ico-review-star-blue.svg);
+    }
+
+    &[data-score="3"] > span:nth-child(-n + 3) {
+      background-image: url(/src/images/common/ico-review-star-blue.svg);
+    }
+
+    &[data-score="4"] > span:nth-child(-n + 4) {
+      background-image: url(/src/images/common/ico-review-star-blue.svg);
+    }
+
+    &[data-score="5"] > span:nth-child(-n + 5) {
+      background-image: url(/src/images/common/ico-review-star-blue.svg);
+    }
+  }
+
+  &__description {
+    @include text-body;
+    margin-top: 10px;
+  }
+
+  &__image {
+    position: relative;
+    width: 116px;
+    height: 116px;
+    margin-top: 10px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__btn-edit {
+    @include text-body-small;
+
+    position: relative;
+    display: inline-block;
+    padding-left: 15px;
+    margin-top: 15px;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      background: url(/src/images/common/ico-trash.svg) no-repeat;
+      background-size: contain;
+      content: "";
+    }
+  }
+
+  &__edit-title {
+    @include text-body-bold;
+  }
+
+  &__edit-stars {
+    display: flex;
+    margin-top: 10px;
+
+    > label {
+      position: relative;
+      display: block;
+      padding: 0 1px;
+      cursor: pointer;
+
+      @include hover {
+        &:hover > span,
+        &:has(~ label:hover) > span {
+          background-image: url(/src/images/common/ico-review-star-blue.svg);
+        }
+      }
+
+      &:has(~ label > input:checked) > span {
+        background-image: url(/src/images/common/ico-review-star-blue.svg);
+      }
+
+      > input[type="radio"] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+
+        &:checked + span {
+          background-image: url(/src/images/common/ico-review-star-blue.svg);
+        }
+      }
+
+      > span {
+        display: block;
+        width: 18px;
+        height: 18px;
+        background: url(/src/images/common/ico-review-star-blank-02.svg) no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__edit-note {
+    @include text-body-small;
+    margin-top: 20px;
+  }
+
+  &__edit-textarea {
+    padding: 10px;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 3px;
+    margin-top: 10px;
+
+    textarea {
+      @include text-body;
+
+      width: 100%;
+      height: 65px;
+      outline: none;
+      resize: none;
+    }
+
+    &-count {
+      @include text-body-small-2;
+
+      margin-top: 5px;
+      color: var(--color-gray);
+      text-align: right;
+    }
+  }
+
+  &__edit-btn-save {
+    @include text-body-small;
+
+    display: flex;
+    width: 60px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 26px;
+    margin-top: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+  }
+}

@@ -36,7 +36,7 @@ block content
             button.box-product-detail-head__btn-share.js-btn-share(aria-label="Share SERENE SANCTUARY TOP")
               +img(src="/src/images/common/ico-share.svg" alt="")
             label.box-product-detail-head__btn-favorite(aria-label="Add to favorite")
-              input(type="checkbox" name="favorite" value="" inert)
+              input(type="checkbox" name="favorite" value="")
               span.box-product-detail-head__btn-favorite-icon
         .box-product-detail-head__price
           p THB 1,500
@@ -254,6 +254,47 @@ block content
                     .select-review-stars__stars
                       span
                     p (0)
+
+        .sec-product-detail__review-list
+          .card-review
+            .card-review__head
+              p.card-review__name Am********
+              .card-review__stars(data-score="4")
+                each i in Array(5)
+                  span
+            .card-review__description
+              p Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus
+            figure.card-review__image
+              +img(src="/src/images/products/img-review-product-01.jpg" alt="")
+          // /.card-review
+
+          .card-review
+            .card-review__head
+              p.card-review__name Ri********
+              .card-review__stars(data-score="3")
+                each i in Array(5)
+                  span
+            .card-review__description
+              p Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus in amet in id. Mattis neque facilisis semper parturient
+            figure.card-review__image
+              +img(src="/src/images/products/img-review-product-02.jpg" alt="")
+            button.card-review__btn-edit Edit my review
+          // /.card-review
+
+          .card-review
+            p.card-review__edit-title Rate the product quality.
+            .card-review__edit-stars
+              each i in Array.from({ length: 5 }, (_, i) => i)
+                label
+                  input(type="radio" name="score" value=i)
+                  span
+            p.card-review__edit-note Write a review of at least 100 characters.
+            .card-review__edit-textarea.js-textarea-count
+              textarea Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus in amet in id. Mattis neque facilisis semper parturient
+              p.card-review__edit-textarea-count #[span.js-number 96] Character
+            button.card-review__edit-btn-save Save
+          // /.card-review
+
       // /.sec-product-detail__review
 
   // /.sec-product-detail
