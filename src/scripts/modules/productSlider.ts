@@ -8,7 +8,7 @@ export default function productSlider() {
   if (!$elements.length) return;
 
   $elements.each(function () {
-    const slider = new Splide($(this).find('.splide').get(0) as HTMLElement, {
+    const slider = new Splide($(this).get(0) as HTMLElement, {
       type: 'slide',
       gap: 2,
       focus: 0,

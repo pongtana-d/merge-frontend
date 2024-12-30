@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import Splide from '@splidejs/splide';
+import { isSmLte } from './screen';
 
 const productGallery = () => {
   const $elements = $('.js-product-gallery');
@@ -7,13 +8,8 @@ const productGallery = () => {
   if (!$elements.length) return;
 
   $elements.each(function () {
-    /** set slider to center if less than viewport */
-    const totalSlide = $(this).find('.splide__slide').length;
-    if (totalSlide < 3) {
-      $(this).attr('data-center', 'true');
-    }
-
-    const slider = new Splide($(this).find('.splide').get(0) as HTMLElement, {
+    const $el = $(this);
+    const slider = new Splide($el.get(0) as HTMLElement, {
       type: 'slide',
       gap: 15,
       focus: 0,
@@ -30,9 +26,12 @@ const productGallery = () => {
     });
 
     slider.on('overflow', function (isOverflow) {
+      $el.attr('data-justify-center', (!isOverflow).toString());
+
       slider.go(0);
       slider.options = {
         drag: isOverflow,
+        pagination: isOverflow,
       };
     });
 
@@ -45,13 +44,7 @@ const productColor = () => {
 
   if (!$el.length) return;
 
-  const totalSlide = $el.find('.splide__slide').length;
-
-  if (totalSlide < 3) {
-    $el.css({ '--padding-inline': '16px' });
-  }
-
-  const slider = new Splide($el.find('.splide').get(0) as HTMLElement, {
+  const slider = new Splide($el.get(0) as HTMLElement, {
     type: 'slide',
     gap: 2,
     perPage: 4,
@@ -73,10 +66,12 @@ const productColor = () => {
   });
 
   slider.on('overflow', function (isOverflow) {
+    $el.attr('data-is-overflow', isOverflow.toString());
+
     slider.go(0);
     slider.options = {
       drag: isOverflow,
-      arrows: isOverflow,
+      arrows: isOverflow && !isSmLte(),
     };
   });
 
@@ -88,7 +83,7 @@ const productSize = () => {
 
   if (!$el.length) return;
 
-  const slider = new Splide($el.find('.splide').get(0) as HTMLElement, {
+  const slider = new Splide($el.get(0) as HTMLElement, {
     type: 'slide',
     gap: 12,
     drag: 'free',
@@ -112,8 +107,46 @@ const productSize = () => {
   slider.mount();
 };
 
+const productMatch = () => {
+  const $el = $('.js-product-match');
+
+  if (!$el.length) return;
+
+  const slider = new Splide($el.get(0) as HTMLElement, {
+    type: 'slide',
+    gap: 2,
+    fixedWidth: '22.222vw',
+    arrows: true,
+    pagination: false,
+    breakpoints: {
+      767: {
+        fixedWidth: '43.733vw',
+        arrows: false,
+      },
+      991: {
+        fixedWidth: '30.272vw',
+        arrows: false,
+      },
+    },
+  });
+
+  slider.on('overflow', function (isOverflow) {
+    $el.attr('data-is-overflow', isOverflow.toString());
+    $el.attr('data-justify-center', (!isOverflow).toString());
+
+    slider.go(0);
+    slider.options = {
+      drag: isOverflow,
+      arrows: isOverflow && !isSmLte(),
+    };
+  });
+
+  slider.mount();
+};
+
 export default function productDetail() {
   productGallery();
   productColor();
   productSize();
+  productMatch();
 }

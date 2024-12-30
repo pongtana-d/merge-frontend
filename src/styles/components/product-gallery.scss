@@ -1,14 +1,6 @@
 @use "../utilities" as *;
 
 .product-gallery {
-  &[data-center="true"] {
-    @include sm-gt {
-      .splide__list {
-        justify-content: center;
-      }
-    }
-  }
-
   &__image {
     position: relative;
     aspect-ratio: 375 / 570;
@@ -21,6 +13,14 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  .splide {
+    &[data-justify-center="true"] .splide__list {
+      @include sm-gt {
+        justify-content: center;
+      }
     }
   }
 

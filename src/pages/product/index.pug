@@ -12,8 +12,8 @@ block modal
 
 block content
   section.sec-product-detail
-    .product-gallery.js-product-gallery
-      .splide
+    .product-gallery
+      .splide.js-product-gallery
         .splide__track
           .splide__list
             each i in Array(2)
@@ -46,8 +46,8 @@ block content
       // /.box-product-detail-head
 
       .sec-product-detail__color
-        .product-color-slider.js-product-color-slider
-          .splide
+        .product-color-slider
+          .splide.js-product-color-slider
             .splide__track
               .splide__list
                 .splide__slide
@@ -68,8 +68,8 @@ block content
       .sec-product-detail__size
         .box-product-detail-size
           p.box-product-detail-size__title Select a Size :
-          .box-product-detail-size__list.js-product-size-slider
-            .splide
+          .box-product-detail-size__list
+            .splide.js-product-size-slider
               .splide__track
                 .splide__list
                   .splide__slide
@@ -297,6 +297,24 @@ block content
 
       // /.sec-product-detail__review
 
+    .sec-product-detail__match
+      h2.sec-product-detail__match-heading MATCH WITH
+      .sec-product-detail__match-list
+        .splide.js-product-match
+          .splide__track
+            .splide__list
+              .splide__slide
+                .card-product
+                  a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+                  figure.card-product__image
+                    +img(src="/src/images/products/img-product-01.jpg" alt="CORA PLUNGE BRALETTE")
+                  .card-product__info
+                    label.card-product__favorite(aria-label="Add to favorite")
+                      input(type="checkbox" name="favorite" value="")
+                      span.card-product__favorite-icon
+                    p.card-product__name CORA PLUNGE BRALETTE
+                    .card-product__price
+                      p THB 1,500
   // /.sec-product-detail
 
   include /src/components/_box-marquee.pug

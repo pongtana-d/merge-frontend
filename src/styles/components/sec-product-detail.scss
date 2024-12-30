@@ -88,4 +88,36 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  &__match {
+    padding-top: 10px;
+  }
+
+  &__match-heading {
+    @include text-title-3;
+
+    padding: 19.5px 16px;
+
+    @include sm-gt {
+      text-align: center;
+    }
+  }
+
+  &__match-list {
+    padding: 2px;
+
+    .splide {
+      &[data-is-overflow="false"] {
+        @include sm-lte {
+          padding: 0 16px;
+        }
+      }
+
+      &[data-justify-center="true"] .splide__list {
+        @include sm-gt {
+          justify-content: center;
+        }
+      }
+    }
+  }
 }
