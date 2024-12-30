@@ -144,9 +144,46 @@ const productMatch = () => {
   slider.mount();
 };
 
+const productRelated = () => {
+  const $el = $('.js-product-related');
+
+  if (!$el.length) return;
+
+  const slider = new Splide($el.get(0) as HTMLElement, {
+    type: 'slide',
+    gap: 2,
+    fixedWidth: '22.222vw',
+    arrows: true,
+    pagination: false,
+    breakpoints: {
+      767: {
+        destroy: true,
+      },
+      991: {
+        fixedWidth: '30.272vw',
+        arrows: false,
+      },
+    },
+  });
+
+  slider.on('overflow', function (isOverflow) {
+    $el.attr('data-is-overflow', isOverflow.toString());
+    $el.attr('data-justify-center', (!isOverflow).toString());
+
+    slider.go(0);
+    slider.options = {
+      drag: isOverflow,
+      arrows: isOverflow,
+    };
+  });
+
+  slider.mount();
+};
+
 export default function productDetail() {
   productGallery();
   productColor();
   productSize();
   productMatch();
+  productRelated();
 }

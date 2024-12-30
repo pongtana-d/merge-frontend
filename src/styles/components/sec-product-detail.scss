@@ -89,11 +89,11 @@
     gap: 10px;
   }
 
-  &__match {
-    padding-top: 10px;
+  &__related {
+    margin-top: 10px;
   }
 
-  &__match-heading {
+  &__related-heading {
     @include text-title-3;
 
     padding: 19.5px 16px;
@@ -116,6 +116,26 @@
       &[data-justify-center="true"] .splide__list {
         @include sm-gt {
           justify-content: center;
+        }
+      }
+    }
+  }
+
+  &__related-list {
+    padding: 2px;
+
+    .splide {
+      &[data-justify-center="true"] .splide__list {
+        @include sm-gt {
+          justify-content: center;
+        }
+      }
+
+      &:not(.is-active) .splide__list {
+        @include sm-lte {
+          display: grid;
+          gap: 2px;
+          grid-template-columns: 1fr 1fr;
         }
       }
     }
