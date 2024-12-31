@@ -24,10 +24,9 @@ export function screenLock(): void {
   if (isIOS() || isMacSafari()) {
     const top = $(window).scrollTop() || 0;
 
-    if ($('html').attr('data-screen-locked') === 'false') {
-      $('html').attr('data-screen-locked', 'true').css({ top: -top }).data('top', top);
-    }
+    $('html').attr('data-screen-locked', 'true').css({ top: -top }).data('top', top);
   } else {
+    $('html').css({ overflowY: 'scroll' });
     $('body').css({ overflowY: 'hidden' });
   }
 }
@@ -36,11 +35,10 @@ export function screenUnlock(): void {
   if (isIOS() || isMacSafari()) {
     const top = $('html').data('top') || 0;
 
-    if ($('html').attr('data-screen-locked') === 'true') {
-      $('html').attr('data-screen-locked', 'false').css({ top: '' });
-      $(window).scrollTop(top);
-    }
+    $('html').attr('data-screen-locked', 'false').css({ top: '' });
+    $(window).scrollTop(top);
   } else {
+    $('html').css({ overflowY: '' });
     $('body').css({ overflowY: '' });
   }
 }
