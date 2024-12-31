@@ -5,5 +5,6 @@
 @import "@splidejs/splide/css" layer(libs);
 
 @import "components/+.css" layer(components);
+@import "pages/+.css" layer(pages);
 
 @layer reset, tokens, base, libs, components, pages;

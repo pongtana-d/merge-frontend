@@ -42,7 +42,7 @@ export default defineConfig({
     vituum({
       input: ['./src/styles/styles.{css,scss}', './src/scripts/main.{js,ts}'],
       imports: {
-        paths: ['./src/styles/components/**'],
+        paths: ['./src/styles/components/**', './src/styles/pages/**'],
       },
     }),
     pug({

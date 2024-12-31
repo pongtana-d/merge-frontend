@@ -1,0 +1,41 @@
+@use "../utilities" as *;
+
+.breadcrumb {
+  overflow: auto;
+  padding: 23px 0;
+
+  @include sm-gt {
+    display: none;
+  }
+
+  &__list {
+    display: inline-flex;
+    padding: 0 16px;
+    white-space: nowrap;
+
+    > li {
+      @include text-body-small;
+
+      &:not(:first-child) {
+        position: relative;
+        padding-left: 14px;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 14px;
+          height: 14px;
+          background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
+          background-size: contain;
+          content: "";
+          transform: translateY(-50%);
+        }
+      }
+
+      &:last-child {
+        color: var(--color-gray);
+      }
+    }
+  }
+}

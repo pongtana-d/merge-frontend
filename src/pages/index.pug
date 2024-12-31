@@ -11,11 +11,7 @@ block append scripts
 block modal
 
 block content
-  section.main-visual
-    figure.main-visual__image
-      picture
-        source(media="(min-width:992px)" srcset="/src/images/home/img-mv-merge-sabina-pc.jpg")
-        +img(src="/src/images/home/img-mv-merge-sabina-sp.jpg" alt="MERGE X SABINA Collection")
+  .main-visual(style="--bg-desktop:url('/src/images/home/img-mv-merge-sabina-pc.jpg'); --bg-mobile:url('/src/images/home/img-mv-merge-sabina-sp.jpg')")
     h1.main-visual__heading
       span MERGE X SABINA
       span.main-visual__heading-sub Collection
@@ -135,11 +131,7 @@ block content
 
   a.btn-view-all(href="/flashsale/"): span View All at Flash Sale
 
-  section.main-visual
-    figure.main-visual__image
-      picture
-        source(media="(min-width:992px)" srcset="/src/images/home/img-mv-eternal-affair-pc.jpg")
-        +img(src="/src/images/home/img-mv-eternal-affair-sp.jpg" alt="ETERNAL AFFAIR Collection")
+  .main-visual(style="--bg-desktop:url('/src/images/home/img-mv-eternal-affair-pc.jpg'); --bg-mobile:url('/src/images/home/img-mv-eternal-affair-sp.jpg')")
     h2.main-visual__heading
       span ETERNAL AFFAIR
       span.main-visual__heading-sub Collection
@@ -177,11 +169,7 @@ block content
                     p THB 1,500
   // /sec-product-slider
 
-  section.main-visual
-    figure.main-visual__image
-      picture
-        source(media="(min-width:992px)" srcset="/src/images/home/img-mv-dashing-urbanite-pc.jpg")
-        +img(src="/src/images/home/img-mv-dashing-urbanite-sp.jpg" alt="DASHING URBANITE Collection")
+  .main-visual(style="--bg-desktop:url('/src/images/home/img-mv-dashing-urbanite-pc.jpg'); --bg-mobile:url('/src/images/home/img-mv-dashing-urbanite-sp.jpg')")
     h2.main-visual__heading
       span DASHING URBANITE
       span.main-visual__heading-sub Collection
@@ -218,5 +206,3 @@ block content
                   .card-product__price
                     p THB 1,500
   // /sec-product-slider
-
-  include /src/components/_box-marquee.pug

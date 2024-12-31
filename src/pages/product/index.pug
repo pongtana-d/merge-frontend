@@ -11,7 +11,7 @@ block append scripts
 block modal
 
 block content
-  section.sec-product-detail
+  section.p-product-detail
     .product-gallery
       .splide.js-product-gallery
         .splide__track
@@ -28,7 +28,7 @@ block content
                   +img(src="/src/images/products/img-product-gallery-03.jpg" alt="")
     // /.product-gallery
 
-    .sec-product-detail__inner
+    .p-product-detail__inner
       .box-product-detail-head
         .box-product-detail-head__inner
           h1.box-product-detail-head__name SERENE SANCTUARY TOP
@@ -45,7 +45,7 @@ block content
           ins.box-product-detail-head__price-new THB 1,133
       // /.box-product-detail-head
 
-      .sec-product-detail__color
+      .p-product-detail__color
         .product-color-slider
           .splide.js-product-color-slider
             .splide__track
@@ -65,7 +65,7 @@ block content
                     +img(src="/src/images/products/img-product-color-01.jpg" alt="")
         // /.product-color-slider
 
-      .sec-product-detail__size
+      .p-product-detail__size
         .box-product-detail-size
           p.box-product-detail-size__title Select a Size :
           .box-product-detail-size__list
@@ -102,9 +102,9 @@ block content
                       span.box-product-detail-size__text XXL
         // /.box-product-detail-size
 
-      button.sec-product-detail__btn-add-cart ADD TO CART
+      button.p-product-detail__btn-add-cart ADD TO CART
 
-      .sec-product-detail__info
+      .p-product-detail__info
         .list-accordion.js-list-accordion
           .list-accordion__item
             button.list-accordion__title(aria-expanded="false") Find Item at store
@@ -217,13 +217,13 @@ block content
 
         // /.list-accordion
 
-      .sec-product-detail__review
-        .sec-product-detail__review-heading
-          .sec-product-detail__review-title
-            p.sec-product-detail__review-score 4.9
+      .p-product-detail__review
+        .p-product-detail__review-heading
+          .p-product-detail__review-title
+            p.p-product-detail__review-score 4.9
             +img(src="/src/images/common/ico-star-blue.svg" alt="")
-            p.sec-product-detail__review-total Review score (21)
-          .sec-product-detail__review-filter
+            p.p-product-detail__review-total Review score (21)
+          .p-product-detail__review-filter
             .select-review-stars.js-select-review-stars
               input(type="hidden" name="review" value="all")
               button.select-review-stars__text(aria-expanded="false") All
@@ -255,7 +255,7 @@ block content
                       span
                     p (0)
 
-        .sec-product-detail__review-list
+        .p-product-detail__review-list
           .card-review
             .card-review__head
               p.card-review__name Am********
@@ -295,11 +295,11 @@ block content
             button.card-review__edit-btn-save Save
           // /.card-review
 
-      // /.sec-product-detail__review
+      // /.p-product-detail__review
 
-    .sec-product-detail__related
-      h2.sec-product-detail__related-heading MATCH WITH
-      .sec-product-detail__match-list
+    .p-product-detail__related
+      h2.p-product-detail__related-heading MATCH WITH
+      .p-product-detail__match-list
         .splide.js-product-match
           .splide__track
             .splide__list
@@ -315,11 +315,11 @@ block content
                     p.card-product__name CORA PLUNGE BRALETTE
                     .card-product__price
                       p THB 1,500
-    // /.sec-product-detail__related
+    // /.p-product-detail__related
 
-    .sec-product-detail__related
-      h2.sec-product-detail__related-heading YOU MAY ALSO LIKE
-      .sec-product-detail__related-list
+    .p-product-detail__related
+      h2.p-product-detail__related-heading YOU MAY ALSO LIKE
+      .p-product-detail__related-list
         .splide.js-product-related
           .splide__track
             .splide__list
@@ -371,8 +371,16 @@ block content
                     p.card-product__name CORA PLUNGE BRALETTE
                     .card-product__price
                       p THB 1,500
-    // /.sec-product-detail__related
+    // /.p-product-detail__related
 
-  // /.sec-product-detail
+  // /.p-product-detail
 
-  include /src/components/_box-marquee.pug
+  .breadcrumb
+    ul.breadcrumb__list
+      li
+        a(href="#") PRODUCT
+      li
+        a(href="#") OUTERWEAR
+      li
+        a(href="#") JEANS
+      li CORA PLUNGE BRALETTE

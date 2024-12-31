@@ -1,6 +1,6 @@
-@use "../utilities" as *;
+@use "../utilities/index" as *;
 
-.sec-product-detail {
+.p-product-detail {
   &__inner {
     padding: 16px 16px 0;
 

@@ -2,6 +2,7 @@
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
 @import "./box-product-instruction.scss";
+@import "./breadcrumb.scss";
 @import "./btn-view-all.scss";
 @import "./card-product.scss";
 @import "./card-review.scss";
@@ -21,7 +22,6 @@
 @import "./search-recent.scss";
 @import "./search-result.scss";
 @import "./sec-flash-sale.scss";
-@import "./sec-product-detail.scss";
 @import "./sec-product-slider.scss";
 @import "./select-review-stars.scss";
 @import "./table-product-size.scss";

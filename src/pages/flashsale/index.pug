@@ -11,11 +11,7 @@ block append scripts
 block modal
 
 block content
-  section.main-visual
-    figure.main-visual__image
-      picture
-        source(media="(min-width:992px)" srcset="/src/images/flashsale/img-mv-signature-jeans-pc.jpg")
-        +img(src="/src/images/flashsale/img-mv-signature-jeans-sp.jpg" alt="SIGNATURE JEANS Collection")
+  .main-visual(style="--bg-desktop:url('/src/images/flashsale/img-mv-signature-jeans-pc.jpg'); --bg-mobile:url('/src/images/flashsale/img-mv-signature-jeans-sp.jpg')")
     h1.main-visual__heading
       span SIGNATURE JEANS
       span.main-visual__heading-sub Collection
@@ -133,7 +129,4 @@ block content
                 ins.card-product__price-new THB 1,133
   // /.list-product
 
-  .loader-icon
-    .loader-icon__spinner
-
-  include /src/components/_box-marquee.pug
+  include /src/components/_loader-icon.pug
