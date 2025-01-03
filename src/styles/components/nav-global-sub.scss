@@ -21,6 +21,10 @@
     visibility: visible;
   }
 
+  &.is-hidden {
+    transform: translateX(-101%);
+  }
+
   &__container {
     display: flex;
     height: 100%;

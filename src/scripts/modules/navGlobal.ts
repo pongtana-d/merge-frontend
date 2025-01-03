@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { screenLock, screenUnlock } from './screen';
 
 const $nav = $('#nav-global');
+const $navMain = $('#nav-global-container');
 const $btnMenu = $('#btn-header-menu');
 const $overlay = $('#header-overlay');
 let menuLv = 0;
@@ -13,7 +14,13 @@ const closeNavGlobal = () => {
   screenUnlock();
 
   setTimeout(() => {
-    $nav.find('.nav-global-sub').attr({ 'aria-hidden': 'true', inert: '' });
+    $navMain.attr('aria-hidden', 'false');
+    $nav
+      .find('.nav-global-sub')
+      .attr({ 'aria-hidden': 'true', inert: '' })
+      .removeClass('is-hidden')
+      .removeAttr('style')
+      .removeAttr('data-level');
     menuLv = 0;
   }, 400);
 };
@@ -49,17 +56,34 @@ const initNavGlobalSub = () => {
     e.preventDefault();
     const id = $(this).data('target');
     const $target = $(`[data-id="${id}"]`);
+    menuLv++;
 
     if ($target.length) {
-      menuLv++;
-      $target.css('--z-index', menuLv).attr('aria-hidden', 'false').removeAttr('inert');
+      if (menuLv === 1) {
+        $navMain.attr('aria-hidden', 'true');
+      } else {
+        $(this).closest('.nav-global-sub').addClass('is-hidden');
+      }
+
+      $target.css('--z-index', menuLv).attr('data-level', menuLv).attr('aria-hidden', 'false').removeAttr('inert');
     }
   });
 
   $btnBackMain.on('click', function (e) {
     e.preventDefault();
-    $(this).closest('[aria-hidden]').attr({ 'aria-hidden': 'true', inert: '' }).removeAttr('style');
     menuLv--;
+
+    if (menuLv === 0) {
+      $navMain.attr('aria-hidden', 'false');
+    } else {
+      $nav.find(`[data-level="${menuLv}"]`).removeClass('is-hidden');
+    }
+
+    $(this)
+      .closest('[aria-hidden]')
+      .attr({ 'aria-hidden': 'true', inert: '' })
+      .removeAttr('style')
+      .removeAttr('data-level');
   });
 };
 
