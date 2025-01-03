@@ -12,6 +12,8 @@ export default function productSlider() {
       type: 'slide',
       gap: 2,
       focus: 0,
+      speed: 500,
+      flickPower: 200,
       fixedWidth: '22.222vw',
       omitEnd: true,
       arrows: true,
