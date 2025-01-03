@@ -18,9 +18,9 @@ const closeNavGlobal = () => {
     $nav
       .find('.nav-global-sub')
       .attr({ 'aria-hidden': 'true', inert: '' })
-      .removeClass('is-hidden')
       .removeAttr('style')
-      .removeAttr('data-level');
+      .removeAttr('data-level')
+      .removeClass('is-hidden');
     menuLv = 0;
   }, 400);
 };

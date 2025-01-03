@@ -1,2 +1,15 @@
-- const search = 'not-found'
-include /src/components/_home.pug
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Merge',
+    }
+    const search = 'not-found'
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/pages/_home.pug
