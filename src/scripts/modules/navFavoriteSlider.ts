@@ -12,8 +12,10 @@ export default function navFavoriteSlider() {
     fixedWidth: 130,
     gap: 2,
     focus: 0,
-    omitEnd: true,
+    speed: 500,
+    flickPower: 200,
     padding: { left: 16, right: 16 },
+    omitEnd: true,
     arrows: true,
     pagination: false,
     breakpoints: {

@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content=('width=device-width,initial-scale=1.0,minimum-scale=1.0'))
+    meta(name='format-detection' content='telephone=no')
+    title Merge
+    link(rel="stylesheet" href="/src/styles/styles.scss")
+  body
+    style.
+      ._list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+
+        a {
+          font-size: 18px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    ul._list
+      li: a(href="/" target="_blank") Home
+      li: a(href="/index-search-notfound.html" target="_blank") Home (search not found)
+      li: a(href="/index-search-result.html" target="_blank") Home (search with result)
+      li: a(href="/index-favorite.html" target="_blank") Home (with my favorite)
+      li: a(href="/collection/" target="_blank") Collection
+      li: a(href="/flashsale/" target="_blank") Flash sale
+      li: a(href="/product/" target="_blank") Product

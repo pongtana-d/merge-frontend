@@ -32,21 +32,24 @@ nav.nav-global#nav-global(inert aria-hidden="true")
             .nav-global__link-icon
               +img(src="/src/images/common/ico-favorite-off.svg" alt="")
               span MY FAVORITE
-            a.nav-global__favorite-link(href="/my-favorite") SEE ALL
-          p.nav-global__favorite-none You don’t have any favorites
-          .nav-favorite-slider#nav-favorite-slider
-            .splide
-              .splide__track
-                .splide__list
-                  .splide__slide
-                    a.nav-favorite-slider__card(href="#")
-                      +img(src="/src/images/products/img-product-01.webp" alt="")
-                  .splide__slide
-                    a.nav-favorite-slider__card(href="#")
-                      +img(src="/src/images/products/img-product-01.webp" alt="")
-                  .splide__slide
-                    a.nav-favorite-slider__card(href="#")
-                      +img(src="/src/images/products/img-product-01.webp" alt="")
+            if hasFavorite
+              a.nav-global__favorite-link(href="/my-favorite") SEE ALL
+          if hasFavorite
+            .nav-favorite-slider#nav-favorite-slider
+              .splide
+                .splide__track
+                  .splide__list
+                    .splide__slide
+                      a.nav-favorite-slider__card(href="#")
+                        +img(src="/src/images/products/img-product-01.webp" alt="")
+                    .splide__slide
+                      a.nav-favorite-slider__card(href="#")
+                        +img(src="/src/images/products/img-product-01.webp" alt="")
+                    .splide__slide
+                      a.nav-favorite-slider__card(href="#")
+                        +img(src="/src/images/products/img-product-01.webp" alt="")
+          else
+            p.nav-global__favorite-none You don’t have any favorites
         li
           a.nav-global__link-icon(href="/my-account")
             +img(src="/src/images/common/ico-profile.svg" alt="")
