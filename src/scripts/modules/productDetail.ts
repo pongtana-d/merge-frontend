@@ -11,7 +11,7 @@ const productGallery = () => {
     const $el = $(this);
     const slider = new Splide($el.get(0) as HTMLElement, {
       type: 'slide',
-      gap: 15,
+      gap: 5,
       focus: 0,
       perPage: 3,
       perMove: 1,
@@ -23,6 +23,7 @@ const productGallery = () => {
       breakpoints: {
         767: {
           perPage: 1,
+          gap: 1,
         },
       },
     });
