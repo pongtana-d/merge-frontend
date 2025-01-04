@@ -141,16 +141,16 @@
     }
 
     .splide__arrow {
-      left: 28px;
-      width: 24px;
-      height: 24px;
+      left: 30px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background-color: var(--color-white);
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
       opacity: 1;
       transition: background 0.2s ease-out;
 
-      &:not(:disabled):hover {
+      &:hover:not(:disabled) {
         background-color: var(--color-blue);
 
         &::after {
@@ -173,17 +173,17 @@
           position: absolute;
           top: 0;
           left: 0;
-          width: 24px;
-          height: 24px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
-          background: url(/src/images/common/ico-arrow-prev-black.svg) no-repeat;
+          background: url(/src/images/common/ico-arrow-prev-black-lg.svg) no-repeat;
           background-size: contain;
           content: "";
         }
       }
 
       &--next {
-        right: 28px;
+        right: 30px;
         left: auto;
 
         &::after {

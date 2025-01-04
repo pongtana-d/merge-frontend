@@ -7,14 +7,6 @@
   height: 100%;
   background-color: var(--color-white);
 
-  &:hover {
-    @include hover {
-      #{$root}__image > img {
-        transform: scale(1.08);
-      }
-    }
-  }
-
   &__link {
     position: absolute;
     z-index: 2;
@@ -37,7 +29,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease-out;
     }
   }
 
