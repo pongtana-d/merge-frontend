@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import Splide from '@splidejs/splide';
-import { isSmLte } from './screen';
+import { isSmLte, isMdLte } from './screen';
 
 const productGallery = () => {
   const $elements = $('.js-product-gallery');
@@ -175,6 +175,34 @@ const productRelated = () => {
         arrows: false,
       },
     },
+  });
+
+  let intervalTime: number;
+
+  const checkOverflowItem = () => {
+    slider.Components.Elements.slides.forEach((el) => {
+      const react = el.getBoundingClientRect();
+      const isOverflow = react.right > document.documentElement.clientWidth;
+      $(el).toggleClass('is-overflow', isOverflow);
+    });
+  };
+
+  slider.on('ready resized', function () {
+    checkOverflowItem();
+  });
+
+  slider.on('move drag', function () {
+    if (isMdLte()) return;
+
+    clearInterval(intervalTime);
+    intervalTime = setInterval(() => {
+      requestAnimationFrame(checkOverflowItem);
+    }, 100);
+  });
+
+  slider.on('moved dragged active', function () {
+    clearInterval(intervalTime);
+    requestAnimationFrame(checkOverflowItem);
   });
 
   slider.on('overflow', function (isOverflow) {

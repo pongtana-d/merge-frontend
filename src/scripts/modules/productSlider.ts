@@ -55,6 +55,7 @@ export default function productSlider() {
 
     slider.on('moved dragged active', function () {
       clearInterval(intervalTime);
+      requestAnimationFrame(checkOverflowItem);
     });
 
     slider.on('overflow', function (isOverflow) {

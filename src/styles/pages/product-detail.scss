@@ -140,6 +140,16 @@
       }
     }
 
+    .splide__slide {
+      @include md-gt {
+        transition: opacity 0.1s ease-out;
+
+        &.is-overflow {
+          opacity: 0.5;
+        }
+      }
+    }
+
     .splide__arrow {
       left: 30px;
       width: 40px;

@@ -19,7 +19,7 @@
   .splide.js-product-slider
     .splide__track
       .splide__list
-        each i in Array(4)
+        each i in Array(3)
           .splide__slide
             .card-product
               a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
@@ -42,6 +42,42 @@
                   input(type="checkbox" name="favorite" value="")
                   span.card-product__favorite-icon
                 p.card-product__name LARA BRA TOP
+                .card-product__price
+                  p THB 1,500
+          .splide__slide
+            .card-product
+              a.card-product__link(href="#" aria-label="View DEVA LACE TOP")
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-03.webp" alt="DEVA LACE TOP")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name DEVA LACE TOP
+                .card-product__price
+                  p THB 1,500
+          .splide__slide
+            .card-product
+              a.card-product__link(href="#" aria-label="View AVA DENIM SKIRT")
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-04.webp" alt="AVA DENIM SKIRT")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name AVA DENIM SKIRT
+                .card-product__price
+                  p THB 1,500
+          .splide__slide
+            .card-product
+              a.card-product__link(href="#" aria-label="View GAIA HIGHCUT BODYSUIT")
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-05.webp" alt="GAIA HIGHCUT BODYSUIT")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name GAIA HIGHCUT BODYSUIT
                 .card-product__price
                   p THB 1,500
 // /sec-product-slider
@@ -86,32 +122,60 @@
   .splide.js-product-slider
     .splide__track
       .splide__list
-        each i in Array(4)
+        each i in Array(3)
           .splide__slide
             .card-product
-              a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+              a.card-product__link(href="#" aria-label="View ARI TIE CROP TOP")
               p.card-product__discount -30% OFF
               figure.card-product__image
-                +img(src="/src/images/products/img-product-01.webp" alt="CORA PLUNGE BRALETTE")
+                +img(src="/src/images/products/img-product-sale-01.webp" alt="ARI TIE CROP TOP")
               .card-product__info
                 label.card-product__favorite(aria-label="Add to favorite")
                   input(type="checkbox" name="favorite" value="")
                   span.card-product__favorite-icon
-                p.card-product__name CORA PLUNGE BRALETTE
+                p.card-product__name ARI TIE CROP TOP
                 .card-product__price
                   del.card-product__price-old THB 1,500
                   ins.card-product__price-new THB 1,133
           .splide__slide
             .card-product
-              a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
+              a.card-product__link(href="#" aria-label="View MAGNETIC BLUE")
               p.card-product__discount -30% OFF
               figure.card-product__image
-                +img(src="/src/images/products/img-product-02.webp" alt="CORA PLUNGE BRALETTE")
+                +img(src="/src/images/products/img-product-sale-02.webp" alt="MAGNETIC BLUE")
               .card-product__info
                 label.card-product__favorite(aria-label="Add to favorite")
                   input(type="checkbox" name="favorite" value="")
                   span.card-product__favorite-icon
-                p.card-product__name CORA PLUNGE BRALETTE
+                p.card-product__name MAGNETIC BLUE
+                .card-product__price
+                  del.card-product__price-old THB 1,500
+                  ins.card-product__price-new THB 1,133
+          .splide__slide
+            .card-product
+              a.card-product__link(href="#" aria-label="View NIKKI SHORTS DENIM BLUE")
+              p.card-product__discount -30% OFF
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-sale-03.webp" alt="NIKKI SHORTS DENIM BLUE")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name NIKKI SHORTS DENIM BLUE
+                .card-product__price
+                  del.card-product__price-old THB 1,500
+                  ins.card-product__price-new THB 1,133
+          .splide__slide
+            .card-product
+              a.card-product__link(href="#" aria-label="View SIGNATURE JEANS BLUE")
+              p.card-product__discount -30% OFF
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-sale-04.webp" alt="SIGNATURE JEANS BLUE")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name SIGNATURE JEANS BLUE
                 .card-product__price
                   del.card-product__price-old THB 1,500
                   ins.card-product__price-new THB 1,133
@@ -131,7 +195,7 @@ a.btn-view-all(href="/flashsale/"): span View All at Flash Sale
   .splide.js-product-slider
     .splide__track
       .splide__list
-        each i in Array(4)
+        each i in Array(3)
           .splide__slide
             .card-product.card-product--black
               a.card-product__link(href="#" aria-label="View MERGE BABY TEE")
@@ -154,6 +218,18 @@ a.btn-view-all(href="/flashsale/"): span View All at Flash Sale
                   input(type="checkbox" name="favorite" value="")
                   span.card-product__favorite-icon
                 p.card-product__name FIZZ MINI SKIRT
+                .card-product__price
+                  p THB 1,500
+          .splide__slide
+            .card-product.card-product--black
+              a.card-product__link(href="#" aria-label="View FOND TOP")
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-eternal-03.webp" alt="FOND TOP")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name FOND TOP
                 .card-product__price
                   p THB 1,500
 // /sec-product-slider
@@ -193,6 +269,18 @@ a.btn-view-all(href="/flashsale/"): span View All at Flash Sale
                   input(type="checkbox" name="favorite" value="")
                   span.card-product__favorite-icon
                 p.card-product__name DELIGHT BRA TOP
+                .card-product__price
+                  p THB 1,500
+          .splide__slide
+            .card-product
+              a.card-product__link(href="#" aria-label="View M LINE KNIT TOP")
+              figure.card-product__image
+                +img(src="/src/images/products/img-product-dashing-03.webp" alt="M LINE KNIT TOP")
+              .card-product__info
+                label.card-product__favorite(aria-label="Add to favorite")
+                  input(type="checkbox" name="favorite" value="")
+                  span.card-product__favorite-icon
+                p.card-product__name M LINE KNIT TOP
                 .card-product__price
                   p THB 1,500
 // /sec-product-slider
