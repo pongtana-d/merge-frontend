@@ -1,37 +1,21 @@
 import $ from 'jquery';
-import Splide from '@splidejs/splide';
-import { isSmLte } from './screen';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 
 export default function navFavoriteSlider() {
-  const $el = $('#nav-favorite-slider .splide');
+  const $el = $('#nav-favorite-slider .swiper');
 
   if (!$el.length) return;
 
-  const slider = new Splide($el.get(0) as HTMLElement, {
-    type: 'slide',
-    fixedWidth: 130,
-    gap: 2,
-    focus: 0,
-    speed: 500,
-    flickPower: 200,
-    padding: { left: 16, right: 16 },
-    omitEnd: true,
-    arrows: true,
-    pagination: false,
-    breakpoints: {
-      767: {
-        arrows: false,
-      },
+  new Swiper($el.get(0) as HTMLElement, {
+    modules: [Navigation],
+    slidesPerView: 2.73,
+    spaceBetween: 2,
+    slidesOffsetBefore: 16,
+    slidesOffsetAfter: 16,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
-
-  slider.on('overflow', function (isOverflow) {
-    slider.go(0);
-    slider.options = {
-      arrows: isOverflow && !isSmLte(),
-      drag: isOverflow,
-    };
-  });
-
-  slider.mount();
 }

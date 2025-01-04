@@ -3,17 +3,37 @@
 .nav-favorite-slider {
   margin: 15px -16px 0;
 
-  .splide__arrow {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
     left: 28px;
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    margin: 0;
     background-color: var(--color-white);
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
     opacity: 1;
+    transform: translateY(-50%);
     transition: background 0.2s ease-out;
 
-    &:not(:disabled):hover {
+    @include md-lte {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: url(/src/images/common/ico-arrow-prev-black.svg) no-repeat;
+      background-size: contain;
+      content: "";
+    }
+
+    &:hover:not(.swiper-button-disabled) {
       background-color: var(--color-blue);
 
       &::after {
@@ -21,37 +41,19 @@
       }
     }
 
-    > svg {
-      display: none;
+    &.swiper-button-disabled {
+      cursor: default;
+      opacity: 0.5;
+      pointer-events: auto;
     }
+  }
 
-    &--prev,
-    &--next {
-      &:disabled {
-        cursor: default;
-        opacity: 0.5;
-      }
+  .swiper-button-next {
+    right: 28px;
+    left: auto;
 
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background: url(/src/images/common/ico-arrow-prev-black.svg) no-repeat;
-        background-size: contain;
-        content: "";
-      }
-    }
-
-    &--next {
-      right: 28px;
-      left: auto;
-
-      &::after {
-        transform: rotate(180deg);
-      }
+    &::after {
+      transform: rotate(180deg);
     }
   }
 

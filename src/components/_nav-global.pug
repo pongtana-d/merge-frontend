@@ -36,18 +36,19 @@ nav.nav-global#nav-global(inert aria-hidden="true")
               a.nav-global__favorite-link(href="/my-favorite") SEE ALL
           if hasFavorite
             .nav-favorite-slider#nav-favorite-slider
-              .splide
-                .splide__track
-                  .splide__list
-                    .splide__slide
-                      a.nav-favorite-slider__card(href="#")
-                        +img(src="/src/images/products/img-product-01.webp" alt="")
-                    .splide__slide
-                      a.nav-favorite-slider__card(href="#")
-                        +img(src="/src/images/products/img-product-01.webp" alt="")
-                    .splide__slide
-                      a.nav-favorite-slider__card(href="#")
-                        +img(src="/src/images/products/img-product-01.webp" alt="")
+              .swiper
+                button.swiper-button-prev
+                button.swiper-button-next
+                .swiper-wrapper
+                  .swiper-slide
+                    a.nav-favorite-slider__card(href="#")
+                      +img(src="/src/images/products/img-product-01.webp" alt="")
+                  .swiper-slide
+                    a.nav-favorite-slider__card(href="#")
+                      +img(src="/src/images/products/img-product-02.webp" alt="")
+                  .swiper-slide
+                    a.nav-favorite-slider__card(href="#")
+                      +img(src="/src/images/products/img-product-03.webp" alt="")
           else
             p.nav-global__favorite-none You don’t have any favorites
         li
