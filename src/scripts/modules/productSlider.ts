@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import Splide from '@splidejs/splide';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 import { isMdLte } from './screen';
 
 export default function productSlider() {
@@ -7,65 +8,51 @@ export default function productSlider() {
 
   if (!$elements.length) return;
 
+  const checkOverflowItem = (swiper: Swiper): void => {
+    if (isMdLte()) return;
+    swiper.slides.forEach((el: HTMLElement) => {
+      const react: DOMRect = el.getBoundingClientRect();
+      const isOverflow: boolean = react.right > document.documentElement.clientWidth;
+      $(el).toggleClass('is-overflow', isOverflow);
+    });
+  };
+
   $elements.each(function () {
-    const slider = new Splide($(this).get(0) as HTMLElement, {
-      type: 'slide',
-      gap: 2,
-      focus: 0,
-      speed: 500,
-      flickPower: 200,
-      fixedWidth: '22.222vw',
-      omitEnd: true,
-      arrows: true,
-      pagination: false,
+    let timer: number;
+
+    new Swiper($(this).get(0) as HTMLElement, {
+      modules: [Navigation],
+      spaceBetween: 2,
+      slidesPerView: 2.262,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       breakpoints: {
-        767: {
-          fixedWidth: '43.733vw',
-          arrows: false,
+        768: {
+          slidesPerView: 3.475,
         },
-        991: {
-          fixedWidth: '30.272vw',
-          arrows: false,
+        992: {
+          slidesPerView: 4.475,
+        },
+      },
+      on: {
+        afterInit: (swiper) => {
+          checkOverflowItem(swiper);
+        },
+        slideChange: (swiper) => {
+          requestAnimationFrame(() => checkOverflowItem(swiper));
+        },
+        slideChangeTransitionEnd: (swiper) => {
+          requestAnimationFrame(() => checkOverflowItem(swiper));
+        },
+        sliderMove: (swiper) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            requestAnimationFrame(() => checkOverflowItem(swiper));
+          }, 100);
         },
       },
     });
-
-    let intervalTime: number;
-
-    const checkOverflowItem = () => {
-      slider.Components.Elements.slides.forEach((el) => {
-        const react = el.getBoundingClientRect();
-        const isOverflow = react.right > document.documentElement.clientWidth;
-        $(el).toggleClass('is-overflow', isOverflow);
-      });
-    };
-
-    slider.on('ready resized', function () {
-      checkOverflowItem();
-    });
-
-    slider.on('move drag', function () {
-      if (isMdLte()) return;
-
-      clearInterval(intervalTime);
-      intervalTime = setInterval(() => {
-        requestAnimationFrame(checkOverflowItem);
-      }, 100);
-    });
-
-    slider.on('moved dragged active', function () {
-      clearInterval(intervalTime);
-      requestAnimationFrame(checkOverflowItem);
-    });
-
-    slider.on('overflow', function (isOverflow) {
-      slider.go(0);
-      slider.options = {
-        arrows: isOverflow && !isMdLte(),
-        drag: isOverflow,
-      };
-    });
-
-    slider.mount();
   });
 }

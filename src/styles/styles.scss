@@ -3,6 +3,9 @@
 @import "foundation/base.scss" layer(base);
 
 @import "@splidejs/splide/css" layer(libs);
+@import "swiper/css" layer(libs);
+@import "swiper/css/navigation" layer(libs);
+@import "swiper/css/pagination" layer(libs);
 
 @import "components/+.css" layer(components);
 @import "pages/+.css" layer(pages);
