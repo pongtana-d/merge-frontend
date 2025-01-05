@@ -1,44 +1,32 @@
 import $ from 'jquery';
 import Splide from '@splidejs/splide';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { isSmLte, isMdLte } from './screen';
 
 const productGallery = () => {
-  const $elements = $('.js-product-gallery');
+  const $el = $('.js-product-gallery');
 
-  if (!$elements.length) return;
+  if (!$el.length) return;
 
-  $elements.each(function () {
-    const $el = $(this);
-    const slider = new Splide($el.get(0) as HTMLElement, {
-      type: 'slide',
-      gap: 5,
-      focus: 0,
-      perPage: 3,
-      perMove: 1,
-      speed: 500,
-      flickPower: 200,
-      omitEnd: true,
-      arrows: false,
-      pagination: true,
-      breakpoints: {
-        767: {
-          perPage: 1,
-          gap: 1,
-        },
+  if ($el.find('.swiper-slide').length < 3) {
+    $el.attr('data-justify-center', 'true');
+  }
+
+  new Swiper($el.get(0) as HTMLElement, {
+    modules: [Pagination],
+    slidesPerView: 1,
+    spaceBetween: 1,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 5,
       },
-    });
-
-    slider.on('overflow', function (isOverflow) {
-      $el.attr('data-justify-center', (!isOverflow).toString());
-
-      slider.go(0);
-      slider.options = {
-        drag: isOverflow,
-        pagination: isOverflow,
-      };
-    });
-
-    slider.mount();
+    },
   });
 };
 
@@ -47,40 +35,32 @@ const productColor = () => {
 
   if (!$el.length) return;
 
-  const slider = new Splide($el.get(0) as HTMLElement, {
-    type: 'slide',
-    gap: 2,
-    perPage: 4,
-    perMove: 1,
-    speed: 500,
-    flickPower: 200,
-    arrows: true,
-    pagination: false,
+  const totalItems = $el.find('.swiper-slide').length;
+
+  new Swiper($el.get(0) as HTMLElement, {
+    modules: [Navigation],
+    slidesPerView: 3.181,
+    spaceBetween: 2,
+    slidesOffsetBefore: totalItems > 3 ? 0 : 16,
+    slidesOffsetAfter: totalItems > 3 ? 0 : 16,
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
     breakpoints: {
-      767: {
-        fixedWidth: '31.4667vw',
-        perPage: 0,
-        arrows: false,
+      768: {
+        slidesPerView: 4,
+        slidesOffsetBefore: 0,
+        slidesOffsetAfter: 0,
+      },
+    },
+    on: {
+      afterInit: (swiper) => {
+        const activeIndex = $(swiper.slides).find('[aria-current="true"]').parent().index();
+        if (activeIndex >= 0) swiper.slideTo(activeIndex);
       },
     },
   });
-
-  slider.on('ready', function () {
-    const activeIndex = $(slider.Components.Elements.list).find('[aria-current="true"]').parent().index();
-    if (activeIndex >= 0) slider.go(activeIndex);
-  });
-
-  slider.on('overflow', function (isOverflow) {
-    $el.attr('data-is-overflow', isOverflow.toString());
-
-    slider.go(0);
-    slider.options = {
-      drag: isOverflow,
-      arrows: isOverflow && !isSmLte(),
-    };
-  });
-
-  slider.mount();
 };
 
 const productSize = () => {

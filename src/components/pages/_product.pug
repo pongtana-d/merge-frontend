@@ -1,18 +1,18 @@
 section.p-product-detail
   .product-gallery
-    .splide.js-product-gallery
-      .splide__track
-        .splide__list
-          each i in Array(2)
-            .splide__slide
-              figure.product-gallery__image
-                +img(src="/src/images/products/img-product-gallery-01.webp" alt="")
-            .splide__slide
-              figure.product-gallery__image
-                +img(src="/src/images/products/img-product-gallery-02.webp" alt="")
-            .splide__slide
-              figure.product-gallery__image
-                +img(src="/src/images/products/img-product-gallery-03.webp" alt="")
+    .swiper.js-product-gallery
+      .swiper-wrapper
+        each i in Array(2)
+          .swiper-slide
+            figure.product-gallery__image
+              +img(src="/src/images/products/img-product-gallery-01.webp" alt="")
+          .swiper-slide
+            figure.product-gallery__image
+              +img(src="/src/images/products/img-product-gallery-02.webp" alt="")
+          .swiper-slide
+            figure.product-gallery__image
+              +img(src="/src/images/products/img-product-gallery-03.webp" alt="")
+      .swiper-pagination
   // /.product-gallery
 
   .p-product-detail__inner
@@ -35,27 +35,28 @@ section.p-product-detail
 
     .p-product-detail__color
       .product-color-slider
-        .splide.js-product-color-slider
-          .splide__track
-            .splide__list
-              .splide__slide
-                a.product-color-slider__image(href="/product/" aria-current="true")
-                  +img(src="/src/images/products/img-product-color-01.webp" alt="")
-              .splide__slide
-                a.product-color-slider__image(href="/product/product-02.html")
-                  +img(src="/src/images/products/img-product-color-02.webp" alt="")
-              .splide__slide
-                a.product-color-slider__image(href="/product/product-03.html")
-                  +img(src="/src/images/products/img-product-color-01.webp" alt="")
-              .splide__slide
-                a.product-color-slider__image
-                  +img(src="/src/images/products/img-product-color-02.webp" alt="")
-              .splide__slide
-                a.product-color-slider__image
-                  +img(src="/src/images/products/img-product-color-01.webp" alt="")
-              .splide__slide
-                a.product-color-slider__image
-                  +img(src="/src/images/products/img-product-color-02.webp" alt="")
+        .swiper.js-product-color-slider
+          button.swiper-button-prev
+          button.swiper-button-next
+          .swiper-wrapper
+            .swiper-slide
+              a.product-color-slider__image(href="/product/" aria-current="true")
+                +img(src="/src/images/products/img-product-color-01.webp" alt="")
+            .swiper-slide
+              a.product-color-slider__image(href="/product/product-02.html")
+                +img(src="/src/images/products/img-product-color-02.webp" alt="")
+            .swiper-slide
+              a.product-color-slider__image(href="/product/product-03.html")
+                +img(src="/src/images/products/img-product-color-01.webp" alt="")
+            .swiper-slide
+              a.product-color-slider__image
+                +img(src="/src/images/products/img-product-color-02.webp" alt="")
+            .swiper-slide
+              a.product-color-slider__image
+                +img(src="/src/images/products/img-product-color-01.webp" alt="")
+            .swiper-slide
+              a.product-color-slider__image
+                +img(src="/src/images/products/img-product-color-02.webp" alt="")
       // /.product-color-slider
 
     .p-product-detail__size
