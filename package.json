@@ -11,7 +11,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint:css": "stylelint 'src/styles/**/*.css' --fix --allow-empty-input"
+    "lint:css": "stylelint 'src/styles/**/*.scss' --fix --allow-empty-input"
   },
   "devDependencies": {
     "@types/countdown": "^0.0.12",
@@ -20,6 +20,7 @@
     "@vituum/vite-plugin-pug": "^1.1.0",
     "autoprefixer": "^10.4.20",
     "image-size": "^1.1.1",
+    "meow": "^9.0.0",
     "prettier": "^3.4.2",
     "sass-embedded": "^1.83.0",
     "sharp": "^0.33.5",
@@ -30,8 +31,8 @@
     "typescript": "~5.6.2",
     "vite": "^6.0.6",
     "vite-plugin-beautify": "^1.0.0",
+    "vite-plugin-checker": "^0.8.0",
     "vite-plugin-image-optimizer": "^1.1.8",
-    "vite-plugin-stylelint": "^6.0.0",
     "vituum": "^1.1.1",
     "webfontloader": "^1.6.28"
   },

@@ -1,14 +1,18 @@
 import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import beautify from 'vite-plugin-beautify';
+import checker from 'vite-plugin-checker';
 import nodeFs from 'node:fs';
 import nodePath from 'node:path';
 import pug from '@vituum/vite-plugin-pug';
 import sizeOf from 'image-size';
-import stylelint from 'vite-plugin-stylelint';
+
 import vituum from 'vituum';
 
 export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+  },
   css: {
     devSourcemap: true,
   },
@@ -45,6 +49,12 @@ export default defineConfig({
         paths: ['./src/styles/components/**', './src/styles/pages/**'],
       },
     }),
+    checker({
+      stylelint: {
+        lintCommand: 'stylelint src/styles/**/*.scss --allow-empty-input',
+      },
+      typescript: true,
+    }),
     pug({
       globals: {
         _nodeFs: nodeFs,
@@ -52,7 +62,6 @@ export default defineConfig({
         _sizeOf: sizeOf,
       },
     }),
-    stylelint(),
     ViteImageOptimizer({
       png: { quality: 80 },
       jpeg: { quality: 80 },

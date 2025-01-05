@@ -8,18 +8,43 @@
   }
 
   &__list {
+    overflow: auto;
     margin: 10px -16px 0;
 
     @include sm-gt {
+      overflow: visible;
       margin-right: 0;
       margin-left: 0;
     }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__track {
+    display: inline-flex;
+    gap: 12px;
+    white-space: nowrap;
   }
 
   &__label {
     position: relative;
     display: block;
+    flex-shrink: 0;
     cursor: pointer;
+
+    &:first-child {
+      @include sm-lte {
+        margin-left: 16px;
+      }
+    }
+
+    &:last-child {
+      @include sm-lte {
+        margin-right: 16px;
+      }
+    }
 
     > input {
       position: absolute;

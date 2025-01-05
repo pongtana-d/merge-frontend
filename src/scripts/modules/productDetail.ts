@@ -63,37 +63,6 @@ const productColor = () => {
   });
 };
 
-const productSize = () => {
-  const $el = $('.js-product-size-slider');
-
-  if (!$el.length) return;
-
-  const slider = new Splide($el.get(0) as HTMLElement, {
-    type: 'slide',
-    gap: 12,
-    drag: 'free',
-    speed: 500,
-    flickPower: 200,
-    fixedWidth: 46,
-    arrows: false,
-    pagination: false,
-    breakpoints: {
-      767: {
-        padding: { left: 16, right: 16 },
-      },
-    },
-  });
-
-  slider.on('overflow', function (isOverflow) {
-    slider.go(0);
-    slider.options = {
-      drag: isOverflow ? 'free' : false,
-    };
-  });
-
-  slider.mount();
-};
-
 const productMatch = () => {
   const $el = $('.js-product-match');
 
@@ -202,7 +171,6 @@ const productRelated = () => {
 export default function productDetail() {
   productGallery();
   productColor();
-  productSize();
   productMatch();
   productRelated();
 }
