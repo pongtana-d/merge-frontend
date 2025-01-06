@@ -25,8 +25,8 @@ export default function productSlider() {
       spaceBetween: 2,
       slidesPerView: 2.262,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: $(this).find('.swiper-button-next').get(0),
+        prevEl: $(this).find('.swiper-button-prev').get(0),
       },
       breakpoints: {
         768: {

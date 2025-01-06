@@ -1,44 +1,43 @@
 @use "../utilities" as *;
 
 .table-product-size {
-  &__head {
-    @include text-body-bold;
+  width: 100%;
 
-    display: grid;
-    padding: 2.5px 4px;
+  thead {
     background-color: var(--color-white);
-    gap: 18px;
-    grid-template-columns: minmax(0, 1fr) repeat(auto-fit, 30px);
-    text-align: center;
+
+    th {
+      @include text-body-bold;
+
+      padding: 2.5px 0;
+      text-align: center;
+
+      &:not(:first-child) {
+        width: 47px;
+      }
+    }
   }
 
-  &__body {
-    @include text-body;
-
-    display: flex;
-    flex-direction: column;
-    padding-right: 4px;
-    margin-top: 19px;
-  }
-
-  &__row {
-    display: grid;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--color-gray-2);
-    gap: 18px;
-    grid-template-columns: minmax(0, 1fr) repeat(auto-fit, 30px);
-    text-align: center;
-
-    &:first-child {
-      padding-top: 0;
+  tbody {
+    tr:first-child td {
+      padding-top: 19px;
     }
 
-    &:last-child {
+    tr:last-child td {
+      padding-bottom: 10px;
       border-bottom: 0;
     }
 
-    > *:first-child {
-      text-align-last: left;
+    td {
+      @include text-body;
+
+      padding: 10px 0;
+      border-bottom: 1px solid var(--color-gray-2);
+      text-align: center;
+
+      &:first-child {
+        text-align: left;
+      }
     }
   }
 }

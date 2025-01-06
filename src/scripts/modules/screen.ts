@@ -4,6 +4,10 @@ export const isSmLte = () => window.matchMedia('(max-width: 767px)').matches;
 
 export const isMdLte = () => window.matchMedia('(max-width: 991px)').matches;
 
+export const isSmGt = () => window.matchMedia('(min-width: 768px)').matches;
+
+export const isMdGt = () => window.matchMedia('(min-width: 992px)').matches;
+
 const isIOS = (): boolean => {
   return (
     ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||

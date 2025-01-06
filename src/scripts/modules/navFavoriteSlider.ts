@@ -14,8 +14,8 @@ export default function navFavoriteSlider() {
     slidesOffsetBefore: 16,
     slidesOffsetAfter: 16,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: $el.find('.swiper-button-next').get(0),
+      prevEl: $el.find('.swiper-button-prev').get(0),
     },
   });
 }

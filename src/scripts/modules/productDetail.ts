@@ -1,8 +1,11 @@
 import $ from 'jquery';
-import Splide from '@splidejs/splide';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import { isSmLte, isMdLte } from './screen';
+import { isSmLte, isMdLte, isSmGt, isMdGt } from './screen';
+
+interface SwiperInstance {
+  initialized: boolean;
+}
 
 const productGallery = () => {
   const $el = $('.js-product-gallery');
@@ -35,17 +38,19 @@ const productColor = () => {
 
   if (!$el.length) return;
 
-  const totalItems = $el.find('.swiper-slide').length;
+  const totalSlides = $el.find('.swiper-slide').length;
+
+  if (totalSlides < 4) {
+    $el.attr('data-is-overflow', 'false');
+  }
 
   new Swiper($el.get(0) as HTMLElement, {
     modules: [Navigation],
-    slidesPerView: 3.181,
+    slidesPerView: totalSlides > 3 ? 3.181 : 3,
     spaceBetween: 2,
-    slidesOffsetBefore: totalItems > 3 ? 0 : 16,
-    slidesOffsetAfter: totalItems > 3 ? 0 : 16,
     navigation: {
-      prevEl: '.swiper-button-prev',
-      nextEl: '.swiper-button-next',
+      nextEl: $el.find('.swiper-button-next').get(0),
+      prevEl: $el.find('.swiper-button-prev').get(0),
     },
     breakpoints: {
       768: {
@@ -68,38 +73,38 @@ const productMatch = () => {
 
   if (!$el.length) return;
 
-  const slider = new Splide($el.get(0) as HTMLElement, {
-    type: 'slide',
-    gap: 2,
-    speed: 500,
-    flickPower: 200,
-    fixedWidth: '22.222vw',
-    arrows: true,
-    pagination: false,
+  const totalSlides = $el.find('.swiper-slide').length;
+
+  if (totalSlides < 3) {
+    $el.attr('data-is-overflow', 'false');
+  }
+
+  new Swiper($el.get(0) as HTMLElement, {
+    modules: [Navigation],
+    spaceBetween: 2,
+    slidesPerView: totalSlides > 2 ? 2.262 : 2,
+    navigation: {
+      nextEl: $el.find('.swiper-button-next').get(0),
+      prevEl: $el.find('.swiper-button-prev').get(0),
+    },
     breakpoints: {
-      767: {
-        fixedWidth: '43.733vw',
-        arrows: false,
+      768: {
+        slidesPerView: 3.475,
       },
-      991: {
-        fixedWidth: '30.272vw',
-        arrows: false,
+      992: {
+        slidesPerView: 4.475,
+      },
+    },
+    on: {
+      resize: () => {
+        if ((isMdGt() && totalSlides < 5) || (isSmGt() && totalSlides < 4)) {
+          $el.attr('data-justify-center', 'true');
+        } else {
+          $el.attr('data-justify-center', 'false');
+        }
       },
     },
   });
-
-  slider.on('overflow', function (isOverflow) {
-    $el.attr('data-is-overflow', isOverflow.toString());
-    $el.attr('data-justify-center', (!isOverflow).toString());
-
-    slider.go(0);
-    slider.options = {
-      drag: isOverflow,
-      arrows: isOverflow && !isSmLte(),
-    };
-  });
-
-  slider.mount();
 };
 
 const productRelated = () => {
@@ -107,65 +112,65 @@ const productRelated = () => {
 
   if (!$el.length) return;
 
-  const slider = new Splide($el.get(0) as HTMLElement, {
-    type: 'slide',
-    gap: 2,
-    speed: 500,
-    flickPower: 200,
-    fixedWidth: '22.222vw',
-    arrows: true,
-    pagination: false,
-    breakpoints: {
-      767: {
-        destroy: true,
-      },
-      991: {
-        fixedWidth: '30.272vw',
-        arrows: false,
-      },
-    },
-  });
-
-  let intervalTime: number;
-
-  const checkOverflowItem = () => {
-    slider.Components.Elements.slides.forEach((el) => {
-      const react = el.getBoundingClientRect();
-      const isOverflow = react.right > document.documentElement.clientWidth;
+  const checkOverflowItem = (swiper: Swiper): void => {
+    if (isMdLte()) return;
+    swiper.slides.forEach((el: HTMLElement) => {
+      const react: DOMRect = el.getBoundingClientRect();
+      const isOverflow: boolean = react.right > document.documentElement.clientWidth;
       $(el).toggleClass('is-overflow', isOverflow);
     });
   };
 
-  slider.on('ready resized', function () {
-    checkOverflowItem();
+  let timer: number;
+  let slider: Swiper & SwiperInstance;
+
+  const initSlider = () => {
+    slider = new Swiper($el.get(0) as HTMLElement, {
+      modules: [Navigation],
+      spaceBetween: 2,
+      slidesPerView: 3.475,
+      navigation: {
+        nextEl: $el.find('.swiper-button-next').get(0),
+        prevEl: $el.find('.swiper-button-prev').get(0),
+      },
+      breakpoints: {
+        992: {
+          slidesPerView: 4.475,
+        },
+      },
+      on: {
+        afterInit: (swiper) => {
+          checkOverflowItem(swiper);
+        },
+        slideChange: (swiper) => {
+          requestAnimationFrame(() => checkOverflowItem(swiper));
+        },
+        slideChangeTransitionEnd: (swiper) => {
+          requestAnimationFrame(() => checkOverflowItem(swiper));
+        },
+        sliderMove: (swiper) => {
+          clearTimeout(timer);
+          timer = setTimeout(() => {
+            requestAnimationFrame(() => checkOverflowItem(swiper));
+          }, 100);
+        },
+      },
+    }) as Swiper & SwiperInstance;
+  };
+
+  const checkScreenSize = () => {
+    if (isSmLte() && slider?.initialized) {
+      slider.destroy();
+    } else if (!isSmLte() && !slider?.initialized) {
+      initSlider();
+    }
+  };
+
+  $(window.matchMedia('(max-width: 767px)')).on('change', () => {
+    checkScreenSize();
   });
 
-  slider.on('move drag', function () {
-    if (isMdLte()) return;
-
-    clearInterval(intervalTime);
-    intervalTime = setInterval(() => {
-      requestAnimationFrame(checkOverflowItem);
-    }, 100);
-  });
-
-  slider.on('moved dragged active', function () {
-    clearInterval(intervalTime);
-    requestAnimationFrame(checkOverflowItem);
-  });
-
-  slider.on('overflow', function (isOverflow) {
-    $el.attr('data-is-overflow', isOverflow.toString());
-    $el.attr('data-justify-center', (!isOverflow).toString());
-
-    slider.go(0);
-    slider.options = {
-      drag: isOverflow,
-      arrows: isOverflow,
-    };
-  });
-
-  slider.mount();
+  checkScreenSize();
 };
 
 export default function productDetail() {

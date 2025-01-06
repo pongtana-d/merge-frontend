@@ -3,6 +3,14 @@
 .product-color-slider {
   margin-top: 2px;
 
+  .swiper {
+    &[data-is-overflow="false"] {
+      @include sm-lte {
+        padding: 0 16px;
+      }
+    }
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     top: 50%;
@@ -65,6 +73,9 @@
     cursor: pointer;
 
     &[aria-current="true"] {
+      cursor: default;
+      pointer-events: none;
+
       &::after {
         @include text-body-small-2;
 
