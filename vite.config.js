@@ -25,7 +25,7 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name].js',
         assetFileNames: ({ names, originalFileNames }) => {
           if (originalFileNames?.length) {
             const originalPath = originalFileNames[0].match(/src\/(images|styles)\/(.*\/)[^/]*$/)?.[2] || '';
