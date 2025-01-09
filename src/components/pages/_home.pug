@@ -86,17 +86,27 @@
 .sec-flash-sale
   .sec-flash-sale__inner
     +img.sec-flash-sale__title(src="/src/images/common/text-flash-sale.svg" alt="FLASH SALE")
-    - const endTime = new Date(new Date().setDate(new Date().getDate() + 1)).toISOString();
+    - const endTime = new Date(new Date().setDate(new Date().getDate() + 2)).toISOString();
     .sec-flash-sale__time.js-countdown(data-end-time=endTime)
       .sec-flash-sale__rollers
-        .sec-flash-sale__roller.sec-flash-sale__roller--hour
+        .sec-flash-sale__roller
+          .sec-flash-sale__digit.js-d-tens
+            each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
+              span= i
+          .sec-flash-sale__digit.js-d-ones
+            each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
+              span= i
+        p.sec-flash-sale__unit Day
+      .sec-flash-sale__colon
+      .sec-flash-sale__rollers
+        .sec-flash-sale__roller
           .sec-flash-sale__digit.js-h-tens
             each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
               span= i
           .sec-flash-sale__digit.js-h-ones
             each i in Array.from({ length: 10 }, (_, i) => i).concat(0).reverse()
               span= i
-        p.sec-flash-sale__unit.sec-flash-sale__unit--hour Hour
+        p.sec-flash-sale__unit Hour
       .sec-flash-sale__colon
       .sec-flash-sale__rollers
         .sec-flash-sale__roller

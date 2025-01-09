@@ -3,6 +3,7 @@
 .header {
   $root: &;
   height: 70px;
+  background-color: var(--color-white);
 
   &__container {
     position: fixed;

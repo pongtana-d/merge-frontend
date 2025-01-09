@@ -4,6 +4,10 @@
   position: relative;
   height: 100%;
 
+  &:has(.list-product) {
+    background-color: var(--color-gray-3);
+  }
+
   &__not-found {
     position: absolute;
     top: calc(50% - 35px);

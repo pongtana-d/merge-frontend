@@ -1,6 +1,7 @@
 @use "../utilities" as *;
 
 .sec-flash-sale {
+  $root: &;
   display: flex;
   justify-content: center;
   padding: 18px;
@@ -34,6 +35,17 @@
     background-size: contain;
   }
 
+  &__rollers:first-child {
+    #{$root}__roller {
+      background-color: var(--color-red);
+      box-shadow: inset 1px 1px 1px #f35656;
+    }
+
+    #{$root}__unit {
+      color: var(--color-red);
+    }
+  }
+
   &__roller {
     display: flex;
     overflow: hidden;
@@ -43,11 +55,6 @@
     border-radius: 5px;
     background-color: var(--color-white);
     box-shadow: inset 1px 1px 1px #56c9f3;
-
-    &--hour {
-      background-color: var(--color-red);
-      box-shadow: inset 1px 1px 1px #f35656;
-    }
   }
 
   &__digit {
@@ -73,9 +80,5 @@
     margin-top: 3px;
     color: var(--color-white);
     text-align: center;
-
-    &--hour {
-      color: var(--color-red);
-    }
   }
 }

@@ -20,7 +20,7 @@ html {
 body {
   @include text-body;
 
-  background: var(--color-gray-3);
+  background: var(--color-white);
   font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;

@@ -13,6 +13,7 @@ export default function countDown() {
   if (!endTime) return;
 
   const moveDigit = ($target: JQuery<HTMLElement>, units: number, digit: string): void => {
+    if (!$target.length) return;
     const current = $target.attr('data-current') || '';
     const y = (units - Number(digit)) * -24;
 
@@ -29,12 +30,18 @@ export default function countDown() {
 
   interval = countdown(
     (ts) => {
-      const hh = String(ts.hours).padStart(2, '0');
-      const mm = String(ts.minutes).padStart(2, '0');
-      const ss = String(ts.seconds).padStart(2, '0');
+      let dd = String(ts.days).padStart(2, '0');
+      let hh = String(ts.hours).padStart(2, '0');
+      let mm = String(ts.minutes).padStart(2, '0');
+      let ss = String(ts.seconds).padStart(2, '0');
 
-      if (ts.value === 0) clearInterval(interval as number);
+      if (ts.value <= 0) {
+        dd = hh = mm = ss = '00';
+        clearInterval(interval as number);
+      }
 
+      moveDigit($el.find('.js-d-tens'), 10, dd.charAt(0));
+      moveDigit($el.find('.js-d-ones'), 10, dd.charAt(1));
       moveDigit($el.find('.js-h-tens'), 10, hh.charAt(0));
       moveDigit($el.find('.js-h-ones'), 10, hh.charAt(1));
       moveDigit($el.find('.js-m-tens'), 6, mm.charAt(0));
@@ -44,6 +51,6 @@ export default function countDown() {
     },
     new Date(endTime),
 
-    countdown.HOURS | countdown.MINUTES | countdown.SECONDS,
+    countdown.DAYS | countdown.HOURS | countdown.MINUTES | countdown.SECONDS,
   );
 }
