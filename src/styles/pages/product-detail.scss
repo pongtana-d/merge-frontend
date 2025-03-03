@@ -42,6 +42,11 @@
         opacity: var(--hover-opacity);
       }
     }
+
+    &:disabled {
+      background-color: var(--color-gray-2);
+      pointer-events: none;
+    }
   }
 
   &__info {

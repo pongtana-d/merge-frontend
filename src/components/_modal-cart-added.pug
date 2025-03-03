@@ -1,0 +1,18 @@
+.c-modal-cart-added(aria-hidden="true")
+  .c-modal-cart-added__container
+    .c-modal-cart-added__heading
+      p.c-modal-cart-added__heading-title Product added
+      a.c-modal-cart-added__heading-link(href="/cart") View Cart
+    .c-modal-cart-added__product
+      figure.c-modal-cart-added__image
+        +img(src="/src/images/products/img-product-gallery-01.webp" alt="")
+      .c-modal-cart-added__detail
+        .c-modal-cart-added__detail-upper
+          p.c-modal-cart-added__name SERENE SANCTUARY TOP
+          .c-modal-cart-added__variant
+            p White
+            p M
+        .c-modal-cart-added__price
+          p.c-modal-cart-added__price-number THB 1,500
+          p.c-modal-cart-added__price-qty 1
+    button.c-modal-cart-added__close.js-modal-close CLOSE

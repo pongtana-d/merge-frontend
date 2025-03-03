@@ -12,6 +12,7 @@ import btnShare from './modules/btnShare';
 import listAccordion from './modules/listAccordion';
 import selectReviewStars from './modules/selectReviewStars';
 import form from './modules/form';
+import addToCart from './modules/addToCart';
 
 document.addEventListener('DOMContentLoaded', () => {
   webFontLoader();
@@ -28,4 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
   listAccordion();
   selectReviewStars();
   form();
+  addToCart();
 });

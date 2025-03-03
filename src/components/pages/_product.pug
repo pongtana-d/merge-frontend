@@ -84,7 +84,10 @@ section.p-product-detail
               span.box-product-detail-size__text XXL
       // /.box-product-detail-size
 
-    button.p-product-detail__btn-add-cart ADD TO CART
+    if isSoldOut
+      button(disabled).p-product-detail__btn-add-cart SOLD OUT
+    else
+      button.p-product-detail__btn-add-cart.js-btn-add-cart ADD TO CART
 
     .p-product-detail__info
       .list-accordion.js-list-accordion

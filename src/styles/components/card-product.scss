@@ -101,7 +101,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 5px;
-    column-gap: 5px;
+    column-gap: 7px;
   }
 
   &__price-old {
@@ -110,8 +110,7 @@
 
   &__price-new {
     position: relative;
-    padding: 0 2px;
-    background-color: var(--color-red);
+    color: var(--color-red-2);
     font-weight: 600;
     text-decoration: none;
   }
@@ -124,7 +123,7 @@
     top: 0;
     right: 0;
     padding: 0 3px 1px;
-    background: var(--color-black-25);
+    background: var(--color-red-2);
     color: var(--color-white);
   }
 

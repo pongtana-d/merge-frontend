@@ -9,6 +9,7 @@ block variables
 block append scripts
 
 block modal
+  include /src/components/_modal-cart-added.pug
 
 block content
   section.p-product-detail
@@ -93,7 +94,7 @@ block content
                 span.box-product-detail-size__text XXL
         // /.box-product-detail-size
 
-      button.p-product-detail__btn-add-cart ADD TO CART
+      button.p-product-detail__btn-add-cart.js-btn-add-cart ADD TO CART
 
       .p-product-detail__info
         .list-accordion.js-list-accordion

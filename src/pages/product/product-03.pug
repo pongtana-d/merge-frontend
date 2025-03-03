@@ -9,6 +9,7 @@ block variables
 block append scripts
 
 block modal
+  include /src/components/_modal-cart-added.pug
 
 block content
   section.p-product-detail
@@ -18,13 +19,13 @@ block content
           each i in Array(2)
             .swiper-slide
               figure.product-gallery__image
-                +img(src="/src/images/products/img-product-gallery-01.webp" alt="")
+                img(src="/src/images/products/img-product-gallery-01.webp" alt="")
             .swiper-slide
               figure.product-gallery__image
-                +img(src="/src/images/products/img-product-gallery-02.webp" alt="")
+                img(src="/src/images/products/img-product-gallery-02.webp" alt="")
             .swiper-slide
               figure.product-gallery__image
-                +img(src="/src/images/products/img-product-gallery-03.webp" alt="")
+                img(src="/src/images/products/img-product-gallery-03.webp" alt="")
         .swiper-pagination
     // /.product-gallery
 
@@ -34,7 +35,7 @@ block content
           h1.box-product-detail-head__name SERENE SANCTUARY TOP 3
           .box-product-detail-head__share
             button.box-product-detail-head__btn-share.js-btn-share(aria-label="Share SERENE SANCTUARY TOP")
-              +img(src="/src/images/common/ico-share.svg" alt="")
+              img(src="/src/images/common/ico-share.svg" alt="")
             label.box-product-detail-head__btn-favorite(aria-label="Add to favorite")
               input(type="checkbox" name="favorite" value="")
               span.box-product-detail-head__btn-favorite-icon
@@ -50,19 +51,19 @@ block content
             .swiper-wrapper
               .swiper-slide
                 a.product-color-slider__image(href="/product/")
-                  +img(src="/src/images/products/img-product-color-01.webp" alt="")
+                  img(src="/src/images/products/img-product-color-01.webp" alt="")
               .swiper-slide
                 a.product-color-slider__image(href="/product/product-02.html")
-                  +img(src="/src/images/products/img-product-color-02.webp" alt="")
+                  img(src="/src/images/products/img-product-color-02.webp" alt="")
               .swiper-slide
                 a.product-color-slider__image(href="/product/product-03.html" aria-current="true")
-                  +img(src="/src/images/products/img-product-color-01.webp" alt="")
+                  img(src="/src/images/products/img-product-color-01.webp" alt="")
               .swiper-slide
                 a.product-color-slider__image(href="/product/product-04.html")
-                  +img(src="/src/images/products/img-product-color-02.webp" alt="")
+                  img(src="/src/images/products/img-product-color-02.webp" alt="")
               .swiper-slide
                 a.product-color-slider__image(href="/product/product-05.html")
-                  +img(src="/src/images/products/img-product-color-01.webp" alt="")
+                  img(src="/src/images/products/img-product-color-01.webp" alt="")
         // /.product-color-slider
 
       .p-product-detail__size
@@ -93,7 +94,7 @@ block content
                 span.box-product-detail-size__text XXL
         // /.box-product-detail-size
 
-      button.p-product-detail__btn-add-cart ADD TO CART
+      button.p-product-detail__btn-add-cart.js-btn-add-cart ADD TO CART
 
       .p-product-detail__info
         .list-accordion.js-list-accordion
@@ -209,7 +210,7 @@ block content
         .p-product-detail__review-heading
           .p-product-detail__review-title
             p.p-product-detail__review-score 4.9
-            +img(src="/src/images/common/ico-star-blue.svg" alt="")
+            img(src="/src/images/common/ico-star-blue.svg" alt="")
             p.p-product-detail__review-total Review score (21)
           .p-product-detail__review-filter
             .select-review-stars.js-select-review-stars
@@ -253,7 +254,7 @@ block content
             .card-review__description
               p Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus
             figure.card-review__image
-              +img(src="/src/images/products/img-review-product-01.webp" alt="")
+              img(src="/src/images/products/img-review-product-01.webp" alt="")
           // /.card-review
 
           .card-review
@@ -265,7 +266,7 @@ block content
             .card-review__description
               p Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus in amet in id. Mattis neque facilisis semper parturient
             figure.card-review__image
-              +img(src="/src/images/products/img-review-product-02.webp" alt="")
+              img(src="/src/images/products/img-review-product-02.webp" alt="")
             button.card-review__btn-edit Edit my review
           // /.card-review
 
@@ -294,7 +295,7 @@ block content
               .card-product
                 a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
                 figure.card-product__image
-                  +img(src="/src/images/products/img-product-01.webp" alt="CORA PLUNGE BRALETTE")
+                  img(src="/src/images/products/img-product-01.webp" alt="CORA PLUNGE BRALETTE")
                 .card-product__info
                   label.card-product__favorite(aria-label="Add to favorite")
                     input(type="checkbox" name="favorite" value="")
@@ -306,7 +307,7 @@ block content
               .card-product
                 a.card-product__link(href="#" aria-label="View LARA BRA TOP")
                 figure.card-product__image
-                  +img(src="/src/images/products/img-product-03.webp" alt="LARA BRA TOP")
+                  img(src="/src/images/products/img-product-03.webp" alt="LARA BRA TOP")
                 .card-product__info
                   label.card-product__favorite(aria-label="Add to favorite")
                     input(type="checkbox" name="favorite" value="")
@@ -318,7 +319,7 @@ block content
               .card-product
                 a.card-product__link(href="#" aria-label="View DEVA LACE TOP")
                 figure.card-product__image
-                  +img(src="/src/images/products/img-product-03.webp" alt="DEVA LACE TOP")
+                  img(src="/src/images/products/img-product-03.webp" alt="DEVA LACE TOP")
                 .card-product__info
                   label.card-product__favorite(aria-label="Add to favorite")
                     input(type="checkbox" name="favorite" value="")
@@ -330,7 +331,7 @@ block content
               .card-product
                 a.card-product__link(href="#" aria-label="View AVA DENIM SKIRT")
                 figure.card-product__image
-                  +img(src="/src/images/products/img-product-04.webp" alt="AVA DENIM SKIRT")
+                  img(src="/src/images/products/img-product-04.webp" alt="AVA DENIM SKIRT")
                 .card-product__info
                   label.card-product__favorite(aria-label="Add to favorite")
                     input(type="checkbox" name="favorite" value="")
@@ -352,7 +353,7 @@ block content
                 .card-product
                   a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
                   figure.card-product__image
-                    +img(src="/src/images/products/img-product-01.webp" alt="CORA PLUNGE BRALETTE")
+                    img(src="/src/images/products/img-product-01.webp" alt="CORA PLUNGE BRALETTE")
                   .card-product__info
                     label.card-product__favorite(aria-label="Add to favorite")
                       input(type="checkbox" name="favorite" value="")
@@ -364,7 +365,7 @@ block content
                 .card-product
                   a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
                   figure.card-product__image
-                    +img(src="/src/images/products/img-product-02.webp" alt="CORA PLUNGE BRALETTE")
+                    img(src="/src/images/products/img-product-02.webp" alt="CORA PLUNGE BRALETTE")
                   .card-product__info
                     label.card-product__favorite(aria-label="Add to favorite")
                       input(type="checkbox" name="favorite" value="")
@@ -376,7 +377,7 @@ block content
                 .card-product
                   a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
                   figure.card-product__image
-                    +img(src="/src/images/products/img-product-02.webp" alt="CORA PLUNGE BRALETTE")
+                    img(src="/src/images/products/img-product-02.webp" alt="CORA PLUNGE BRALETTE")
                   .card-product__info
                     label.card-product__favorite(aria-label="Add to favorite")
                       input(type="checkbox" name="favorite" value="")
@@ -388,7 +389,7 @@ block content
                 .card-product
                   a.card-product__link(href="#" aria-label="View CORA PLUNGE BRALETTE")
                   figure.card-product__image
-                    +img(src="/src/images/products/img-product-05.webp" alt="CORA PLUNGE BRALETTE")
+                    img(src="/src/images/products/img-product-05.webp" alt="CORA PLUNGE BRALETTE")
                   .card-product__info
                     label.card-product__favorite(aria-label="Add to favorite")
                       input(type="checkbox" name="favorite" value="")

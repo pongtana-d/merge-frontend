@@ -16,7 +16,9 @@
   --color-black: #231f20;
   --color-black-25: #{rgba(#231f20, 0.25)};
   --color-black-30: #{rgba(#231f20, 0.3)};
+  --color-black-50: #{rgba(#231f20, 0.5)};
   --color-red: #ff9c9c;
+  --color-red-2: #f73030;
   --color-gray: #8e8e8e;
   --color-gray-2: #e3e3e3;
   --color-gray-3: #f4f4f4;
@@ -26,4 +28,5 @@
   --z-index-header-overlay: 11;
   --z-index-header-search: 12;
   --z-index-nav-global: 12;
+  --z-index-modal-cart-added: 15;
 }
