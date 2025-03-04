@@ -1,6 +1,6 @@
 @use "../utilities" as *;
 
-.c-modal-cart-added {
+.modal-cart-added {
   position: fixed;
   z-index: var(--z-index-modal-cart-added);
   top: 0;
@@ -54,7 +54,6 @@
 
     position: relative;
     padding-left: 28px;
-    color: var(--color-black);
 
     &::before {
       position: absolute;
@@ -121,7 +120,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 16px 16px 16px 0;
-    color: var(--color-black);
   }
 
   &__name {

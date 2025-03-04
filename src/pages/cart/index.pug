@@ -1,0 +1,69 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Cart | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  .p-cart
+    h1.p-cart__heading CART
+    .p-cart__inner
+      .p-cart__list
+        .card-product-cart
+          figure.card-product-cart__image
+            +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+          .card-product-cart__content
+            .card-product-cart__content-upper
+              p.card-product-cart__name SERENE SANCTUARY TOP
+              .card-product-cart__variant
+                p White
+                p M
+            .card-product-cart__content-lower
+              p.card-product-cart__price THB 1,500
+              .card-product-cart__control
+                button(disabled arial-label="Decrease").card-product-cart__control-minus
+                p.card-product-cart__control-qty 1
+                button(arial-label="Increase").card-product-cart__control-plus
+        // /.card-product-cart
+
+        .card-product-cart
+          figure.card-product-cart__image
+            +img(src="/src/images/cart/img-product-cart-02.webp" alt="")
+          .card-product-cart__content
+            .card-product-cart__content-upper
+              p.card-product-cart__name SERENE SANCTUARY TOP
+              .card-product-cart__variant
+                p White
+                p M
+            .card-product-cart__content-lower
+              p.card-product-cart__price THB 1,500
+              .card-product-cart__control
+                button(disabled arial-label="Decrease").card-product-cart__control-minus
+                p.card-product-cart__control-qty 1
+                button(arial-label="Increase").card-product-cart__control-plus
+        // /.card-product-cart
+
+        .card-product-cart
+          figure.card-product-cart__image
+            +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
+          .card-product-cart__content
+            .card-product-cart__content-upper
+              p.card-product-cart__name MAGNETIC BLUE
+              .card-product-cart__variant
+                p White/Blue
+                p XS
+            .card-product-cart__content-lower
+              p.card-product-cart__price THB 3,000
+              .card-product-cart__control
+                button(arial-label="Decrease").card-product-cart__control-minus
+                p.card-product-cart__control-qty 2
+                button(arial-label="Increase").card-product-cart__control-plus
+        // /.card-product-cart
+
+  // /.p-cart

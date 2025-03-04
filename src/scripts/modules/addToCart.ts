@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export default function addToCart() {
-  const $cartModal = $('.c-modal-cart-added');
+  const $cartModal = $('.modal-cart-added');
   const $btnAdd = $('.js-btn-add-cart');
 
   if (!$btnAdd.length || !$cartModal.length) return;

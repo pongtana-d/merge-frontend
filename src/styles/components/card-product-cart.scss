@@ -1,0 +1,96 @@
+@use "../utilities" as *;
+
+.card-product-cart {
+  display: flex;
+  background-color: var(--color-white);
+
+  &__image {
+    position: relative;
+    width: 116px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    aspect-ratio: 116 / 168;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  &__name {
+    @include text-body-bold;
+  }
+
+  &__variant {
+    @include text-body;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    color: var(--color-gray);
+    gap: 8px;
+  }
+
+  &__content-lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  &__price {
+    @include text-body-bold;
+  }
+
+  &__qty {
+    @include text-title-3;
+  }
+
+  &__control {
+    display: flex;
+    min-width: 52px;
+    gap: 2px;
+  }
+
+  &__control-qty {
+    @include text-title-3;
+
+    flex: 1;
+    align-self: center;
+    text-align: center;
+  }
+
+  &__control-minus,
+  &__control-plus {
+    display: block;
+    width: 10px;
+    background: url(/src/images/common/ico-minus-black.svg) center no-repeat;
+    background-size: 10px;
+
+    &:disabled {
+      background-image: url(/src/images/common/ico-minus-gray.svg);
+      pointer-events: none;
+    }
+  }
+
+  &__control-plus {
+    background-image: url(/src/images/common/ico-plus-black.svg);
+
+    &:disabled {
+      background-image: url(/src/images/common/ico-plus-gray.svg);
+    }
+  }
+}
