@@ -14,6 +14,7 @@
     "lint:css": "stylelint 'src/styles/**/*.scss' --fix --allow-empty-input"
   },
   "devDependencies": {
+    "@types/alpinejs": "^3.13.11",
     "@types/countdown": "^0.0.12",
     "@types/jquery": "^3.5.32",
     "@types/webfontloader": "^1.6.38",
@@ -39,7 +40,7 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "countdown": "^2.6.0",
+    "alpinejs": "^3.14.8",
     "destyle.css": "^4.0.1",
     "jquery": "^3.7.1",
     "swiper": "^11.2.0"

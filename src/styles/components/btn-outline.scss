@@ -1,0 +1,21 @@
+@use "../utilities" as *;
+
+.btn-outline {
+  @include text-title-3;
+
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+  color: var(--color-black);
+  transition: var(--hover-transition);
+
+  &:hover {
+    @include hover {
+      opacity: var(--hover-opacity);
+    }
+  }
+}

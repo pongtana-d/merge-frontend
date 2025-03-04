@@ -13,57 +13,132 @@ block modal
 block content
   .p-cart
     h1.p-cart__heading CART
-    .p-cart__inner
+    section.p-cart__inner
       .p-cart__list
-        .card-product-cart
-          figure.card-product-cart__image
-            +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
-          .card-product-cart__content
-            .card-product-cart__content-upper
-              p.card-product-cart__name SERENE SANCTUARY TOP
-              .card-product-cart__variant
-                p White
-                p M
-            .card-product-cart__content-lower
-              p.card-product-cart__price THB 1,500
-              .card-product-cart__control
-                button(disabled arial-label="Decrease").card-product-cart__control-minus
-                p.card-product-cart__control-qty 1
-                button(arial-label="Increase").card-product-cart__control-plus
-        // /.card-product-cart
+        .p-cart__list-item
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name SERENE SANCTUARY TOP
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                .card-product-cart__variant
+                  p White
+                  p M
+              .card-product-cart__content-lower
+                p.card-product-cart__price THB 1,500
+                .card-product-cart__control(x-data="{ qty: 1 }")
+                  button.card-product-cart__control-minus(
+                    x-bind:disabled="qty === 1"
+                    x-on:click.prevent="qty--"
+                    arial-label="Decrease quantity"
+                  )
+                  p.card-product-cart__control-qty(x-text="qty") 1
+                  button.card-product-cart__control-plus(
+                    x-bind:disabled="qty === 99"
+                    x-on:click.prevent="qty++"
+                    arial-label="Increase quantity"
+                  )
+          // /.card-product-cart
+        .p-cart__list-item
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-02.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name SERENE SANCTUARY TOP
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                .card-product-cart__variant
+                  p White
+                  p M
+              .card-product-cart__content-lower
+                p.card-product-cart__price THB 1,500
+                .card-product-cart__control(x-data="{ qty: 1 }")
+                  button.card-product-cart__control-minus(
+                    x-bind:disabled="qty === 1"
+                    x-on:click.prevent="qty--"
+                    arial-label="Decrease quantity"
+                  )
+                  p.card-product-cart__control-qty(x-text="qty") 1
+                  button.card-product-cart__control-plus(
+                    x-bind:disabled="qty === 99"
+                    x-on:click.prevent="qty++"
+                    arial-label="Increase quantity"
+                  )
+          // /.card-product-cart
+        .p-cart__list-item
+          .card-product-cart.is-sold-out
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+              span SOLD OUT
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name SERENE SANCTUARY TOP
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                .card-product-cart__variant
+                  p White
+                  p M
+              .card-product-cart__content-lower
+                p.card-product-cart__price THB 1,500
+                .card-product-cart__control
+                  button.card-product-cart__control-minus(disabled arial-label="Decrease quantity")
+                  p.card-product-cart__control-qty 1
+                  button.card-product-cart__control-plus(disabled arial-label="Increase quantity")
+          // /.card-product-cart
+          p.p-cart__sold-out-text Item is sold out. Please remove from your cart
+        .p-cart__list-item
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name MAGNETIC BLUE
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                .card-product-cart__variant
+                  p White/Blue
+                  p XS
+              .card-product-cart__content-lower
+                p.card-product-cart__price THB 3,000
+                .card-product-cart__control(x-data="{ qty: 2 }")
+                  button.card-product-cart__control-minus(
+                    x-bind:disabled="qty === 1"
+                    x-on:click.prevent="qty--"
+                    arial-label="Decrease quantity"
+                  )
+                  p.card-product-cart__control-qty(x-text="qty") 2
+                  button.card-product-cart__control-plus(
+                    x-bind:disabled="qty === 99"
+                    x-on:click.prevent="qty++"
+                    arial-label="Increase quantity"
+                  )
+          // /.card-product-cart
 
-        .card-product-cart
-          figure.card-product-cart__image
-            +img(src="/src/images/cart/img-product-cart-02.webp" alt="")
-          .card-product-cart__content
-            .card-product-cart__content-upper
-              p.card-product-cart__name SERENE SANCTUARY TOP
-              .card-product-cart__variant
-                p White
-                p M
-            .card-product-cart__content-lower
-              p.card-product-cart__price THB 1,500
-              .card-product-cart__control
-                button(disabled arial-label="Decrease").card-product-cart__control-minus
-                p.card-product-cart__control-qty 1
-                button(arial-label="Increase").card-product-cart__control-plus
-        // /.card-product-cart
+      // /.p-cart__list
 
-        .card-product-cart
-          figure.card-product-cart__image
-            +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
-          .card-product-cart__content
-            .card-product-cart__content-upper
-              p.card-product-cart__name MAGNETIC BLUE
-              .card-product-cart__variant
-                p White/Blue
-                p XS
-            .card-product-cart__content-lower
-              p.card-product-cart__price THB 3,000
-              .card-product-cart__control
-                button(arial-label="Decrease").card-product-cart__control-minus
-                p.card-product-cart__control-qty 2
-                button(arial-label="Increase").card-product-cart__control-plus
-        // /.card-product-cart
+      .box-cart-summary
+        .box-cart-summary__coupon
+          +img.box-cart-summary__coupon-icon(src="/src/images/common/ico-coupon.svg" alt="")
+          p.box-cart-summary__coupon-text Use Coupons
+          //- button.box-cart-summary__coupon-delete(aria-label="Remove coupon")
+          a.box-cart-summary__coupon-link(href="/cart/coupon/")
+        .box-cart-summary__info
+          p.box-cart-summary__total-text Total: 3 Items
+          p.box-cart-summary__total-price THB 6,000
+        .box-cart-summary__info
+          p Shipping Fee
+          p THB 0
+        .box-cart-summary__button
+          button.btn-primary CHECK OUT
+          a.btn-outline(href="/product/") CONTINUE SHOPPING
+      // /.box-cart-summary
 
-  // /.p-cart
+    section.p-cart__related
+      h2.p-cart__related-heading YOU MAY ALSO LIKE
+      .p-cart__related-list
+        include /src/components/_product-related-slider.pug
+    // /.p-cart__related

@@ -1,4 +1,6 @@
+import Alpine from 'alpinejs';
 import webFontLoader from './modules/web-font-loader';
+
 import headerSmall from './modules/headerSmall';
 import headerSearch from './modules/headerSearch';
 import navGlobal from './modules/navGlobal';
@@ -14,7 +16,16 @@ import selectReviewStars from './modules/selectReviewStars';
 import form from './modules/form';
 import addToCart from './modules/addToCart';
 
+declare global {
+  interface Window {
+    Alpine: typeof Alpine;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  window.Alpine = Alpine;
+  Alpine.start();
+
   webFontLoader();
   headerSmall();
   headerSearch();

@@ -1,0 +1,21 @@
+@use "../utilities" as *;
+
+.btn-primary {
+  @include text-title-3;
+
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: var(--hover-transition);
+
+  &:hover {
+    @include hover {
+      opacity: var(--hover-opacity);
+    }
+  }
+}

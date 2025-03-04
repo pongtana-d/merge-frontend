@@ -1,6 +1,9 @@
 @use "../utilities" as *;
 
 .card-product-cart {
+  --text-color: var(--color-black);
+
+  $this-root: &;
   display: flex;
   background-color: var(--color-white);
 
@@ -29,10 +32,33 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
+    color: var(--text-color);
+  }
+
+  &__head {
+    display: flex;
+    gap: 10px;
   }
 
   &__name {
     @include text-body-bold;
+    flex: 1;
+  }
+
+  &__btn-delete {
+    display: block;
+    width: 16px;
+    height: 17px;
+    margin-top: 1px;
+    background: url(/src/images/common/ico-delete-02-black.svg) no-repeat;
+    background-size: contain;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
   }
 
   &__variant {
@@ -62,7 +88,7 @@
   &__control {
     display: flex;
     min-width: 52px;
-    gap: 2px;
+    gap: 4px;
   }
 
   &__control-qty {
@@ -91,6 +117,30 @@
 
     &:disabled {
       background-image: url(/src/images/common/ico-plus-gray.svg);
+    }
+  }
+
+  &.is-sold-out {
+    --text-color: var(--color-gray);
+
+    #{$this-root}__image > span {
+      @include text-body-small-2-bold;
+
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-black-35);
+      color: var(--color-white);
+    }
+
+    #{$this-root}__btn-delete {
+      background-image: url(/src/images/common/ico-delete-02-gray.svg);
     }
   }
 }

@@ -1,0 +1,96 @@
+@use "../utilities" as *;
+
+.box-cart-summary {
+  padding-top: 20px;
+  border-top: 1px solid var(--color-black);
+  margin-top: 18px;
+
+  &__coupon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: var(--color-gray-2);
+    gap: 8px;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      width: 18px;
+      height: 18px;
+      background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
+      background-size: contain;
+      content: "";
+      pointer-events: none;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__coupon-icon {
+    display: block;
+    width: 18px;
+    height: auto;
+  }
+
+  &__coupon-text {
+    @include text-body-bold;
+  }
+
+  &__coupon-delete {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(/src/images/common/ico-delete.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &__coupon-link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__info {
+    @include text-body;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & + & {
+      margin-top: 8px;
+    }
+  }
+
+  &__total-text {
+    @include text-title-3;
+  }
+
+  &__total-price {
+    @include text-title-2;
+    flex-shrink: 0;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 12px;
+  }
+}
