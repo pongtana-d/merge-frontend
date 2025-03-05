@@ -9,6 +9,7 @@ block variables
 block append scripts
 
 block modal
+  include /src/components/modal/_modal-cart-remove.pug
 
 block content
   .p-cart
@@ -23,7 +24,7 @@ block content
               .card-product-cart__content-upper
                 .card-product-cart__head
                   p.card-product-cart__name SERENE SANCTUARY TOP
-                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart" data-modal-open="#modal-cart-remove")
                 .card-product-cart__variant
                   p White
                   p M
@@ -50,7 +51,7 @@ block content
               .card-product-cart__content-upper
                 .card-product-cart__head
                   p.card-product-cart__name SERENE SANCTUARY TOP
-                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart" data-modal-open="#modal-cart-remove")
                 .card-product-cart__variant
                   p White
                   p M
@@ -78,7 +79,7 @@ block content
               .card-product-cart__content-upper
                 .card-product-cart__head
                   p.card-product-cart__name SERENE SANCTUARY TOP
-                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart" data-modal-open="#modal-cart-remove")
                 .card-product-cart__variant
                   p White
                   p M
@@ -98,7 +99,7 @@ block content
               .card-product-cart__content-upper
                 .card-product-cart__head
                   p.card-product-cart__name MAGNETIC BLUE
-                  button.card-product-cart__btn-delete(aria-label="Remove product from cart")
+                  button.card-product-cart__btn-delete(aria-label="Remove product from cart" data-modal-open="#modal-cart-remove")
                 .card-product-cart__variant
                   p White/Blue
                   p XS

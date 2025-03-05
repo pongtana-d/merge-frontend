@@ -1,0 +1,60 @@
+@use "../utilities" as *;
+
+.modal-process {
+  @include text-body;
+
+  border-radius: 8px;
+  margin: auto;
+  background-color: var(--color-white);
+  text-align: center;
+
+  &__title {
+    @include text-title-2;
+    margin-bottom: 4px;
+  }
+
+  &__button {
+    margin-top: 24px;
+  }
+
+  &__separated {
+    position: relative;
+    margin: 12px 0;
+    color: var(--color-gray);
+    text-align: center;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: calc(50% + 18px);
+      left: 10px;
+      height: 1px;
+      background-color: var(--color-gray-2);
+      content: "";
+    }
+
+    &::after {
+      right: 10px;
+      left: calc(50% + 18px);
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    z-index: 1;
+    top: 14px;
+    right: 16px;
+    width: 18px;
+    height: 18px;
+    background: url(/src/images/common/ico-close.svg) no-repeat;
+    background-size: contain;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+  }
+}
