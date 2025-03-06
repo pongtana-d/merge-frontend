@@ -8,13 +8,13 @@
   }
 
   &__list {
-    overflow: auto;
     margin: 10px -16px 0;
+    overflow: auto;
 
     @include sm-gt {
-      overflow: visible;
       margin-right: 0;
       margin-left: 0;
+      overflow: visible;
     }
 
     &::-webkit-scrollbar {
@@ -53,29 +53,29 @@
       height: 100%;
 
       &:checked + #{$root}__text {
-        background-color: var(--color-black);
         color: var(--color-white);
+        background-color: var(--color-black);
       }
     }
   }
 
   &__text {
     display: flex;
-    width: 46px;
-    height: 46px;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background-color: var(--color-white);
+    width: 46px;
+    height: 46px;
     color: var(--color-gray);
+    background-color: var(--color-white);
+    border-radius: 50%;
     transition:
       background 0.2s ease-out,
       color 0.2s ease-out;
 
     &:hover {
       @include hover {
-        background-color: var(--color-black);
         color: var(--color-white);
+        background-color: var(--color-black);
       }
     }
   }

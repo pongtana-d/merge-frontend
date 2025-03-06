@@ -1,38 +1,38 @@
 @use "../utilities" as *;
 
 .loader-icon {
-  display: flex;
-  height: 18px;
   box-sizing: content-box;
+  display: flex;
   align-items: center;
   justify-content: center;
+  height: 18px;
   padding: 21px 0;
   text-align: center;
 
   &__spinner {
     position: relative;
+    box-sizing: border-box;
     display: inline-block;
     width: 3px;
     height: 18px;
-    box-sizing: border-box;
+    color: var(--color-black);
+    background: currentColor;
     border-radius: 4px;
     animation: loader 0.3s 0.3s linear infinite alternate;
-    background: currentColor;
-    color: var(--color-black);
 
     &::before,
     &::after {
       position: absolute;
       top: 50%;
       left: 7px;
+      box-sizing: border-box;
       width: 3px;
       height: 18px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      animation: loader 0.3s 0.45s linear infinite alternate;
-      background: currentColor;
       content: "";
+      background: currentColor;
+      border-radius: 4px;
       transform: translateY(-50%);
+      animation: loader 0.3s 0.45s linear infinite alternate;
     }
 
     &::before {

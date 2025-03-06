@@ -7,9 +7,9 @@
 
   &__container {
     position: fixed;
-    z-index: var(--z-index-header);
     top: 0;
     left: 0;
+    z-index: var(--z-index-header);
     width: 100%;
     height: 70px;
     background-color: var(--color-white);
@@ -36,25 +36,25 @@
   }
 
   &__logo-text {
+    visibility: hidden;
     width: 100px;
     height: 18px;
     opacity: 0;
-    visibility: hidden;
   }
 
   &__inner {
     display: flex;
-    height: 100%;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
     padding: 0 20px;
   }
 
   &__menu {
     display: flex;
+    align-items: center;
     width: 18px;
     height: 18px;
-    align-items: center;
     transition: var(--hover-transition);
 
     &:hover {
@@ -108,21 +108,21 @@
     }
 
     #{$root}__logo {
-      opacity: 0;
       visibility: hidden;
+      opacity: 0;
     }
 
     #{$root}__logo-text {
-      opacity: 1;
       visibility: visible;
+      opacity: 1;
     }
   }
 
   &__overlay {
     position: fixed;
-    z-index: var(--z-index-header-overlay);
     top: 0;
     left: 0;
+    z-index: var(--z-index-header-overlay);
     display: none;
     width: 100%;
     height: 100%;

@@ -30,8 +30,8 @@ export function screenLock(): void {
 
     $('html').attr('data-screen-locked', 'true').css({ top: -top }).data('top', top);
   } else {
-    $('html').css({ overflowY: 'scroll' });
-    $('body').css({ overflowY: 'hidden' });
+    $('html').css({ overflowY: 'hidden' });
+    $('body').css({ overflowY: 'scroll' });
   }
 }
 

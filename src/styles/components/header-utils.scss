@@ -6,9 +6,9 @@
 
   &__button {
     position: relative;
-    overflow: hidden;
     width: 18px;
     height: 18px;
+    overflow: hidden;
     transition: var(--hover-transition);
 
     &:hover {

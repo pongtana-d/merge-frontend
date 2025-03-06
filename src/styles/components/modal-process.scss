@@ -2,11 +2,11 @@
 
 .modal-process {
   @include text-body;
+  margin: auto;
+  text-align: center;
+  background-color: var(--color-white);
 
   border-radius: 8px;
-  margin: auto;
-  background-color: var(--color-white);
-  text-align: center;
 
   &__title {
     @include text-title-2;
@@ -30,8 +30,8 @@
       right: calc(50% + 18px);
       left: 10px;
       height: 1px;
-      background-color: var(--color-gray-2);
       content: "";
+      background-color: var(--color-gray-2);
     }
 
     &::after {
@@ -42,9 +42,9 @@
 
   &__btn-close {
     position: absolute;
-    z-index: 1;
     top: 14px;
     right: 16px;
+    z-index: 1;
     width: 18px;
     height: 18px;
     background: url(/src/images/common/ico-close.svg) no-repeat;

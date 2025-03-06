@@ -7,6 +7,7 @@
 }
 
 html {
+  height: 100%;
   font-size: 100%;
 
   &[data-screen-locked="true"] {
@@ -20,9 +21,12 @@ html {
 body {
   @include text-body;
 
-  background: var(--color-white);
-  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: var(--font-family-base);
+  color: var(--color-black);
+  background: var(--color-white);
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
 }

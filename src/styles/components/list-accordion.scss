@@ -24,9 +24,9 @@
       right: 0;
       width: 18px;
       height: 18px;
+      content: "";
       background: url(/src/images/common/ico-arrow-down-black.svg) no-repeat;
       background-size: contain;
-      content: "";
       transform: translateY(-50%);
       transition: transform 0.2s ease-out;
     }

@@ -12,6 +12,7 @@ import vituum from 'vituum';
 export default defineConfig({
   server: {
     host: '0.0.0.0',
+    open: '/pages.html',
   },
   css: {
     devSourcemap: true,

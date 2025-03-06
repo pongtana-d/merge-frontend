@@ -5,7 +5,7 @@ export function initDefaultModal() {
     const target = $(this).data('modal-open');
 
     if ($(target).length) {
-      $(target).stop().fadeIn(200);
+      $(target).stop().fadeIn(200).attr('aria-hidden', 'false');
     }
   });
 
@@ -14,7 +14,7 @@ export function initDefaultModal() {
       .find('.js-modal-close')
       .on('click', (e) => {
         e.preventDefault();
-        $(this).stop().fadeOut(200);
+        $(this).stop().fadeOut(200).attr('aria-hidden', 'true');
       });
   });
 }

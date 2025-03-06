@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   padding: 16px;
-  background: var(--color-gray-3);
   color: var(--color-black);
+  background: var(--color-gray-3);
 
   @include sm-gt {
     display: none;
@@ -24,9 +24,9 @@
       right: 0;
       width: 18px;
       height: 18px;
+      content: "";
       background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
       background-size: contain;
-      content: "";
       transform: translateY(-50%);
     }
   }

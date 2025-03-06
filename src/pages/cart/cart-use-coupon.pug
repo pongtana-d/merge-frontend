@@ -10,6 +10,7 @@ block append scripts
 
 block modal
   include /src/components/modal/_modal-cart-remove.pug
+  include /src/components/modal/_modal-coupon-remove.pug
 
 block content
   .p-cart
@@ -71,27 +72,6 @@ block content
                   )
           // /.card-product-cart
         .p-cart__list-item
-          .card-product-cart.is-sold-out
-            .card-product-cart__image
-              +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
-              span SOLD OUT
-            .card-product-cart__content
-              .card-product-cart__content-upper
-                .card-product-cart__head
-                  p.card-product-cart__name SERENE SANCTUARY TOP
-                  button.card-product-cart__btn-delete(aria-label="Remove product from cart" data-modal-open="#modal-cart-remove")
-                .card-product-cart__variant
-                  p White
-                  p M
-              .card-product-cart__content-lower
-                p.card-product-cart__price THB 1,500
-                .card-product-cart__control
-                  button.card-product-cart__control-minus(disabled arial-label="Decrease quantity")
-                  p.card-product-cart__control-qty 1
-                  button.card-product-cart__control-plus(disabled arial-label="Increase quantity")
-          // /.card-product-cart
-          p.p-cart__sold-out-text Item is sold out. Please remove from your cart
-        .p-cart__list-item
           .card-product-cart
             .card-product-cart__image
               +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
@@ -124,11 +104,17 @@ block content
       .box-cart-summary
         .box-cart-summary__coupon
           +img.box-cart-summary__coupon-icon(src="/src/images/common/ico-coupon.svg" alt="")
-          p.box-cart-summary__coupon-text Use Coupons
+          p.box-cart-summary__coupon-text Coupon applied.
+          button.box-cart-summary__coupon-delete(data-modal-open="#modal-coupon-remove" aria-label="Remove coupon")
           a.box-cart-summary__coupon-link(href="/coupon/")
         .box-cart-summary__info
           p.box-cart-summary__total-text Total: 3 Items
           p.box-cart-summary__total-price THB 6,000
+        .box-cart-summary__info
+          p.box-cart-summary__info-coupon
+            +img(src="/src/images/common/ico-coupon.svg" alt="")
+            |Yey, you’ve saved THB600
+          del THB 6,000
         .box-cart-summary__info
           p Shipping Fee
           p THB 0

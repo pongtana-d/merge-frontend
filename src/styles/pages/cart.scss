@@ -38,18 +38,18 @@
 
     position: relative;
     display: flex;
+    gap: 6px;
     align-items: center;
     padding: 6px 0 8px;
     color: var(--color-red-2);
-    gap: 6px;
 
     &::before {
       display: block;
       width: 14px;
       height: 15px;
+      content: "";
       background: url(/src/images/common/ico-warning.svg) no-repeat;
       background-size: contain;
-      content: "";
     }
   }
 
@@ -74,9 +74,9 @@
     .swiper-wrapper {
       @include sm-lte {
         display: grid;
-        height: auto;
-        gap: 2px;
         grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        height: auto;
       }
     }
 
@@ -96,12 +96,12 @@
       left: 30px;
       width: 40px;
       height: 40px;
-      border-radius: 50%;
       margin: 0;
+      pointer-events: auto;
       background-color: var(--color-white);
+      border-radius: 50%;
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
       opacity: 1;
-      pointer-events: auto;
       transform: translateY(-50%);
       transition: background 0.2s ease-out;
 
@@ -115,10 +115,10 @@
         left: 0;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
+        content: "";
         background: url(/src/images/common/ico-arrow-prev-black-lg.svg) no-repeat;
         background-size: contain;
-        content: "";
+        border-radius: 50%;
       }
 
       &:hover:not(.swiper-button-disabled) {

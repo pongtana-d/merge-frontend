@@ -6,8 +6,8 @@
 
   &__list {
     display: grid;
-    gap: 2px;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
 
     @include sm-gt {
       grid-template-columns: repeat(3, 1fr);

@@ -8,15 +8,15 @@
 
   &::after {
     position: absolute;
-    z-index: 0;
     top: 29px;
     right: 0;
+    z-index: 0;
     display: block;
     width: 179px;
     height: 279px;
+    content: "";
     background: url(/src/images//common/bg-footer-logo.svg) left center no-repeat;
     background-size: auto 100%;
-    content: "";
   }
 
   &__inner {
@@ -69,9 +69,9 @@
       right: 0;
       width: 18px;
       height: 18px;
+      content: "";
       background: url("/src/images/common/ico-arrow-down-white.svg") no-repeat;
       background-size: contain;
-      content: "";
       transform: translateY(-50%);
       transition: transform 0.3s ease-out;
     }
@@ -89,9 +89,9 @@
     > ul {
       display: flex;
       flex-direction: column;
+      row-gap: 10px;
       padding-bottom: 17px;
       padding-left: 16px;
-      row-gap: 10px;
 
       a {
         @include text-body;
@@ -111,9 +111,9 @@
 
   &__sns {
     display: flex;
-    margin-top: 40px;
-    gap: 15px;
     grid-area: 15px;
+    gap: 15px;
+    margin-top: 40px;
 
     a {
       display: block;
@@ -142,8 +142,8 @@
 
   &__lang {
     display: flex;
-    align-items: center;
     column-gap: 5px;
+    align-items: center;
 
     a {
       @include text-body-small;
@@ -160,8 +160,8 @@
       }
 
       &[aria-current="true"] {
-        opacity: 1;
         pointer-events: none;
+        opacity: 1;
       }
     }
   }

@@ -9,9 +9,9 @@
 
   &__image {
     position: relative;
-    width: 116px;
     flex-shrink: 0;
     align-self: flex-start;
+    width: 116px;
     aspect-ratio: 116 / 168;
 
     img {
@@ -65,9 +65,9 @@
     @include text-body;
     display: flex;
     flex-direction: column;
+    gap: 8px;
     margin-top: 8px;
     color: var(--color-gray);
-    gap: 8px;
   }
 
   &__content-lower {
@@ -87,8 +87,8 @@
 
   &__control {
     display: flex;
-    min-width: 52px;
     gap: 4px;
+    min-width: 52px;
   }
 
   &__control-qty {
@@ -107,8 +107,8 @@
     background-size: 10px;
 
     &:disabled {
-      background-image: url(/src/images/common/ico-minus-gray.svg);
       pointer-events: none;
+      background-image: url(/src/images/common/ico-minus-gray.svg);
     }
   }
 
@@ -127,16 +127,16 @@
       @include text-body-small-2-bold;
 
       position: absolute;
-      z-index: 1;
       top: 0;
       left: 0;
+      z-index: 1;
       display: flex;
-      width: 100%;
-      height: 100%;
       align-items: center;
       justify-content: center;
-      background-color: var(--color-black-35);
+      width: 100%;
+      height: 100%;
       color: var(--color-white);
+      background-color: var(--color-black-35);
     }
 
     #{$this-root}__btn-delete {

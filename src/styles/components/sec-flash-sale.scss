@@ -9,8 +9,8 @@
 
   &__inner {
     display: flex;
-    align-items: center;
     column-gap: 19px;
+    align-items: center;
   }
 
   &__text {
@@ -21,15 +21,15 @@
 
   &__time {
     display: flex;
-    align-items: center;
     column-gap: 5px;
+    align-items: center;
   }
 
   &__colon {
     display: block;
+    align-self: flex-start;
     width: 3px;
     height: 10px;
-    align-self: flex-start;
     margin-top: 8px;
     background: url(/src/images/common/ico-colon-white.svg) no-repeat;
     background-size: contain;
@@ -48,29 +48,29 @@
 
   &__roller {
     display: flex;
-    overflow: hidden;
+    justify-content: center;
     width: 25px;
     height: 24px;
-    justify-content: center;
-    border-radius: 5px;
+    overflow: hidden;
     background-color: var(--color-white);
+    border-radius: 5px;
     box-shadow: inset 1px 1px 1px #56c9f3;
   }
 
   &__digit {
     display: flex;
-    height: 100%;
     flex-direction: column;
+    height: 100%;
     font-size: calc(15 / 16 * 1rem);
     font-weight: 600;
     line-height: 1.4;
 
     > span {
       display: flex;
-      height: 100%;
       flex-shrink: 0;
       align-items: center;
       justify-content: center;
+      height: 100%;
     }
   }
 
