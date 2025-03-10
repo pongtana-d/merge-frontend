@@ -19,6 +19,13 @@
   letter-spacing: 0.02em;
 }
 
+@mixin text-title-3-regular {
+  font-size: calc(15 / 16 * 1rem);
+  font-weight: 400;
+  line-height: calc(21 / 15);
+  letter-spacing: 0.02em;
+}
+
 @mixin text-body {
   font-size: calc(13 / 16 * 1rem);
   line-height: calc(19 / 13);

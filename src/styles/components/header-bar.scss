@@ -16,7 +16,8 @@
     @include text-title-3;
   }
 
-  &__btn-back {
+  &__btn-back,
+  &__btn-close {
     position: absolute;
     top: 50%;
     left: 20px;
@@ -33,5 +34,11 @@
         opacity: var(--hover-opacity);
       }
     }
+  }
+
+  &__btn-close {
+    right: 20px;
+    left: auto;
+    background-image: url(/src/images/common/ico-close.svg);
   }
 }

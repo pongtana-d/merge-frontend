@@ -1,0 +1,61 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Add Delivery Address | MERGE',
+    }
+
+block append scripts
+
+block modal
+  include /src/components/modal/_modal-close-process.pug
+
+block content
+  main.main-fit
+    .main-fit__body
+      .header-bar
+        h1.header-bar__page-title ADD DELIVERY ADDRESS
+        a.header-bar__btn-back(href="/cart/" aria-label="Back")
+        button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
+
+      form.form-main(novalidate)
+        p.form-main__title Address name
+        .form-main__row(x-data="{ isFocus: false, addressName: '' }")
+          .form-input(x-bind:class="isFocus || addressName !== '' ? 'is-focus' : ''")
+            label(for="addressName") Address name
+            input(
+              type="text"
+              id="addressName"
+              name="addressName"
+              x-model="addressName"
+              x-on:focus="isFocus = true"
+              x-on:blur="isFocus = false"
+            )
+        p.form-main__title Contact info
+        .form-main__row(x-data="{ isFocus: false, firstName: '' }")
+          .form-input(x-bind:class="isFocus || firstName !== '' ? 'is-focus' : ''")
+            label(for="firstName") First name
+            input(
+              type="text"
+              id="firstName"
+              name="firstName"
+              x-model="firstName"
+              x-on:focus="isFocus = true"
+              x-on:blur="isFocus = false"
+            )
+        .form-main__row
+          .form-input
+            label Last name
+            input(type="text" name="lastName" value="")
+        .form-main__row
+          .form-input
+            label Tel.
+            input(type="tel" value="")
+        .form-main__row
+          .form-input
+            label Email
+            input(type="email" value="")
+
+    .main-fit__footer
+      button.btn-primary SAVE

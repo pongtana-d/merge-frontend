@@ -18,7 +18,7 @@ block content
         a.header-bar__btn-back(href="/cart/" aria-label="Back")
 
       .box-coupon-search
-        form.box-coupon-search__form(method="post" action="/coupon/")
+        form.box-coupon-search__form(method="post" action="/cart/coupon/")
           label.box-coupon-search__input(
             x-data="{ isActive: false }"
             x-bind:class="isActive ? 'is-active' : ''"
@@ -27,11 +27,16 @@ block content
               type="text"
               name="coupon"
               placeholder="Enter coupon code here"
-              value="ABC"
+              value="MERGE25"
               x-on:focus="isActive = true"
               x-on:blur="isActive = false"
             )
           button.box-coupon-search__button Search
-        p.box-coupon-search__notice The discount code you entered is incorrect
+        .card-coupon-active
+          figure.card-coupon-active__image
+            +img(src="/src/images/cart/img-coupon.webp" alt="")
+          .card-coupon-active__content
+            p.card-coupon-active__name Name of coupon abc
+            p 25% off, minimum spend THB 25,000
     .main-fit__footer
-      button.btn-primary(disabled) USE COUPON
+      button.btn-primary USE COUPON
