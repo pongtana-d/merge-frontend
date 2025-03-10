@@ -1,4 +1,5 @@
 @import "./box-cart-summary.scss";
+@import "./box-coupon-search.scss";
 @import "./box-marquee.scss";
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
@@ -7,17 +8,19 @@
 @import "./btn-outline.scss";
 @import "./btn-primary.scss";
 @import "./btn-view-all.scss";
+@import "./card-coupon-active.scss";
 @import "./card-product-cart.scss";
 @import "./card-product.scss";
 @import "./card-review.scss";
 @import "./footer.scss";
+@import "./header-bar.scss";
 @import "./header-search.scss";
-@import "./header-simple.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
 @import "./list-accordion.scss";
 @import "./list-product.scss";
 @import "./loader-icon.scss";
+@import "./main-fit.scss";
 @import "./main-visual.scss";
 @import "./modal-cart-added.scss";
 @import "./modal-process.scss";

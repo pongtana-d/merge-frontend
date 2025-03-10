@@ -1,0 +1,82 @@
+@use "../utilities" as *;
+
+.box-coupon-search {
+  padding: 20px;
+  background-color: var(--color-white);
+  border-radius: 5px;
+
+  &__form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10.5px 0;
+  }
+
+  &__input {
+    flex: 1;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-gray-2);
+    transition: border-color 0.2s ease-out;
+
+    &.is-active {
+      border-color: var(--color-black);
+    }
+
+    > input[type="text"] {
+      @include text-body-bold;
+
+      display: block;
+      width: 100%;
+      height: 19px;
+      color: var(--color-black);
+      outline: none;
+
+      &::placeholder {
+        @include text-body;
+
+        font-weight: normal;
+        color: var(--color-gray);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    @include text-body-bold;
+
+    display: block;
+    flex-shrink: 0;
+    width: 66px;
+    height: 30px;
+    text-align: center;
+    background-color: var(--color-white);
+    border: 1px solid var((--color-black));
+    border-radius: 26px;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+  }
+
+  &__notice {
+    @include text-body;
+
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--color-gray);
+
+    &::before {
+      display: block;
+      flex-shrink: 0;
+      width: 14px;
+      height: 15px;
+      content: "";
+      background: url(/src/images/common/ico-warning-gray.svg) no-repeat;
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "../utilities" as *;
+
+.card-coupon-active {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 5px;
+
+  &__image {
+    flex-shrink: 0;
+    width: 60px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    @include text-body-small;
+
+    flex: 1;
+    color: var(--color-gray);
+  }
+
+  &__name {
+    @include text-body-bold;
+
+    margin-bottom: 2px;
+    color: var(--color-black);
+  }
+}

@@ -6,7 +6,6 @@ import nodeFs from 'node:fs';
 import nodePath from 'node:path';
 import pug from '@vituum/vite-plugin-pug';
 import sizeOf from 'image-size';
-
 import vituum from 'vituum';
 
 export default defineConfig({

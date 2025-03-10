@@ -1,0 +1,31 @@
+@use "../utilities" as *;
+
+.main-fit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+
+  @include sm-gt {
+    max-width: 610px;
+    margin: 0 auto;
+  }
+
+  &__body {
+    flex: 1;
+    padding: 76px 16px 0;
+
+    @include sm-gt {
+      padding: 116px 20px 0;
+    }
+  }
+
+  &__footer {
+    flex-shrink: 0;
+    padding: 16px;
+
+    @include sm-gt {
+      padding: 16px 20px 32px;
+    }
+  }
+}

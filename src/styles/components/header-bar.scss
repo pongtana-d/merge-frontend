@@ -1,22 +1,16 @@
 @use "../utilities" as *;
 
-.header-simple {
-  flex-shrink: 0;
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 56px;
   background-color: var(--color-white);
-
-  &__container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-index-header);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 56px;
-    background-color: var(--color-white);
-  }
 
   &__page-title {
     @include text-title-3;
