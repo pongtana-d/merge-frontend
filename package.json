@@ -43,6 +43,7 @@
     "alpinejs": "^3.14.8",
     "destyle.css": "^4.0.1",
     "jquery": "^3.7.1",
+    "select2": "^4.1.0-rc.0",
     "swiper": "^11.2.0"
   }
 }

@@ -28,6 +28,7 @@ block content
               type="text"
               id="addressName"
               name="addressName"
+              required
               x-model="addressName"
               x-on:focus="isFocus = true"
               x-on:blur="isFocus = false"
@@ -40,22 +41,62 @@ block content
               type="text"
               id="firstName"
               name="firstName"
+              required
               x-model="firstName"
               x-on:focus="isFocus = true"
               x-on:blur="isFocus = false"
             )
+        .form-main__row(x-data="{ isFocus: false, lastName: '' }")
+          .form-input(x-bind:class="isFocus || lastName !== '' ? 'is-focus' : ''")
+            label(for="lastName") Last name
+            input(
+              type="text"
+              id="lastName"
+              name="lastName"
+              required
+              x-model="lastName"
+              x-on:focus="isFocus = true"
+              x-on:blur="isFocus = false"
+            )
+        .form-main__row(x-data="{ isFocus: false, tel: '' }")
+          .form-input(x-bind:class="isFocus || tel !== '' ? 'is-focus' : ''")
+            label(for="tel") Tel.
+            input(
+              type="tel"
+              id="tel"
+              name="tel"
+              required
+              x-model="tel"
+              x-on:focus="isFocus = true"
+              x-on:blur="isFocus = false"
+            )
+        .form-main__row(x-data="{ isFocus: false, email: '' }")
+          .form-input(x-bind:class="isFocus || email !== '' ? 'is-focus' : ''")
+            label(for="email") Email
+            input(
+              type="text"
+              id="email"
+              name="email"
+              required
+              x-model="email"
+              x-on:focus="isFocus = true"
+              x-on:blur="isFocus = false"
+            )
+        p.form-main__title Address info
         .form-main__row
-          .form-input
-            label Last name
-            input(type="text" name="lastName" value="")
-        .form-main__row
-          .form-input
-            label Tel.
-            input(type="tel" value="")
-        .form-main__row
-          .form-input
-            label Email
-            input(type="email" value="")
+          .form-select-container.is-focus
+            label Country
+            .form-custom-select
+              select.js-custom-select(name="country")
+                option(value="Thailand") Thailand
+                option(value="Afghanistan") Afghanistan
+                option(value="Albania") Albania
+                option(value="Algeria") Algeria
+                option(value="Andorra") Andorra
+                option(value="Angola") Angola
+                option(value="Antigua and Barbuda") Antigua and Barbuda
+                option(value="Argentina") Argentina
 
+        div(style="height: 1000px")
     .main-fit__footer
       button.btn-primary SAVE
