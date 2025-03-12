@@ -1,79 +1,72 @@
 @use "../utilities" as *;
 
-// form-main
-.form-main {
-  &__title {
+// form-layout
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  legend {
     @include text-body-bold;
 
+    display: block;
     padding: 10px 0 16px;
     color: var(--color-black);
   }
 
-  &__row {
-    margin-top: 24px;
-  }
+  &__field {
+    position: relative;
+    padding-top: 26px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-gray-2);
+    transition: border-color 0.2s ease-out;
 
-  &__title + &__row {
-    margin-top: 0;
-  }
+    & + & {
+      margin-top: 24px;
+    }
 
-  &__row + &__title {
-    margin-top: 20px;
-  }
-}
+    &.is-dropdown {
+      padding-bottom: 0;
+    }
 
-// form-input
-.form-input,
-.form-select-container {
-  position: relative;
-  padding-top: 26px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-gray-2);
+    &.is-focus {
+      border-color: var(--color-black);
 
-  &.is-focus > label {
-    top: 0;
-  }
+      > label {
+        top: 0;
+      }
+    }
 
-  > label {
-    @include text-body;
+    &.is-fill > label {
+      top: 0;
+    }
 
-    position: absolute;
-    top: 29px;
-    left: 0;
-    color: var(--color-gray);
-    pointer-events: none;
-    transition: top 0.2s ease-out;
-  }
+    > label {
+      @include text-body;
 
-  > input {
-    &[type="text"],
-    &[type="email"],
-    &[type="tel"] {
-      @include text-title-3-regular;
-
-      width: 100%;
-      height: 21px;
-      color: var(--color-black);
-      outline: none;
+      position: absolute;
+      top: 29px;
+      left: 0;
+      color: var(--color-gray);
+      pointer-events: none;
+      transition: top 0.2s ease-out;
     }
   }
 }
 
-// form-select-container
-.form-select-container {
-  padding-top: 15px;
-  padding-bottom: 0;
-  border-color: var(--color-black);
+// form-input-text
+.form-input-text {
+  @include text-title-3-regular;
 
-  > label {
-    top: 0;
-  }
+  width: 100%;
+  height: 21px;
+  color: var(--color-black);
+  outline: none;
 }
 
-// form-custom-select
-.form-custom-select {
+// form-custom-dropdown
+.form-custom-dropdown {
   position: relative;
-  z-index: 2;
 
   > select {
     width: 100%;
@@ -94,9 +87,15 @@
       }
 
       .select2-selection__arrow {
+        right: 20px;
         transform: translateY(-50%) rotate(180deg);
       }
     }
+  }
+
+  .select2-selection__placeholder {
+    @include text-title-3-regular;
+    color: var(--color-gray);
   }
 
   .select2-selection {
@@ -117,7 +116,7 @@
 
   .select2-selection__arrow {
     top: 50%;
-    right: 20px;
+    right: 0;
     width: 18px;
     height: 18px;
     background: url(/src/images/common/ico-arrow-down-black.svg) no-repeat;

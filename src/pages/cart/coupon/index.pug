@@ -19,17 +19,12 @@ block content
 
       .box-coupon-search
         form.box-coupon-search__form(method="post" action="/cart/coupon/")
-          .box-coupon-search__input(
-            x-data="{ isActive: false }"
-            x-bind:class="isActive ? 'is-active' : ''"
-          )
+          label.box-coupon-search__input.js-input-focus
             input(
               type="text"
               name="coupon"
               placeholder="Enter coupon code here"
               value=""
-              x-on:focus="isActive = true"
-              x-on:blur="isActive = false"
             )
           button.box-coupon-search__button Search
     .main-fit__footer

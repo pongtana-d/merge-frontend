@@ -19,75 +19,62 @@ block content
         a.header-bar__btn-back(href="/cart/" aria-label="Back")
         button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
 
-      form.form-main(novalidate)
-        p.form-main__title Address name
-        .form-main__row(x-data="{ isFocus: false, addressName: '' }")
-          .form-input(x-bind:class="isFocus || addressName !== '' ? 'is-focus' : ''")
+      form.form-layout(novalidate)
+        fieldset
+          legend Address name
+          .form-layout__field.js-input-focus
             label(for="addressName") Address name
-            input(
+            input.form-input-text(
               type="text"
               id="addressName"
               name="addressName"
+              value=""
               required
-              x-model="addressName"
-              x-on:focus="isFocus = true"
-              x-on:blur="isFocus = false"
             )
-        p.form-main__title Contact info
-        .form-main__row(x-data="{ isFocus: false, firstName: '' }")
-          .form-input(x-bind:class="isFocus || firstName !== '' ? 'is-focus' : ''")
+        fieldset
+          legend Contact info
+          .form-layout__field.js-input-focus
             label(for="firstName") First name
-            input(
+            input.form-input-text(
               type="text"
               id="firstName"
               name="firstName"
+              value=""
               required
-              x-model="firstName"
-              x-on:focus="isFocus = true"
-              x-on:blur="isFocus = false"
             )
-        .form-main__row(x-data="{ isFocus: false, lastName: '' }")
-          .form-input(x-bind:class="isFocus || lastName !== '' ? 'is-focus' : ''")
+          .form-layout__field.js-input-focus
             label(for="lastName") Last name
-            input(
+            input.form-input-text(
               type="text"
               id="lastName"
               name="lastName"
+              value=""
               required
-              x-model="lastName"
-              x-on:focus="isFocus = true"
-              x-on:blur="isFocus = false"
             )
-        .form-main__row(x-data="{ isFocus: false, tel: '' }")
-          .form-input(x-bind:class="isFocus || tel !== '' ? 'is-focus' : ''")
+          .form-layout__field.js-input-focus
             label(for="tel") Tel.
-            input(
+            input.form-input-text(
               type="tel"
               id="tel"
               name="tel"
+              value=""
               required
-              x-model="tel"
-              x-on:focus="isFocus = true"
-              x-on:blur="isFocus = false"
             )
-        .form-main__row(x-data="{ isFocus: false, email: '' }")
-          .form-input(x-bind:class="isFocus || email !== '' ? 'is-focus' : ''")
+          .form-layout__field.js-input-focus
             label(for="email") Email
-            input(
-              type="text"
+            input.form-input-text(
+              type="email"
               id="email"
               name="email"
+              value=""
               required
-              x-model="email"
-              x-on:focus="isFocus = true"
-              x-on:blur="isFocus = false"
             )
-        p.form-main__title Address info
-        .form-main__row
-          .form-select-container.is-focus
-            label Country
-            .form-custom-select
-              select.js-custom-select(name="country")
+        fieldset
+          legend Address info
+          .form-layout__field.is-dropdown.is-fill
+            label(for="country") Country
+            .form-custom-dropdown
+              select.js-custom-dropdown(id="country" name="country" data-country="true")
                 option(value="Thailand") Thailand
                 option(value="Afghanistan") Afghanistan
                 option(value="Albania") Albania
@@ -96,7 +83,63 @@ block content
                 option(value="Angola") Angola
                 option(value="Antigua and Barbuda") Antigua and Barbuda
                 option(value="Argentina") Argentina
+          .form-layout__field.is-dropdown.is-fill
+            label(for="province") Province
+            .form-custom-dropdown
+              select.js-custom-dropdown(id="province" name="province" data-placeholder="Please select")
+                option
+                option(value="Amnat Charoen") Amnat Charoen
+                option(value="Ang Thong") Ang Thong
+                option(value="Bangkok") Bangkok
+                option(value="Bueng Kan") Bueng Kan
+                option(value="Buri Ram") Buri Ram
+                option(value="Chachoengsao") Chachoengsao
+                option(value="Chai Nat") Chai Nat
+          .form-layout__field.js-input-focus
+            label(for="district") District
+            input.form-input-text(
+              type="text"
+              id="district"
+              name="district"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-focus
+            label(for="subDistrict") Sub-District
+            input.form-input-text(
+              type="text"
+              id="subDistrict"
+              name="subDistrict"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-focus
+            label(for="address1") Address 1
+            input.form-input-text(
+              type="text"
+              id="address1"
+              name="address1"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-focus
+            label(for="address2") Address 2
+            input.form-input-text(
+              type="text"
+              id="address2"
+              name="address2"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-focus
+            label(for="postcode") Post Code
+            input.form-input-text(
+              type="text"
+              id="postcode"
+              name="postcode"
+              value=""
+              required
+            )
 
-        div(style="height: 1000px")
     .main-fit__footer
       button.btn-primary SAVE
