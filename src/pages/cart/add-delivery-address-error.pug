@@ -22,7 +22,7 @@ block content
       form.form-layout(novalidate)
         fieldset
           legend Address name
-          .form-layout__field.js-input-fill
+          .form-layout__field.is-error.js-input-fill
             label(for="addressName") Address name
             input.form-input-text(
               type="text"
@@ -31,9 +31,10 @@ block content
               value=""
               required
             )
+            p.form-layout__error The field Address name is a mandatory field.
         fieldset
           legend Contact info
-          .form-layout__field.js-input-fill
+          .form-layout__field.is-error.js-input-fill
             label(for="firstName") First name
             input.form-input-text(
               type="text"
@@ -42,7 +43,8 @@ block content
               value=""
               required
             )
-          .form-layout__field.js-input-fill
+            p.form-layout__error The field First name is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="lastName") Last name
             input.form-input-text(
               type="text"
@@ -51,7 +53,8 @@ block content
               value=""
               required
             )
-          .form-layout__field.js-input-fill
+            p.form-layout__error The field Last name is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="tel") Tel.
             input.form-input-text(
               type="tel"
@@ -60,7 +63,8 @@ block content
               value=""
               required
             )
-          .form-layout__field.js-input-fill
+            p.form-layout__error The field Telephone No. is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="email") Email
             input.form-input-text(
               type="email"
@@ -69,6 +73,7 @@ block content
               value=""
               required
             )
+            p.form-layout__error The email address is a mandatory field.
         fieldset
           legend Address info
           .form-layout__field.is-dropdown.is-fill
@@ -83,7 +88,7 @@ block content
                 option(value="Angola") Angola
                 option(value="Antigua and Barbuda") Antigua and Barbuda
                 option(value="Argentina") Argentina
-          .form-layout__field.is-dropdown.is-fill
+          .form-layout__field.is-dropdown.is-fill.is-error
             label(for="province") Province
             .form-custom-dropdown
               select.js-custom-dropdown(id="province" name="province" data-placeholder="Please select")
@@ -95,7 +100,8 @@ block content
                 option(value="Buri Ram") Buri Ram
                 option(value="Chachoengsao") Chachoengsao
                 option(value="Chai Nat") Chai Nat
-          .form-layout__field.js-input-fill
+            p.form-layout__error The province is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="district") District
             input.form-input-text(
               type="text"
@@ -104,7 +110,8 @@ block content
               value=""
               required
             )
-          .form-layout__field.js-input-fill
+            p.form-layout__error The field District is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="subDistrict") Sub-District
             input.form-input-text(
               type="text"
@@ -113,6 +120,7 @@ block content
               value=""
               required
             )
+            p.form-layout__error The field Sub-District is a mandatory field.
           .form-layout__field.js-input-fill
             label(for="address1") Address 1
             input.form-input-text(
@@ -122,7 +130,8 @@ block content
               value=""
               required
             )
-          .form-layout__field.js-input-fill
+            p.form-layout__error The field Address 1 is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="address2") Address 2
             input.form-input-text(
               type="text"
@@ -131,7 +140,8 @@ block content
               value=""
               required
             )
-          .form-layout__field.js-input-fill
+            p.form-layout__error The field Address 2 is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
             label(for="postcode") Post Code
             input.form-input-text(
               type="text"
@@ -140,7 +150,7 @@ block content
               value=""
               required
             )
-
+            p.form-layout__error The post code is a mandatory field.
     .main-full__footer
       button.btn-rounded SAVE
       ul.breadcrumb-checkout

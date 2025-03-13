@@ -31,17 +31,9 @@ block content
               .card-product-cart__content-lower
                 p.card-product-cart__price THB 1,500
                 .card-product-cart__control(x-data="{ qty: 1 }")
-                  button.card-product-cart__control-minus(
-                    x-bind:disabled="qty === 1"
-                    x-on:click.prevent="qty--"
-                    arial-label="Decrease quantity"
-                  )
-                  p.card-product-cart__control-qty(x-text="qty") 1
-                  button.card-product-cart__control-plus(
-                    x-bind:disabled="qty === 99"
-                    x-on:click.prevent="qty++"
-                    arial-label="Increase quantity"
-                  )
+                  button.card-product-cart__control-minus(disabled arial-label="Decrease quantity")
+                  p.card-product-cart__control-qty 1
+                  button.card-product-cart__control-plus(arial-label="Increase quantity")
           // /.card-product-cart
         .p-cart__list-item
           .card-product-cart
@@ -57,18 +49,10 @@ block content
                   p M
               .card-product-cart__content-lower
                 p.card-product-cart__price THB 1,500
-                .card-product-cart__control(x-data="{ qty: 1 }")
-                  button.card-product-cart__control-minus(
-                    x-bind:disabled="qty === 1"
-                    x-on:click.prevent="qty--"
-                    arial-label="Decrease quantity"
-                  )
-                  p.card-product-cart__control-qty(x-text="qty") 1
-                  button.card-product-cart__control-plus(
-                    x-bind:disabled="qty === 99"
-                    x-on:click.prevent="qty++"
-                    arial-label="Increase quantity"
-                  )
+                .card-product-cart__control
+                  button.card-product-cart__control-minus(disabled arial-label="Decrease quantity")
+                  p.card-product-cart__control-qty 1
+                  button.card-product-cart__control-plus(arial-label="Increase quantity")
           // /.card-product-cart
         .p-cart__list-item
           .card-product-cart.is-sold-out
@@ -105,18 +89,10 @@ block content
                   p XS
               .card-product-cart__content-lower
                 p.card-product-cart__price THB 3,000
-                .card-product-cart__control(x-data="{ qty: 2 }")
-                  button.card-product-cart__control-minus(
-                    x-bind:disabled="qty === 1"
-                    x-on:click.prevent="qty--"
-                    arial-label="Decrease quantity"
-                  )
-                  p.card-product-cart__control-qty(x-text="qty") 2
-                  button.card-product-cart__control-plus(
-                    x-bind:disabled="qty === 99"
-                    x-on:click.prevent="qty++"
-                    arial-label="Increase quantity"
-                  )
+                .card-product-cart__control
+                  button.card-product-cart__control-minus(arial-label="Decrease quantity")
+                  p.card-product-cart__control-qty 2
+                  button.card-product-cart__control-plus(arial-label="Increase quantity")
           // /.card-product-cart
 
       // /.p-cart__list

@@ -11,15 +11,15 @@ block append scripts
 block modal
 
 block content
-  main.main-fit
-    .main-fit__body
+  main.main-full
+    .main-full__body
       .header-bar
         h1.header-bar__page-title COUPON
         a.header-bar__btn-back(href="/cart/" aria-label="Back")
 
       .box-coupon-search
         form.box-coupon-search__form(method="post" action="/cart/coupon/")
-          label.box-coupon-search__input.js-input-focus
+          label.box-coupon-search__input
             input(
               type="text"
               name="coupon"
@@ -28,5 +28,5 @@ block content
             )
           button.box-coupon-search__button Search
         p.box-coupon-search__notice The discount code you entered is incorrect
-    .main-fit__footer
+    .main-full__footer
       button.btn-primary(disabled) USE COUPON

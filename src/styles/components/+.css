@@ -4,9 +4,11 @@
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
 @import "./box-product-instruction.scss";
+@import "./breadcrumb-checkout.scss";
 @import "./breadcrumb.scss";
 @import "./btn-outline.scss";
 @import "./btn-primary.scss";
+@import "./btn-rounded.scss";
 @import "./btn-view-all.scss";
 @import "./card-coupon-active.scss";
 @import "./card-product-cart.scss";
@@ -21,7 +23,7 @@
 @import "./list-accordion.scss";
 @import "./list-product.scss";
 @import "./loader-icon.scss";
-@import "./main-fit.scss";
+@import "./main-full.scss";
 @import "./main-visual.scss";
 @import "./modal-cart-added.scss";
 @import "./modal-process.scss";

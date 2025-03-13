@@ -25,11 +25,11 @@
       margin-top: 24px;
     }
 
-    &.is-dropdown {
-      padding-bottom: 0;
+    &:has(.select2-container--open) {
+      z-index: 2;
     }
 
-    &.is-focus {
+    &:has(.form-input-text:focus) {
       border-color: var(--color-black);
 
       > label {
@@ -39,6 +39,31 @@
 
     &.is-fill > label {
       top: 0;
+    }
+
+    &.is-error {
+      border-color: var(--color-red-2);
+    }
+
+    &.is-valid::after {
+      position: absolute;
+      right: 0;
+      bottom: 12px;
+      z-index: 0;
+      width: 18px;
+      height: 18px;
+      content: "";
+      background: url(/src/images/common/ico-valid.svg) no-repeat;
+      background-size: contain;
+    }
+
+    &.is-dropdown {
+      padding-bottom: 0;
+
+      &.is-valid::after {
+        right: 26px;
+        bottom: 14px;
+      }
     }
 
     > label {
@@ -51,6 +76,15 @@
       pointer-events: none;
       transition: top 0.2s ease-out;
     }
+  }
+
+  &__error {
+    @include text-body-small-2;
+
+    position: absolute;
+    top: calc(100% + 3px);
+    width: 100%;
+    color: var(--color-red-2);
   }
 }
 

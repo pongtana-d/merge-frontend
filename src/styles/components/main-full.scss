@@ -1,13 +1,13 @@
 @use "../utilities" as *;
 
-.main-fit {
+.main-full {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
 
   @include sm-gt {
-    max-width: 610px;
+    max-width: 650px;
     margin: 0 auto;
   }
 
