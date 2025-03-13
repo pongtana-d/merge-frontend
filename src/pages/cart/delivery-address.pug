@@ -1,0 +1,50 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Delivery Address | MERGE',
+    }
+
+block append scripts
+
+block modal
+  include /src/components/modal/_modal-close-process.pug
+
+block content
+  main.main-full
+    .main-full__body
+      .header-bar
+        h1.header-bar__page-title DELIVERY ADDRESS
+        button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
+
+      div(class="grid grid-cols-1 gap-4")
+        .card-address
+          .card-address__head
+            p.card-address__title Home - Life Condo Asoke
+            button.card-address__btn-rounded Change
+          .card-address__info
+            p.card-address__name Meena Sukjai
+            p Tel. 0921267040
+            p Email meena_sukjai@gmail.com
+          p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+          button.card-address__btn-default Default
+
+        .card-address
+          .card-address__head
+            p.card-address__title Office - ABC
+            .card-address__tool
+              button(aria-label="Edit")
+              button(aria-label="Delete")
+          .card-address__info
+            p.card-address__name Meena Sukjai
+            p Tel. 0921267040
+            p Email meena_sukjai@gmail.com
+          p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+          button.card-address__btn-set Set As Default
+
+    .main-full__footer
+      button.btn-primary CONTINUE TO PAY
+      ul.breadcrumb-checkout
+        li CHECK OUT
+        li ADDRESS INFO
