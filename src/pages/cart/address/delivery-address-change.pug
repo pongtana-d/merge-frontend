@@ -34,20 +34,28 @@ block content
           p.card-address__location
             +img(src="/src/images/common/ico-marker.svg" alt="")
             span 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
-          button.card-address__btn-default Default
+          div
+            button.card-address__btn-set(tabindex="-1")
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Default
 
         .card-address.is-inactive
           .card-address__head
             p.card-address__title Office - ABC
             .card-address__tool
               button(aria-label="Edit")
+                +img(src="/src/images/common/ico-edit.svg" alt="")
               button(aria-label="Delete")
+                +img(src="/src/images/common/ico-trash.svg" alt="")
           .card-address__info
             p.card-address__name Meena Sukjai
             p Tel. 0921267040
             p Email meena_sukjai@gmail.com
           p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
-          button.card-address__btn-set Set As Default
+          div
+            button.card-address__btn-set Set As Default
 
     .main-full__footer
-      button.btn-rounded-outline CONTINUE TO PAY
+      button.btn-primary.is-rounded.is-outline
+        +img(src="/src/images/common/ico-add.svg" alt="" style="--width:20;")
+        span Add a New Delivery Address

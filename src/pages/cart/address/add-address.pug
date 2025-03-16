@@ -22,51 +22,51 @@ block content
       form.form-layout(novalidate)
         fieldset
           legend Address name
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="addressName") Address name
             input.form-input-text(
               type="text"
               id="addressName"
               name="addressName"
-              value="Home"
+              value=""
               required
             )
         fieldset
           legend Contact info
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="firstName") First name
             input.form-input-text(
               type="text"
               id="firstName"
               name="firstName"
-              value="Pattara"
+              value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="lastName") Last name
             input.form-input-text(
               type="text"
               id="lastName"
               name="lastName"
-              value="Chirawanich"
+              value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="tel") Tel.
             input.form-input-text(
               type="tel"
               id="tel"
               name="tel"
-              value="095 969 1569"
+              value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="email") Email
             input.form-input-text(
               type="email"
               id="email"
               name="email"
-              value="abcemail@gmail.com"
+              value=""
               required
             )
         fieldset
@@ -83,7 +83,7 @@ block content
                 option(value="Angola") Angola
                 option(value="Antigua and Barbuda") Antigua and Barbuda
                 option(value="Argentina") Argentina
-          .form-layout__field.is-dropdown.is-fill.is-valid
+          .form-layout__field.is-dropdown.is-fill
             label(for="province") Province
             .form-custom-dropdown
               select.js-custom-dropdown(id="province" name="province" data-placeholder="Please select")
@@ -95,7 +95,7 @@ block content
                 option(value="Buri Ram") Buri Ram
                 option(value="Chachoengsao") Chachoengsao
                 option(value="Chai Nat") Chai Nat
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="district") District
             input.form-input-text(
               type="text"
@@ -104,7 +104,7 @@ block content
               value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="subDistrict") Sub-District
             input.form-input-text(
               type="text"
@@ -113,7 +113,7 @@ block content
               value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="address1") Address 1
             input.form-input-text(
               type="text"
@@ -122,7 +122,7 @@ block content
               value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="address2") Address 2
             input.form-input-text(
               type="text"
@@ -131,7 +131,7 @@ block content
               value=""
               required
             )
-          .form-layout__field.is-fill.is-valid.js-input-fill
+          .form-layout__field.js-input-fill
             label(for="postcode") Post Code
             input.form-input-text(
               type="text"
@@ -142,7 +142,7 @@ block content
             )
 
     .main-full__footer
-      button.btn-rounded SAVE
+      button.btn-primary.is-rounded.bg-blue SAVE
       ul.breadcrumb-checkout
         li CHECK OUT
         li ADD DELIVERY ADDRESS

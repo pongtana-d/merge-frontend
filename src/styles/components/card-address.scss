@@ -16,6 +16,12 @@
     #{$root}__title {
       color: var(--color-black);
     }
+
+    #{$root}__btn-set {
+      color: var(--color-black);
+      pointer-events: none;
+      border-color: var(--color-black);
+    }
   }
 
   &.is-inactive {
@@ -97,6 +103,26 @@
     img {
       display: block;
       width: 14px;
+      height: auto;
+    }
+  }
+
+  &__btn-set {
+    @include text-body-bold;
+
+    display: inline-flex;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 5.5px 12px;
+    color: var(--color-gray);
+    border: 1px solid var(--color-gray);
+    border-radius: 48px;
+
+    > img {
+      display: block;
+      flex-shrink: 0;
+      width: 18px;
       height: auto;
     }
   }
