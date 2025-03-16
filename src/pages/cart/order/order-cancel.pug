@@ -1,0 +1,41 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Order Cancelled | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title CANCELLED
+      button.header-bar__btn-close(aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-order-result
+        .box-order-result__head
+          +img(src="/src/images/common/img-order-cancel.svg" style="--width:59" alt="")
+          h2.title-sm.mb-2 Your Order Has Been Cancelled!
+          p.text-gray your payment was not successfully processed or you have made a product exchange after payment is complete.
+        dl.box-order-result__detail
+          .box-order-result__detail-item
+            dt ORDER ID :
+            dd M2024110700465
+          .box-order-result__detail-item
+            dt ORDER DATE :
+            dd Jan 16, 2025 at 1.39 PM
+          .box-order-result__detail-item
+            dt ORDER ID :
+            dd
+              .box-order-result__status
+                +img(src="/src/images/common/ico-order-cancelled.svg" alt="")
+                span.text-red-2 Cancelled
+      // /.box-order-result
+
+    .main-full__footer
+      button.btn-primary.is-outline CONTINUE SHOPPING

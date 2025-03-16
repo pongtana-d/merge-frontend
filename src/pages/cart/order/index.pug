@@ -1,0 +1,105 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Order Detail | MERGE',
+    }
+
+block append scripts
+
+block modal
+  include /src/components/modal/_modal-close-process.pug
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title ORDER DETAIL
+      a.header-bar__btn-back(href="/cart/address/delivery-address.html" aria-label="Back")
+      button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
+  main.main-full
+    .main-full__body
+      div(class="flex flex-col gap-5")
+        div(class="flex flex-col gap-4")
+          h2.text-body-bold Delivery Address
+          .card-address
+            .card-address__info
+              p.card-address__name Meena Sukjai
+              p Tel. 0921267040
+              p Email meena_sukjai@gmail.com
+            p.card-address__location
+              +img(src="/src/images/common/ico-marker.svg" alt="")
+              span 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+        div(class="flex flex-col gap-4")
+          h2.text-body-bold Payment Summary
+          div
+            div(class="flex flex-col gap-0.5")
+              .card-product-cart
+                .card-product-cart__image
+                  +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+                .card-product-cart__content
+                  .card-product-cart__content-upper
+                    .card-product-cart__head
+                      p.card-product-cart__name SERENE SANCTUARY TOP
+                    .card-product-cart__variant
+                      p White
+                      p M
+                  .card-product-cart__content-lower
+                    p.card-product-cart__price THB 1,500
+                    p.card-product-cart__qty 1
+              // /.card-product-cart
+              .card-product-cart
+                .card-product-cart__image
+                  +img(src="/src/images/cart/img-product-cart-02.webp" alt="")
+                .card-product-cart__content
+                  .card-product-cart__content-upper
+                    .card-product-cart__head
+                      p.card-product-cart__name SERENE SANCTUARY TOP
+                    .card-product-cart__variant
+                      p White
+                      p M
+                  .card-product-cart__content-lower
+                    p.card-product-cart__price THB 1,500
+                    p.card-product-cart__qty 1
+              // /.card-product-cart
+              .card-product-cart
+                .card-product-cart__image
+                  +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
+                .card-product-cart__content
+                  .card-product-cart__content-upper
+                    .card-product-cart__head
+                      p.card-product-cart__name MAGNETIC BLUE
+                    .card-product-cart__variant
+                      p White/Blue
+                      p XS
+                  .card-product-cart__content-lower
+                    p.card-product-cart__price THB 3,000
+                    p.card-product-cart__qty 2
+              // /.card-product-cart
+
+            .box-cart-summary
+              .box-cart-summary__detail
+                .box-cart-summary__detail-item
+                  p.title-sm Total: 3 Items
+                  p.title-md THB 5,400
+                .box-cart-summary__detail-item
+                  p.box-cart-summary__used-coupon
+                    +img(src="/src/images/common/ico-coupon.svg" alt="")
+                    |Yey, you’ve saved THB600
+                  del THB 6,000
+                .box-cart-summary__detail-item
+                  p Shipping Fee
+                  p THB 0
+              label.input-agreement
+                input(type="checkbox" name="agreement" value="")
+                span I agree with #[a(href="#" target="_blank") Terms and Cons]
+            // /.box-cart-summary
+
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue(disabled)
+        +img(src="/src/images/common/ico-lock.svg" alt="")
+        span PAY
+      nav.breadcrumb.breadcrumb--checkout
+        ul.breadcrumb__list
+          li CHECK OUT
+          li ORDER DETAIL

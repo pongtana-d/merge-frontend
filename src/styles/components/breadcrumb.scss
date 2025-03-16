@@ -39,4 +39,14 @@
       }
     }
   }
+
+  &--checkout {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0 0;
+
+    @include sm-gt {
+      padding-top: 32px;
+    }
+  }
 }

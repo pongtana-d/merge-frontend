@@ -83,17 +83,18 @@ block content
           p.box-cart-summary__coupon-text Coupon applied.
           button.box-cart-summary__coupon-delete(data-modal-open="#modal-coupon-remove" aria-label="Remove coupon")
           a.box-cart-summary__coupon-link(href="/cart/coupon/")
-        .box-cart-summary__info
-          p.box-cart-summary__total-text Total: 3 Items
-          p.box-cart-summary__total-price THB 6,000
-        .box-cart-summary__info
-          p.box-cart-summary__info-coupon
-            +img(src="/src/images/common/ico-coupon.svg" alt="")
-            |Yey, you’ve saved THB600
-          del THB 6,000
-        .box-cart-summary__info
-          p Shipping Fee
-          p THB 0
+        .box-cart-summary__detail
+          .box-cart-summary__detail-item
+            p.title-sm Total: 3 Items
+            p.title-md THB 6,000
+          .box-cart-summary__detail-item
+            p.box-cart-summary__used-coupon
+              +img(src="/src/images/common/ico-coupon.svg" alt="")
+              |Yey, you’ve saved THB600
+            del THB 6,000
+          .box-cart-summary__detail-item
+            p Shipping Fee
+            p THB 0
         .box-cart-summary__button
           button.btn-primary CHECK OUT
           a.btn-primary.is-outline(href="/product/") CONTINUE SHOPPING

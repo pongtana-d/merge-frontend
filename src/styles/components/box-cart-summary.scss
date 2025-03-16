@@ -1,6 +1,9 @@
 @use "../utilities" as *;
 
 .box-cart-summary {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   padding-top: 20px;
   margin-top: 18px;
   border-top: 1px solid var(--color-black);
@@ -12,7 +15,6 @@
     align-items: center;
     justify-content: flex-start;
     padding: 10px 12px;
-    margin-bottom: 20px;
     background-color: var(--color-gray-2);
     border-radius: 5px;
     transition: var(--hover-transition);
@@ -66,19 +68,29 @@
     height: 100%;
   }
 
-  &__info {
+  &__detail {
     @include text-body;
 
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__detail-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    & + & {
-      margin-top: 8px;
+    > *:nth-child(2) {
+      flex-shrink: 0;
+    }
+
+    del {
+      text-decoration: line-through;
     }
   }
 
-  &__info-coupon {
+  &__used-coupon {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -88,25 +100,11 @@
       width: 14px;
       height: 14px;
     }
-
-    del {
-      text-decoration: line-through;
-    }
-  }
-
-  &__total-text {
-    @include text-title-3;
-  }
-
-  &__total-price {
-    @include text-title-2;
-    flex-shrink: 0;
   }
 
   &__button {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-top: 20px;
   }
 }

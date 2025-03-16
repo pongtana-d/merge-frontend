@@ -1,0 +1,17 @@
+@use "../utilities" as *;
+
+.title-lg {
+  @include text-title-1;
+}
+
+.title-md {
+  @include text-title-2;
+}
+
+.title-sm {
+  @include text-title-3;
+}
+
+.title-sm-normal {
+  @include text-title-3-regular;
+}

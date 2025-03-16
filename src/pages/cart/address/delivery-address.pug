@@ -18,7 +18,7 @@ block content
       button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
   main.main-full
     .main-full__body
-      div(class="grid grid-cols-1 gap-4")
+      div(class="flex flex-col gap-4")
         .card-address
           .card-address__head
             p.card-address__title Home - Life Condo Asoke
@@ -33,6 +33,7 @@ block content
 
     .main-full__footer
       button.btn-primary CONTINUE TO PAY
-      ul.breadcrumb-checkout
-        li CHECK OUT
-        li ADDRESS INFO
+      nav.breadcrumb.breadcrumb--checkout
+        ul.breadcrumb__list
+          li CHECK OUT
+          li ADD DELIVERY ADDRESS

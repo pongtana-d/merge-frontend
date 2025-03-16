@@ -1,0 +1,64 @@
+@use "../utilities" as *;
+
+.box-order-result {
+  &__head {
+    padding-top: 16px;
+    text-align: center;
+
+    @include sm-gt {
+      padding-top: 0;
+    }
+
+    > img {
+      --width: 87;
+
+      display: block;
+      width: calc(var(--width) * 1px);
+      height: auto;
+      margin: 0 auto 12px;
+    }
+  }
+
+  &__detail {
+    margin-top: 32px;
+    border: 1px solid var(--color-gray-2);
+    border-radius: 5px;
+
+    &-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 21.5px 16px;
+
+      &:not(:first-child) {
+        border-top: 1px solid var(--color-gray-2);
+      }
+    }
+
+    dt {
+      @include text-body-small;
+
+      font-weight: normal;
+      color: var(--color-gray);
+    }
+
+    dd {
+      @include text-body;
+    }
+  }
+
+  &__status {
+    @include text-body-bold;
+
+    display: flex;
+    gap: 6px;
+
+    > img {
+      display: block;
+      width: 18px;
+      height: auto;
+      transform: translateY(-2px);
+    }
+  }
+}

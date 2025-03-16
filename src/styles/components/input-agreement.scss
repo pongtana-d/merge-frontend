@@ -1,0 +1,48 @@
+@use "../utilities" as *;
+
+.input-agreement {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+
+  > input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + span::before {
+      background-image: url(/src/images/common/ico-checkbox-on.svg);
+    }
+  }
+
+  > span {
+    @include text-body;
+
+    position: relative;
+    display: block;
+    padding-left: 28px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      content: "";
+      background: url(/src/images/common/ico-checkbox-off.svg) no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

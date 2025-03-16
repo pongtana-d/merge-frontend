@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+.text-body {
+  @include text-body;
+}
+
+.text-body-bold {
+  @include text-body-bold;
+}
+
+.text-body-sm {
+  @include text-body-small;
+}
+
+.text-body-xs {
+  @include text-body-small-2;
+}
+
+.text-body-xs-bold {
+  @include text-body-small-2-bold;
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-red-2 {
+  color: var(--color-red-2);
+}
