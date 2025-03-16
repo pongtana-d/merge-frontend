@@ -1,15 +1,33 @@
 @use "../utilities" as *;
 
 .card-address {
+  $root: &;
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 16px;
   background-color: var(--color-white);
+  border: 1px solid transparent;
   border-radius: 5px;
+
+  &.is-default {
+    border-color: var(--color-blue);
+
+    #{$root}__title {
+      color: var(--color-black);
+    }
+  }
+
+  &.is-inactive {
+    #{$root}__title {
+      color: var(--color-gray);
+    }
+  }
 
   &__head {
     display: flex;
+    gap: 10px;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
@@ -47,6 +65,39 @@
   }
 
   &__location {
+    @include text-body;
+
     display: flex;
+    gap: 6px;
+    align-items: flex-start;
+
+    > img {
+      display: block;
+      flex-shrink: 0;
+      width: 18px;
+      height: auto;
+    }
+
+    > span {
+      display: block;
+      flex: 1;
+    }
+  }
+
+  &__tool {
+    display: flex;
+    gap: 12px;
+
+    button {
+      display: block;
+      width: 14px;
+      padding: 3.5px 0;
+    }
+
+    img {
+      display: block;
+      width: 14px;
+      height: auto;
+    }
   }
 }

@@ -27,12 +27,6 @@
     }
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
   &__sold-out-text {
     @include text-body;
 

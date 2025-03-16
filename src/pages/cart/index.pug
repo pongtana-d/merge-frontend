@@ -15,8 +15,8 @@ block content
   .p-cart
     h1.p-cart__heading CART
     section.p-cart__inner
-      .p-cart__list
-        .p-cart__list-item
+      div(class="flex flex-col gap-0.5")
+        div
           .card-product-cart
             .card-product-cart__image
               +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
@@ -35,7 +35,7 @@ block content
                   p.card-product-cart__control-qty 1
                   button.card-product-cart__control-plus(arial-label="Increase quantity")
           // /.card-product-cart
-        .p-cart__list-item
+        div
           .card-product-cart
             .card-product-cart__image
               +img(src="/src/images/cart/img-product-cart-02.webp" alt="")
@@ -54,7 +54,7 @@ block content
                   p.card-product-cart__control-qty 1
                   button.card-product-cart__control-plus(arial-label="Increase quantity")
           // /.card-product-cart
-        .p-cart__list-item
+        div
           .card-product-cart.is-sold-out
             .card-product-cart__image
               +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
@@ -75,7 +75,7 @@ block content
                   button.card-product-cart__control-plus(disabled arial-label="Increase quantity")
           // /.card-product-cart
           p.p-cart__sold-out-text Item is sold out. Please remove from your cart
-        .p-cart__list-item
+        div
           .card-product-cart
             .card-product-cart__image
               +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
@@ -94,8 +94,6 @@ block content
                   p.card-product-cart__control-qty 2
                   button.card-product-cart__control-plus(arial-label="Increase quantity")
           // /.card-product-cart
-
-      // /.p-cart__list
 
       .box-cart-summary
         .box-cart-summary__coupon

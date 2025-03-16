@@ -11,12 +11,12 @@ block append scripts
 block modal
 
 block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title COUPON
+      a.header-bar__btn-back(href="/cart/" aria-label="Back")
   main.main-full
     .main-full__body
-      .header-bar
-        h1.header-bar__page-title COUPON
-        a.header-bar__btn-back(href="/cart/" aria-label="Back")
-
       .box-coupon-search
         form.box-coupon-search__form(method="post" action="/cart/coupon/")
           label.box-coupon-search__input

@@ -19,10 +19,14 @@ block content
   main.main-full
     .main-full__body
       div(class="grid grid-cols-1 gap-4")
-        .card-address
+        .card-address.is-default
           .card-address__head
             p.card-address__title Home - Life Condo Asoke
-            button.card-address__btn-rounded Change
+            .card-address__tool
+              button(aria-label="Edit")
+                +img(src="/src/images/common/ico-edit.svg" alt="")
+              button(aria-label="Delete")
+                +img(src="/src/images/common/ico-trash.svg" alt="")
           .card-address__info
             p.card-address__name Meena Sukjai
             p Tel. 0921267040
@@ -30,9 +34,20 @@ block content
           p.card-address__location
             +img(src="/src/images/common/ico-marker.svg" alt="")
             span 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+          button.card-address__btn-default Default
+
+        .card-address.is-inactive
+          .card-address__head
+            p.card-address__title Office - ABC
+            .card-address__tool
+              button(aria-label="Edit")
+              button(aria-label="Delete")
+          .card-address__info
+            p.card-address__name Meena Sukjai
+            p Tel. 0921267040
+            p Email meena_sukjai@gmail.com
+          p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+          button.card-address__btn-set Set As Default
 
     .main-full__footer
-      button.btn-primary CONTINUE TO PAY
-      ul.breadcrumb-checkout
-        li CHECK OUT
-        li ADDRESS INFO
+      button.btn-rounded-outline CONTINUE TO PAY

@@ -3,7 +3,7 @@
 .card-product-cart {
   --text-color: var(--color-black);
 
-  $this-root: &;
+  $root: &;
   display: flex;
   background-color: var(--color-white);
 
@@ -123,7 +123,7 @@
   &.is-sold-out {
     --text-color: var(--color-gray);
 
-    #{$this-root}__image > span {
+    #{$root}__image > span {
       @include text-body-small-2-bold;
 
       position: absolute;
@@ -139,7 +139,7 @@
       background-color: var(--color-black-35);
     }
 
-    #{$this-root}__btn-delete {
+    #{$root}__btn-delete {
       background-image: url(/src/images/common/ico-delete-02-gray.svg);
     }
   }

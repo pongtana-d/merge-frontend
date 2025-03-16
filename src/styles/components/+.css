@@ -22,6 +22,7 @@
 @import "./header-utils.scss";
 @import "./header.scss";
 @import "./list-accordion.scss";
+@import "./list-product-related.scss";
 @import "./list-product.scss";
 @import "./loader-icon.scss";
 @import "./main-full.scss";
