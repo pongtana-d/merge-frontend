@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+.box-heading-tab {
+  display: flex;
+  margin: 0 -16px;
+
+  @include sm-gt {
+    margin: 0;
+  }
+
+  &__link {
+    @include text-body-bold;
+
+    display: block;
+    flex: 1;
+    padding-top: 4px;
+    padding-bottom: 9px;
+    color: var(--color-gray);
+    text-align: center;
+    border-bottom: 1px solid var(--color-gray-2);
+
+    @include sm-gt {
+      padding-top: 0;
+      padding-bottom: 16px;
+    }
+
+    &.is-active {
+      color: var(--color-black);
+      pointer-events: none;
+      border-color: var(--color-black);
+    }
+  }
+}

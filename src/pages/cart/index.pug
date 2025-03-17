@@ -10,6 +10,7 @@ block append scripts
 
 block modal
   include /src/components/modal/_modal-cart-remove.pug
+  include /src/components/modal/_modal-login.pug
 
 block content
   section.p-cart
@@ -108,7 +109,7 @@ block content
             p Shipping Fee
             p THB 0
         .box-cart-summary__button
-          button.btn-primary CHECK OUT
+          button.btn-primary(data-modal-open="#modal-login") CHECK OUT
           a.btn-primary.is-outline(href="/product/") CONTINUE SHOPPING
       // /.box-cart-summary
 

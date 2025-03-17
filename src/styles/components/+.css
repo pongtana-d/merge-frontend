@@ -1,5 +1,7 @@
 @import "./box-cart-summary.scss";
 @import "./box-coupon-search.scss";
+@import "./box-heading-tab.scss";
+@import "./box-login-otp.scss";
 @import "./box-marquee.scss";
 @import "./box-order-result.scss";
 @import "./box-product-detail-head.scss";
@@ -19,6 +21,7 @@
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
+@import "./heading-underline.scss";
 @import "./input-agreement.scss";
 @import "./list-accordion.scss";
 @import "./list-product.scss";

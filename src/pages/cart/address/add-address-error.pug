@@ -76,23 +76,17 @@ block content
             p.form-layout__error The email address is a mandatory field.
         fieldset
           legend Address info
-          .form-layout__field.is-dropdown.is-fill.is-valid
-            label(for="country") Country
-            .form-custom-dropdown
-              select.js-custom-dropdown(id="country" name="country" data-country="true")
-                option(value="Thailand") Thailand
-                option(value="Afghanistan") Afghanistan
-                option(value="Albania") Albania
-                option(value="Algeria") Algeria
-                option(value="Andorra") Andorra
-                option(value="Angola") Angola
-                option(value="Antigua and Barbuda") Antigua and Barbuda
-                option(value="Argentina") Argentina
-          .form-layout__field.is-dropdown.is-fill.is-error
+          .form-layout__field.is-fill.is-valid
+            label Country
+            .form-selectbox-icon
+              .form-selectbox-icon__text
+                +img(src="/assets/images/flag/thailand.svg" alt="")
+                span Thailand
+          .form-layout__field.is-error.is-fill
             label(for="province") Province
-            .form-custom-dropdown
-              select.js-custom-dropdown(id="province" name="province" data-placeholder="Please select")
-                option(value="")
+            .form-selectbox
+              select.js-custom-dropdown(id="province" name="province" required)
+                option(value="" disabled selected) Please select
                 option(value="Amnat Charoen") Amnat Charoen
                 option(value="Ang Thong") Ang Thong
                 option(value="Bangkok") Bangkok

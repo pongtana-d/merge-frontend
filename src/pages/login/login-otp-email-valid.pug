@@ -1,0 +1,32 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Login OTP | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/_header
+  main.main-full
+    .main-full__body
+      .box-login-otp
+        .box-login-otp__head
+          h1.title-sm Enter the 4-digit code
+          p.text-gray Please enter OTP sent to your email (OTP ref: X03456)
+          .box-login-otp__user: span abcmail@gmail.com
+        .box-login-otp__input
+          input(type="text" value="8" required)
+          input(type="text" value="8" required)
+          input(type="text" value="8" required)
+          input(type="text" value="8" required)
+        .box-login-otp__footer
+          p Entering the wrong OTP more than 3 times, it will be disabled and you'll need to request a new one.
+          p Resend Verifacation #[span.box-login-otp__time (90s)]
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue VERIFY
+      p.main-full__note Want to Change Your Telephone No.? #[a(href="#") Change Here]

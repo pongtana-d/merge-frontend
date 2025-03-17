@@ -1,0 +1,95 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Register | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/_header
+  main.main-full
+    .main-full__body
+      h1.heading-underline REGISTER
+      form.form-layout(novalidate)
+        fieldset
+          .form-layout__field.is-error.js-input-fill
+            label(for="firstName") First name
+            input.form-input-text(
+              type="text"
+              id="firstName"
+              name="firstName"
+              value=""
+              required
+            )
+            p.form-layout__error The field First Name is a mandatory field.
+          .form-layout__field.js-input-fill
+            label(for="midName") Middle name (Optional)
+            input.form-input-text(
+              type="text"
+              id="midName"
+              name="midName"
+              value=""
+            )
+          .form-layout__field.is-error.js-input-fill
+            label(for="lastName") Last name
+            input.form-input-text(
+              type="text"
+              id="lastName"
+              name="lastName"
+              value=""
+              required
+            )
+            p.form-layout__error The field Last Name is a mandatory field.
+          .form-layout__tel-code
+            .form-layout__field.is-fill
+              label Tel.
+              .form-selectbox-icon
+                .form-selectbox-icon__text
+                  +img(src="/assets/images/flag/thailand.svg" alt="")
+                  span +66
+            .form-layout__field.is-error.js-input-fill
+              input.form-input-text(
+                type="tel"
+                id="tel"
+                name="tel"
+                value=""
+                required
+              )
+              p.form-layout__error The field Telephone No. is a mandatory field.
+          .form-layout__field.is-error.js-input-fill
+            label(for="email") Email
+            input.form-input-text(
+              type="email"
+              id="email"
+              name="email"
+              value=""
+              required
+            )
+            p.form-layout__error The email address is a mandatory field
+          .form-layout__field.is-error.js-input-fill
+            label(for="birthdate") Birth date
+            input.form-input-text(
+              type="text"
+              id="birthdate"
+              name="birthdate"
+              value=""
+              required
+            )
+            p.form-layout__error The field Birth date is a mandatory field.
+          .form-layout__field.is-fill.is-error
+            label(for="gender") Gender
+            .form-selectbox
+              select.js-custom-dropdown(id="gender" name="gender" required)
+                option(value="" disabled selected) Please select
+                option(value="Male") Male
+                option(value="Female") Female
+            p.form-layout__error The field Gender is a mandatory field.
+
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue SUBMIT
+      p.main-full__note.text-gray By proceeding, you agree to our #[a(href="#" target="_blank") Terms &amp; Cons] and confirm#[br]you have read our #[a(href="#" target="_blank") Private Policy]

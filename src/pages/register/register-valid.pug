@@ -1,0 +1,89 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Register | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/_header
+  main.main-full
+    .main-full__body
+      h1.heading-underline REGISTER
+      form.form-layout(novalidate)
+        fieldset
+          .form-layout__field.is-valid.is-fill.js-input-fill
+            label(for="firstName") First name
+            input.form-input-text(
+              type="text"
+              id="firstName"
+              name="firstName"
+              value="Pattara"
+              required
+            )
+          .form-layout__field.is-valid.is-fill.js-input-fill
+            label(for="midName") Middle name (Optional)
+            input.form-input-text(
+              type="text"
+              id="midName"
+              name="midName"
+              value="Peter"
+            )
+          .form-layout__field.is-valid.is-fill.js-input-fill
+            label(for="lastName") Last name
+            input.form-input-text(
+              type="text"
+              id="lastName"
+              name="lastName"
+              value="Chirawanich"
+              required
+            )
+          .form-layout__tel-code
+            .form-layout__field.is-fill
+              label Tel.
+              .form-selectbox-icon
+                .form-selectbox-icon__text
+                  +img(src="/assets/images/flag/thailand.svg" alt="")
+                  span +66
+            .form-layout__field.is-valid.js-input-fill
+              input.form-input-text(
+                type="tel"
+                id="tel"
+                name="tel"
+                value="095 969 1569"
+                required
+              )
+          .form-layout__field.is-fill.is-valid.js-input-fill
+            label(for="email") Email
+            input.form-input-text(
+              type="email"
+              id="email"
+              name="email"
+              value="abcemail@gmail.com"
+              required
+            )
+          .form-layout__field.is-fill.is-valid.js-input-fill
+            label(for="birthdate") Birth date
+            input.form-input-text(
+              type="text"
+              id="birthdate"
+              name="birthdate"
+              value="07/11/1981"
+              required
+            )
+          .form-layout__field.is-fill.is-valid
+            label(for="gender") Gender
+            .form-selectbox
+              select.js-custom-dropdown(id="gender" name="gender" required)
+                option(value="" disabled) Please select
+                option(value="Male" selected) Male
+                option(value="Female") Female
+
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue SUBMIT
+      p.main-full__note.text-gray By proceeding, you agree to our #[a(href="#" target="_blank") Terms &amp; Cons] and confirm#[br]you have read our #[a(href="#" target="_blank") Private Policy]

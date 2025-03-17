@@ -1,0 +1,39 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Login | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/_header
+  main.main-full
+    .main-full__body
+      .box-heading-tab
+        a.box-heading-tab__link.is-active(href="/login/login-tel.html") TELEPHONE NO.
+        a.box-heading-tab__link(href="/login/login-email.html") EMAIL
+      form.form-layout(class="mt-8" novalidate)
+        .form-layout__tel-code
+          .form-layout__field.is-fill
+            label Tel.
+            .form-selectbox-icon
+              .form-selectbox-icon__text
+                +img(src="/assets/images/flag/thailand.svg" alt="")
+                span +66
+          .form-layout__field.js-input-fill
+            input.form-input-text(
+              type="tel"
+              id="tel"
+              name="tel"
+              value=""
+              required
+            )
+
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue LOGIN
+      p.main-full__note.text-gray By proceeding, you agree to our #[a(href="#" target="_blank") Terms &amp; Cons] and confirm#[br]you have read our #[a(href="#" target="_blank") Private Policy]

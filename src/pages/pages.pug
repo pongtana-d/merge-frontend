@@ -8,55 +8,92 @@ html(lang='en')
     link(rel="stylesheet" href="/src/styles/styles.scss")
   body
     style.
-      .heading {
-        padding: 10px 20px;
-        font-weight: bold;
-        font-size: 20px;
-        border-top: 1px solid #ddd;
-      }
-      ._list {
+      body { background: none; }
+      .container {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
+        max-width: none;
         padding: 20px;
+        font-size: 1.12rem;
+      }
+      .section {
+        display: grid;
+        width: 100%;
 
-        a {
-          font-size: 18px;
+        & + & {
+          padding-top: 30px;
+          border-top: 1px solid var(--color-gray);
+        }
 
-          &:hover {
-            text-decoration: underline;
+        h2 { margin-bottom: 20px; }
+
+        ul {
+          & + & {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--color-gray-2);
           }
         }
-      }
-    h2.heading Phase 1
-    ul._list
-      li: a(href="/" target="_blank") Home
-      li: a(href="/index-search-notfound.html" target="_blank") Home (search not found)
-      li: a(href="/index-search-result.html" target="_blank") Home (search with many results)
-      li: a(href="/index-search-result-one.html" target="_blank") Home (search with one result)
-      li: a(href="/index-favorite.html" target="_blank") Home (with my favorite)
-      li: a(href="/collection/" target="_blank") Collection
-      li: a(href="/flashsale/" target="_blank") Flash sale
-      li: a(href="/product/" target="_blank") Product
-      li: a(href="/product/product-02.html" target="_blank") Product (2 match with)
-      li: a(href="/product/product-03.html" target="_blank") Product (4 match with)
-      li: a(href="/product/discount.html" target="_blank") Product (Discount price)
 
-    h2.heading Phase 2
-    ul._list
-      li: a(href="/product/" target="_blank") Product (add to cart modal)
-      li: a(href="/product/sold-out.html" target="_blank") Product (sold out)
-      li: a(href="/cart/" target="_blank") Cart
-      li: a(href="/cart/cart-use-coupon.html" target="_blank") Cart (use coupon)
-      li: a(href="/cart/coupon/" target="_blank") Coupon
-      li: a(href="/cart/coupon/coupon-error.html" target="_blank") Coupon (Incorrect)
-      li: a(href="/cart/coupon/coupon-active.html" target="_blank") Coupon (Active)
-      li: a(href="/cart/address/add-address.html" target="_blank") Add delivery address
-      li: a(href="/cart/address/add-address-valid.html" target="_blank") Add delivery address (valid)
-      li: a(href="/cart/address/add-address-error.html" target="_blank") Add delivery address (error)
-      li: a(href="/cart/address/delivery-address.html" target="_blank") Delivery address
-      li: a(href="/cart/address/delivery-address-change.html" target="_blank") Delivery address (change)
-      li: a(href="/cart/order/" target="_blank") Order detail
-      li: a(href="/cart/order/order-detail-agree.html" target="_blank") Order detail (agree)
-      li: a(href="/cart/order/order-complete.html" target="_blank") Order completed
-      li: a(href="/cart/order/order-cancel.html" target="_blank") Order cancelled
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
+    .container
+      .section
+        h2.title-lg Phase 1
+        ul
+          li: a(href="/" target="_blank") Home
+          li: a(href="/index-search-notfound.html" target="_blank") Home (search not found)
+          li: a(href="/index-search-result.html" target="_blank") Home (search with many results)
+          li: a(href="/index-search-result-one.html" target="_blank") Home (search with one result)
+          li: a(href="/index-favorite.html" target="_blank") Home (with my favorite)
+        ul
+          li: a(href="/collection/" target="_blank") Collection
+          li: a(href="/flashsale/" target="_blank") Flash sale
+        ul
+          li: a(href="/product/" target="_blank") Product
+          li: a(href="/product/product-02.html" target="_blank") Product (2 match with)
+          li: a(href="/product/product-03.html" target="_blank") Product (4 match with)
+          li: a(href="/product/discount.html" target="_blank") Product (Discount price)
+      .section
+        h2.title-lg Phase 2
+        ul
+          li: a(href="/product/" target="_blank") Product (add to cart modal)
+          li: a(href="/product/sold-out.html" target="_blank") Product (sold out)
+        ul
+          li: a(href="/cart/" target="_blank") Cart
+          li: a(href="/cart/cart-use-coupon.html" target="_blank") Cart (use coupon)
+          li: a(href="/cart/coupon/" target="_blank") Coupon
+          li: a(href="/cart/coupon/coupon-error.html" target="_blank") Coupon (Incorrect)
+          li: a(href="/cart/coupon/coupon-active.html" target="_blank") Coupon (Active)
+        ul
+          li: a(href="/cart/address/add-address.html" target="_blank") Add delivery address
+          li: a(href="/cart/address/add-address-valid.html" target="_blank") Add delivery address (valid)
+          li: a(href="/cart/address/add-address-error.html" target="_blank") Add delivery address (error)
+          li: a(href="/cart/address/delivery-address.html" target="_blank") Delivery address
+          li: a(href="/cart/address/delivery-address-change.html" target="_blank") Delivery address (change)
+        ul
+          li: a(href="/cart/order/" target="_blank") Order detail
+          li: a(href="/cart/order/order-detail-agree.html" target="_blank") Order detail (agree)
+          li: a(href="/cart/order/order-complete.html" target="_blank") Order completed
+          li: a(href="/cart/order/order-cancel.html" target="_blank") Order cancelled
+        ul
+          li: a(href="/login/login-tel.html" target="_blank") Login by tel.
+          li: a(href="/login/login-tel-valid.html" target="_blank") Login by tel. (valid)
+          li: a(href="/login/login-tel-error.html" target="_blank") Login by tel. (error)
+          li: a(href="/login/login-email.html" target="_blank") Login by email
+          li: a(href="/login/login-email-valid.html" target="_blank") Login by email (valid)
+          li: a(href="/login/login-email-error.html" target="_blank") Login by email (error)
+        ul
+          li: a(href="/login/login-otp-tel.html" target="_blank") Login OTP by tel.
+          li: a(href="/login/login-otp-tel-valid.html" target="_blank") Login OTP by tel. (valid)
+          li: a(href="/login/login-otp-email.html" target="_blank") Login OTP by email
+          li: a(href="/login/login-otp-email-valid.html" target="_blank") Login OTP by email (valid)
+          li: a(href="/login/login-otp-resend.html" target="_blank") Login OTP (resend code)
+        ul
+          li: a(href="/register/" target="_blank") Register
+          li: a(href="/register/register-valid.html" target="_blank") Register (valid)
+          li: a(href="/register/register-error.html" target="_blank") Register (error)
