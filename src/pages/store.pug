@@ -1,0 +1,85 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Store | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  .container-lg
+    .container-lg__body
+      h1.page-title STORES
+      div(class="flex flex-col mt-6 gap-8 md:gap-20 md:mt-20")
+        .card-store
+          figure.card-store__figure
+            +img(src="/src/images/store/img-store-01.webp" alt="")
+          .card-store__content
+            h2.card-store__name SIAM SQUARE SOI 2
+            div(class="flex flex-col gap-2")
+              p.title-sm Hour
+              p.card-store__opening
+                +img(src="/src/images/common/ico-clock-black.svg" alt="")
+                span Monday - Sunday 10 AM. - 10 PM.
+            div(class="flex flex-col gap-2.5")
+              p.title-sm Contact
+              ul(class="flex flex-col gap-3")
+                li
+                  a.btn-primary.is-outline(href="tel:+660912465678")
+                    +img(src="/src/images/common/ico-tel-black.svg" alt="")
+                    span.text-body-bold (+66) 091 246 5678
+                li
+                  a.btn-primary(href="#" target="_blank")
+                    +img(src="/src/images/common/ico-marker-white.svg" alt="")
+                    span.text-body-bold Get Direction
+        // /.card-store
+
+        .card-store
+          figure.card-store__figure
+            +img(src="/src/images/store/img-store-01.webp" alt="")
+          .card-store__content
+            h2.card-store__name CENTRAL RAMA9 FL.3
+            div(class="flex flex-col gap-2")
+              p.title-sm Hour
+              p.card-store__opening
+                +img(src="/src/images/common/ico-clock-black.svg" alt="")
+                span Monday - Sunday 10 AM. - 10 PM.
+            div(class="flex flex-col gap-2.5")
+              p.title-sm Contact
+              ul(class="flex flex-col gap-3")
+                li
+                  a.btn-primary.is-outline(href="tel:+660912465678")
+                    +img(src="/src/images/common/ico-tel-black.svg" alt="")
+                    span.text-body-bold (+66) 091 246 5678
+                li
+                  a.btn-primary(href="#" target="_blank")
+                    +img(src="/src/images/common/ico-marker-white.svg" alt="")
+                    span.text-body-bold Get Direction
+        // /.card-store
+
+        .card-store
+          figure.card-store__figure
+            +img(src="/src/images/store/img-store-01.webp" alt="")
+          .card-store__content
+            h2.card-store__name MEGA BANGNA
+            div(class="flex flex-col gap-2")
+              p.title-sm Hour
+              p.card-store__opening
+                +img(src="/src/images/common/ico-clock-black.svg" alt="")
+                span Monday - Sunday 10 AM. - 10 PM.
+            div(class="flex flex-col gap-2.5")
+              p.title-sm Contact
+              ul(class="flex flex-col gap-3")
+                li
+                  a.btn-primary.is-outline(href="tel:+660912465678")
+                    +img(src="/src/images/common/ico-tel-black.svg" alt="")
+                    span.text-body-bold (+66) 091 246 5678
+                li
+                  a.btn-primary(href="#" target="_blank")
+                    +img(src="/src/images/common/ico-marker-white.svg" alt="")
+                    span.text-body-bold Get Direction
+        // /.card-store

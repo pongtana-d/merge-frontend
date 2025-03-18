@@ -15,13 +15,14 @@
 @import "./card-product-cart.scss";
 @import "./card-product.scss";
 @import "./card-review.scss";
+@import "./card-store.scss";
+@import "./container.scss";
 @import "./footer.scss";
 @import "./form.scss";
 @import "./header-bar.scss";
 @import "./header-search.scss";
 @import "./header-utils.scss";
 @import "./header.scss";
-@import "./heading-underline.scss";
 @import "./input-agreement.scss";
 @import "./list-accordion.scss";
 @import "./list-product.scss";
@@ -34,6 +35,7 @@
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";
 @import "./nav-global.scss";
+@import "./page-title.scss";
 @import "./product-color-slider.scss";
 @import "./product-gallery.scss";
 @import "./search-recent.scss";

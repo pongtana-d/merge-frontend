@@ -9,7 +9,7 @@ html(lang='en')
   body
     style.
       body { background: none; }
-      .container {
+      ._container {
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -17,7 +17,7 @@ html(lang='en')
         padding: 20px;
         font-size: 1.12rem;
       }
-      .section {
+      ._section {
         display: grid;
         width: 100%;
 
@@ -41,8 +41,8 @@ html(lang='en')
         }
       }
 
-    .container
-      .section
+    ._container
+      ._section
         h2.title-lg Phase 1
         ul
           li: a(href="/" target="_blank") Home
@@ -58,7 +58,7 @@ html(lang='en')
           li: a(href="/product/product-02.html" target="_blank") Product (2 match with)
           li: a(href="/product/product-03.html" target="_blank") Product (4 match with)
           li: a(href="/product/discount.html" target="_blank") Product (Discount price)
-      .section
+      ._section
         h2.title-lg Phase 2
         ul
           li: a(href="/product/" target="_blank") Product (add to cart modal)
@@ -97,3 +97,5 @@ html(lang='en')
           li: a(href="/register/" target="_blank") Register
           li: a(href="/register/register-valid.html" target="_blank") Register (valid)
           li: a(href="/register/register-error.html" target="_blank") Register (error)
+        ul
+          li: a(href="/store.html" target="_blank") Store

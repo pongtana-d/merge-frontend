@@ -1,0 +1,16 @@
+@use "../utilities" as *;
+
+.container-lg {
+  padding: 24px 16px 40px;
+
+  @include sm-gt {
+    padding: 60px 30px 80px;
+  }
+
+  &__body {
+    @include sm-gt {
+      max-width: 1005px;
+      margin: 0 auto;
+    }
+  }
+}
