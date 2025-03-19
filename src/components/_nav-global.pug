@@ -5,7 +5,7 @@ nav.nav-global#nav-global(inert aria-hidden="true")
       .nav-global__utils
         a(href="/my-favorite")
           +img(src="/src/images/common/ico-favorite-off.svg" alt="My Favorite")
-        a(href="/my-account")
+        a(href="/member/")
           +img(src="/src/images/common/ico-profile.svg" alt="My Account")
     .nav-global__body
       ul.nav-global__list
@@ -52,7 +52,7 @@ nav.nav-global#nav-global(inert aria-hidden="true")
           else
             p.nav-global__favorite-none You don’t have any favorites
         li
-          a.nav-global__link-icon(href="/my-account")
+          a.nav-global__link-icon(href="/member/")
             +img(src="/src/images/common/ico-profile.svg" alt="")
             span MY ACCOUNT
       button.nav-global__btn-sign SIGN OUT

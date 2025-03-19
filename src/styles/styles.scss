@@ -1,17 +1,13 @@
 @use "foundation/reset";
+@import "tailwindcss/theme.css" layer(theme);
 @import "foundation/root.scss" layer(root);
 @import "foundation/base.scss" layer(base);
-
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);
 
 @import "@splidejs/splide/css" layer(libs);
 @import "swiper/css" layer(libs);
 @import "swiper/css/navigation" layer(libs);
 @import "swiper/css/pagination" layer(libs);
-@import "select2/dist/css/select2.css" layer(libs);
 
 @import "components/+.css" layer(components);
 @import "pages/+.css" layer(pages);
-
-@layer reset, theme, tokens, base, libs, components, pages, utilities;
+@import "tailwindcss/utilities.css" layer(utilities);

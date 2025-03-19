@@ -1,0 +1,39 @@
+@use "../utilities" as *;
+
+.btn-inline-sm {
+  @include text-body-small-2-bold;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 8px 4px 15px;
+  text-align: center;
+  border: 1px solid var(--color-black);
+  border-radius: 26px;
+  transition: var(--hover-transition);
+
+  &:hover {
+    @include hover {
+      opacity: var(--hover-opacity);
+    }
+  }
+
+  > span {
+    position: relative;
+    display: block;
+    padding-right: 16px;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 14px;
+      height: 14px;
+      content: "";
+      background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+  }
+}

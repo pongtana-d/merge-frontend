@@ -3,11 +3,14 @@
 @import "./box-heading-tab.scss";
 @import "./box-login-otp.scss";
 @import "./box-marquee.scss";
+@import "./box-member-head.scss";
+@import "./box-member-rank-sm.scss";
 @import "./box-order-result.scss";
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
 @import "./box-product-instruction.scss";
 @import "./breadcrumb.scss";
+@import "./btn-inline-sm.scss";
 @import "./btn-primary.scss";
 @import "./btn-view-all.scss";
 @import "./card-address.scss";
@@ -35,6 +38,7 @@
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";
 @import "./nav-global.scss";
+@import "./nav-member.scss";
 @import "./page-title.scss";
 @import "./product-color-slider.scss";
 @import "./product-gallery.scss";

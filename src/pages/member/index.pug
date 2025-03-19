@@ -1,0 +1,62 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Member | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/_header.pug
+
+  main.main-full
+    .main-full__body
+      div(class="flex flex-col gap-4 md:gap-5")
+        .box-member-head
+          figure.box-member-name__image
+            +img(src="/src/images/member/img-profile.svg" alt="")
+          .box-member-head__name
+            p Hi,
+            p Meena Sukjai
+          a.btn-inline-sm(class="shrink-0" href="/member/profile.html"): span VIEW PROFILE
+        .box-member-rank-sm
+          .box-member-rank-sm__inner
+            a.box-member-rank-sm__status(href="/member/member-club.html")
+              p.box-member-rank-sm__rank SILVER
+              p.box-member-rank-sm__point 5,000 Point #[span *]
+            .box-member-rank-sm__bar(style="--percent: 80")
+            p.box-member-rank-sm__note Just 5,000 more points and you will reach #[span Gold Member]
+        nav.nav-member
+          .nav-member__head
+            h2.nav-member__title MY ORDER
+            a.btn-inline-sm(class="shrink-0" href="/member/order-history.html"): span VIEW ORDER HISTORY
+          ul.nav-member__list
+            li
+              a.nav-member__link(href="/member/order-unpaid.html")
+                +img(src="/src/images/common/ico-member-unpaid.svg" alt="")
+                p Unpaid
+                span 1
+            li
+              a.nav-member__link(href="/member/order-processing.html")
+                +img(src="/src/images/common/ico-member-processing.svg" alt="")
+                p Processing
+            li
+              a.nav-member__link(href="/member/order-shipped.html")
+                +img(src="/src/images/common/ico-member-shipped.svg" alt="")
+                p Shipped
+            li
+              a.nav-member__link(href="/member/order-review.html")
+                +img(src="/src/images/common/ico-member-review.svg" alt="")
+                p Review
+                span 1
+            li
+              a.nav-member__link(href="/member/order-return.html")
+                +img(src="/src/images/common/ico-member-return.svg" alt="")
+                p Return
+
+    .main-full__footer
+      button.btn-primary.is-outline SIGN OUT

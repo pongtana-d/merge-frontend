@@ -18,8 +18,9 @@ html(lang='en')
     meta(property='og:type' content='website')
 
     //- CSS
+    style @layer reset, theme, root, base, libs, components, pages, utilities;
+    link(rel="stylesheet" href="/src/styles/styles.scss")
     block css
-      link(rel="stylesheet" href="/src/styles/styles.scss")
 
   body(id=(bodyId || null ) )
     .wrapper
