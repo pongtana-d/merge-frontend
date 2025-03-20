@@ -3,6 +3,7 @@
 @import "./box-heading-tab.scss";
 @import "./box-login-otp.scss";
 @import "./box-marquee.scss";
+@import "./box-member-club.scss";
 @import "./box-member-head.scss";
 @import "./box-member-rank-sm.scss";
 @import "./box-order-result.scss";
@@ -15,6 +16,7 @@
 @import "./btn-view-all.scss";
 @import "./card-address.scss";
 @import "./card-coupon-active.scss";
+@import "./card-point-condition.scss";
 @import "./card-product-cart.scss";
 @import "./card-product.scss";
 @import "./card-review.scss";
@@ -28,6 +30,7 @@
 @import "./header.scss";
 @import "./input-agreement.scss";
 @import "./list-accordion.scss";
+@import "./list-dotted.scss";
 @import "./list-product.scss";
 @import "./loader-icon.scss";
 @import "./main-full.scss";

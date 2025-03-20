@@ -1,0 +1,198 @@
+@use "../utilities" as *;
+
+.box-member-club {
+  position: relative;
+  padding: 24px 16px 20px;
+  margin: 0 -16px;
+  overflow: hidden;
+  background-color: var(--color-black);
+  border-radius: 0 0 18px 18px;
+
+  @include sm-gt {
+    padding: 36px 24px 30px;
+    margin: 0;
+    border-radius: 18px;
+  }
+
+  &::after {
+    position: absolute;
+    right: -88px;
+    bottom: 27px;
+    z-index: 0;
+    width: 267px;
+    height: 279px;
+    content: "";
+    background: url(/src/images/common/bg-footer-logo.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &__inner {
+    @include text-body;
+
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--color-gray);
+
+    @include sm-gt {
+      gap: 16px;
+    }
+  }
+
+  &__point {
+    &-current {
+      @include text-title-3-regular;
+      margin-top: 6px;
+    }
+
+    &-num {
+      @include text-title-2;
+      color: var(--color-white);
+
+      > span {
+        color: var(--color-blue-light);
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border: 1px solid var(--color-gray);
+    border-radius: 12px;
+
+    &-rank {
+      flex-shrink: 0;
+      font-family: var(--font-family-fanwood);
+      font-size: calc(32 / 16 * 1rem);
+      font-style: italic;
+      line-height: calc(42 / 32);
+      letter-spacing: 0.02em;
+      background: linear-gradient(180deg, #fff 16.67%, #999 69.05%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__progress {
+    --rank: 1;
+    --percent: 0;
+
+    position: relative;
+  }
+
+  &__progress-back {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    opacity: 0.4;
+
+    &::after {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      left: 0;
+      height: 5px;
+      content: "";
+      background-color: var(--color-gray);
+      border-radius: 5px;
+    }
+
+    > span {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-color: var(--color-gray);
+      border-radius: 100%;
+    }
+  }
+
+  &__progress-front {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    &::after {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      z-index: 0;
+      width: calc(var(--percent) * 1%);
+      height: 5px;
+      content: "";
+      background-color: var(--color-blue-light);
+      border-radius: 5px;
+    }
+
+    > button {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: 3px solid transparent;
+      border-radius: 100%;
+
+      &.is-active {
+        background-color: var(--color-blue-light);
+      }
+
+      &.is-selected {
+        pointer-events: none;
+        border-color: var(--color-white);
+      }
+    }
+  }
+
+  &__info {
+    color: var(--color-white);
+  }
+
+  &__info-title {
+    @include text-title-3-regular;
+
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, #fff 23.81%, #999 76.19%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .swiper-pagination {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 23px;
+
+    @include sm-gt {
+      margin-top: 28px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      margin: 0;
+      background-color: var(--color-gray);
+      opacity: 1;
+      transform: none;
+      transition: width 0.2s ease-out;
+
+      &.swiper-pagination-bullet-active {
+        width: 24px;
+        background-color: var(--color-white);
+        border-radius: 4px;
+      }
+    }
+  }
+}

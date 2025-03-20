@@ -1,5 +1,3 @@
-import webFontLoader from './modules/web-font-loader';
-
 import headerSmall from './modules/headerSmall';
 import headerSearch from './modules/headerSearch';
 import navGlobal from './modules/navGlobal';
@@ -14,9 +12,9 @@ import listAccordion from './modules/listAccordion';
 import selectReviewStars from './modules/selectReviewStars';
 import form from './modules/form';
 import { initDefaultModal, addToCartModal } from './modules/modal';
+import { memberRankSlider } from './modules/member';
 
 document.addEventListener('DOMContentLoaded', () => {
-  webFontLoader();
   headerSmall();
   headerSearch();
   navGlobal();
@@ -32,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
   form();
   initDefaultModal();
   addToCartModal();
+  memberRankSlider();
 });

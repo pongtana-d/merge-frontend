@@ -1,6 +1,7 @@
 @use "../utilities" as *;
 
 .main-full {
+  $root: &;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,6 +10,14 @@
   @include sm-gt {
     max-width: 650px;
     margin: 0 auto;
+  }
+
+  &:not(:has(#{$root}__footer)) {
+    padding-bottom: 16px;
+
+    @include sm-gt {
+      padding-bottom: 60px;
+    }
   }
 
   &__body {

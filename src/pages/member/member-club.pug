@@ -1,0 +1,92 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Member Club | MERGE',
+    }
+
+block append scripts
+
+block modal
+  include /src/components/modal/_modal-close-process.pug
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title MERGE MEMBER CLUB
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      button.header-bar__btn-close(aria-label="Close")
+  main.main-full
+    .main-full__body(class="pt-0 md:pt-15")
+      .box-member-club.js-box-member-club
+        .box-member-club__inner
+          .box-member-club__point
+            p Your point
+            p.box-member-club__point-current
+              span.box-member-club__point-num 1,680 #[span *]#{' '}
+              | / 10,000 Point
+          .box-member-club__status
+            p Member status :
+            p.box-member-club__status-rank SILVER
+          .box-member-club__progress(style="--percent: 30;")
+            .box-member-club__progress-back
+              span
+              span
+              span
+            .box-member-club__progress-front.js-rank-button
+              button.is-active(aria-label="Sliver")
+              button(aria-label="Gold")
+              button(aria-label="Platinum")
+          .box-member-club__info
+            .swiper.js-member-rank-slider
+              .swiper-wrapper
+                .swiper-slide
+                  p.box-member-club__info-title SILVER
+                  p ได้เป็นสมาชิกระดับ Silver ทันทีเมื่อสมัครเข้ามา
+                  ul.list-dotted
+                    li ได้รับทันที 100 Points เมื่อสมัคร
+                .swiper-slide
+                  p.box-member-club__info-title GOLD
+                  p ได้เป็นสมาชิกระดับ Gold ทันทีที่มียอดสั่งซื้อครบ 10,000 บาท ภายใน 1 ปี
+                  p.font-semibold การรักษาสภาพ
+                  ul.list-dotted
+                    li มียอดสั่งซื้อ 5,000 บาท ขึ้นไปภายใน 1 ปี
+                    li ถ้ายอดน้อยกว่า 5,000 บาท จะปรับเป็น Silver
+                .swiper-slide
+                  p.box-member-club__info-title PLATINUM
+                  p ได้เป็นสมาชิกระดับ Platinum ทันทีที่มียอดสั่งซื้อครบ 20,000 บาท ภายใน 1 ปี
+                  p.font-semibold การรักษาสภาพ
+                  ul.list-dotted
+                    li มียอดสั่งซื้อ 10,000 บาท ขึ้นไปภายใน 1 ปี
+                    li ถ้ายอด 5,000 - 9,999 บาท จะปรับเป็น Gold
+                    li ถ้ายอดน้อยกว่า 5,000 จะปรับเป็น Silver
+              .swiper-pagination
+      div(class="flex flex-col gap-4 mt-4 md:mt-6")
+        .card-point-condition
+          p.card-point-condition__title
+            +img(src="/src/images/member/ico-point-collect.svg" alt="")
+            span วิธีการสะสมแต้ม
+          .card-point-condition__content
+            p คำสั่งซื้อทุกช่องทางแอดมินจะสะสมแต้มจากเบอร์โทรศัพท์ให้โดยอัตโนมัติ ยกเว้น Shopee/Tiktok/Website รบกวนลูกค้าติดต่อแอดมินทาง Line Official เพื่อสะสมแต้ม ภายใน 7 วัน หลังได้รับสินค้า
+        .card-point-condition
+          p.card-point-condition__title
+            +img(src="/src/images/member/ico-point-coin.svg" alt="")
+            span 1 THB = 1 Point
+          .card-point-condition__content
+            ul.list-dotted
+              li ได้รับทันที 100 Points เมื่อสมัคร
+              li
+                span สามารถใช้เป็นส่วนลดทันที เมื่อซื้อผ่าน Line Official
+                ul.list-dotted
+                  li 2,500 points = 100 THB
+                  li 5,000  points = 300 THB
+        .card-point-condition
+          p.card-point-condition__title
+            +img(src="/src/images/member/ico-point-condition.svg" alt="")
+            span เงื่อนไข
+          .card-point-condition__content
+            ul.list-dotted
+              li ช่วงโปรโมชั่นลดราคาสินค้าทุกแพลตฟอร์ม ไม่สามารถสะสมแต้มได้
+              li แต้มสะสมนับจากยอดชำระเงินจริง หลังหักโปรโมชั่นอื่นๆและค่าจัดส่ง
+              li บัตรสมาชิกมีอายุ 1 ปี นับจากวันที่สมัครสมาชิก

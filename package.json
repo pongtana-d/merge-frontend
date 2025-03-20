@@ -33,8 +33,7 @@
     "vite-plugin-beautify": "^1.0.0",
     "vite-plugin-checker": "^0.8.0",
     "vite-plugin-image-optimizer": "^1.1.8",
-    "vituum": "^1.2.0",
-    "webfontloader": "^1.6.28"
+    "vituum": "^1.2.0"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",

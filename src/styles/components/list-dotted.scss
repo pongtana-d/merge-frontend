@@ -1,0 +1,12 @@
+@use "../utilities" as *;
+
+.list-dotted {
+  padding-left: 20px;
+  list-style: disc;
+
+  > li {
+    &::marker {
+      font-size: 0.8em;
+    }
+  }
+}

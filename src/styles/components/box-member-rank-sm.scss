@@ -49,10 +49,11 @@
     flex-shrink: 0;
     font-family: var(--font-family-fanwood);
     font-size: calc(32 / 16 * 1rem);
+    font-style: italic;
     line-height: calc(42 / 32);
     background: linear-gradient(180deg, #fff 16.67%, #999 69.05%);
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__point {
@@ -68,7 +69,7 @@
     }
   }
 
-  &__bar {
+  &__progress {
     --percent: 0;
 
     position: relative;

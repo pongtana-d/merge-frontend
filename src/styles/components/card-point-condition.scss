@@ -1,0 +1,29 @@
+@use "../utilities" as *;
+
+.card-point-condition {
+  padding: 16px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+
+  &__title {
+    @include text-body-bold;
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    > img {
+      display: block;
+      width: 18px;
+      height: auto;
+    }
+  }
+
+  &__content {
+    @include text-body;
+
+    padding-top: 8px;
+    margin-top: 8px;
+    border-top: 1px solid var(--color-gray);
+  }
+}
