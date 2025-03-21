@@ -1,0 +1,25 @@
+@use "../utilities" as *;
+
+.tag-icon {
+  @include text-body-bold;
+
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  padding: 2px 11px;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  border-radius: 26px;
+
+  img {
+    display: block;
+    flex-shrink: 0;
+    width: 14px;
+    height: auto;
+  }
+
+  &.is-red {
+    color: var(--color-red-2);
+    border-color: var(--color-red-2);
+  }
+}

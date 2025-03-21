@@ -3,36 +3,28 @@ extends /src/layouts/_no-header-footer
 block variables
   -
     const meta = {
-      title: 'Order Detail | MERGE',
+      title: 'My Order | MERGE',
     }
 
 block append scripts
 
 block modal
-  include /src/components/modal/_modal-close-process.pug
 
 block content
   header.header-bar
     .header-bar__container
-      h1.header-bar__page-title ORDER DETAIL
-      a.header-bar__btn-back(href="/cart/address/delivery-address.html" aria-label="Back")
-      button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
+      h1.header-bar__page-title UNPAID
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      button.header-bar__btn-close(aria-label="Close")
   main.main-full
     .main-full__body
       div(class="flex flex-col gap-5")
-        section
-          h2.text-body-bold Delivery Address
-          .card-address(class="mt-4")
-            .card-address__info
-              p.card-address__name Meena Sukjai
-              p Tel. 0921267040
-              p Email meena_sukjai@gmail.com
-            p.card-address__location
-              +img(src="/src/images/common/ico-marker.svg" alt="")
-              span 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
-        section
-          h2.text-body-bold Payment Summary
-          div(class="flex flex-col gap-0.5 mt-4")
+        div
+          div(class="mb-4")
+            .tag-icon.is-red
+              +img(src="/src/images/member/ico-order-unpaid-red.svg" alt="")
+              span Paid Unsuccessfully
+          div(class="flex flex-col gap-0.5")
             .card-product-cart
               .card-product-cart__image
                 +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
@@ -76,7 +68,13 @@ block content
                   p.card-product-cart__qty 2
             // /.card-product-cart
 
-          .box-cart-summary
+          button.btn-see-more(aria-expanded="true")
+            span See more
+
+          .box-cart-summary.box-cart-summary--border-btm
+            .box-cart-summary__id
+              p Order ID
+              a(href="#" target="_blank"): span M2024082800123
             .box-cart-summary__detail
               .box-cart-summary__detail-item
                 p.title-sm Total: 3 Items
@@ -89,16 +87,5 @@ block content
               .box-cart-summary__detail-item
                 p Shipping Fee
                 p THB 0
-            label.input-agreement
-              input(type="checkbox" name="agreement" value="" checked)
-              span I agree with #[a(href="#" target="_blank") Terms and Cons]
+            button.btn-primary PAY AGAIN
           // /.box-cart-summary
-
-    .main-full__footer
-      button.btn-primary.is-rounded.bg-blue
-        +img(src="/src/images/common/ico-lock.svg" alt="")
-        span PAY
-      nav.breadcrumb.breadcrumb--checkout
-        ul.breadcrumb__list
-          li CHECK OUT
-          li ORDER DETAIL

@@ -13,6 +13,7 @@
 @import "./breadcrumb.scss";
 @import "./btn-inline-sm.scss";
 @import "./btn-primary.scss";
+@import "./btn-see-more.scss";
 @import "./btn-view-all.scss";
 @import "./card-address.scss";
 @import "./card-coupon-active.scss";
@@ -53,6 +54,7 @@
 @import "./select-review-stars.scss";
 @import "./table-product-size.scss";
 @import "./table-product-store.scss";
+@import "./tag-icon.scss";
 @import "./text.scss";
 @import "./title.scss";
 @import "./wrapper.scss";

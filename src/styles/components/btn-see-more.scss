@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+.btn-see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+
+  &[aria-expanded="true"] > span::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  > span {
+    @include text-body;
+
+    position: relative;
+    display: block;
+    padding-right: 19px;
+    color: var(--color-black);
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 16px;
+      height: 18px;
+      content: "";
+      background: url(/src/images/common/ico-arrow-down-black.svg) no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+}

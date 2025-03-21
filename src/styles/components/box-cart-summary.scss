@@ -8,6 +8,13 @@
   margin-top: 18px;
   border-top: 1px solid var(--color-black);
 
+  &--border-btm {
+    padding-bottom: 20px;
+    margin-top: 0;
+    border-top: 1px solid var(--color-gray-2);
+    border-bottom: 2px solid var(--color-black);
+  }
+
   &__coupon {
     position: relative;
     display: flex;
@@ -106,5 +113,36 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  &__id {
+    @include text-title-3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      display: inline-flex;
+      flex-shrink: 0;
+      gap: 4px;
+      align-items: center;
+      transition: var(--hover-transition);
+
+      &:hover {
+        @include hover {
+          opacity: var(--hover-opacity);
+        }
+      }
+
+      &::after {
+        display: block;
+        width: 14px;
+        height: 15px;
+        content: "";
+        background: url(/src/images/common/ico-new-window.svg) no-repeat;
+        background-size: contain;
+      }
+    }
   }
 }

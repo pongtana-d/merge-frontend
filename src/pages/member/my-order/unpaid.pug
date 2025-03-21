@@ -1,0 +1,62 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'My Order | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title UNPAID
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      button.header-bar__btn-close(aria-label="Close")
+  main.main-full
+    .main-full__body
+      div(class="flex flex-col gap-5")
+        div
+          div(class="mb-4")
+            .tag-icon.is-red
+              +img(src="/src/images/member/ico-order-unpaid-red.svg" alt="")
+              span Paid Unsuccessfully
+          div(class="flex flex-col gap-0.5")
+            .card-product-cart
+              .card-product-cart__image
+                +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+              .card-product-cart__content
+                .card-product-cart__content-upper
+                  .card-product-cart__head
+                    p.card-product-cart__name SERENE SANCTUARY TOP
+                  .card-product-cart__variant
+                    p White
+                    p M
+                .card-product-cart__content-lower
+                  p.card-product-cart__price THB 1,500
+                  p.card-product-cart__qty 1
+
+          button.btn-see-more(aria-expanded="false")
+            span See more
+
+          .box-cart-summary.box-cart-summary--border-btm
+            .box-cart-summary__id
+              p Order ID
+              a(href="#" target="_blank"): span M2024082800123
+            .box-cart-summary__detail
+              .box-cart-summary__detail-item
+                p.title-sm Total: 3 Items
+                p.title-md THB 5,400
+              .box-cart-summary__detail-item
+                p.box-cart-summary__used-coupon
+                  +img(src="/src/images/common/ico-coupon.svg" alt="")
+                  |Yey, you’ve saved THB600
+                del THB 6,000
+              .box-cart-summary__detail-item
+                p Shipping Fee
+                p THB 0
+            button.btn-primary PAY AGAIN
+          // /.box-cart-summary
