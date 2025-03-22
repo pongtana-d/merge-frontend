@@ -30,6 +30,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
+    gap: 8px;
     justify-content: space-between;
     padding: 16px;
     color: var(--text-color);
@@ -66,15 +67,21 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-top: 8px;
     color: var(--color-gray);
   }
 
+  &__content-upper,
   &__content-lower {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__space-btw {
+    display: flex;
+    gap: 8px;
     align-items: center;
     justify-content: space-between;
-    margin-top: 8px;
   }
 
   &__price {
@@ -117,6 +124,23 @@
 
     &:disabled {
       background-image: url(/src/images/common/ico-plus-gray.svg);
+    }
+  }
+
+  &__btn-return {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    padding: 2px 8px 2px 6px;
+    color: var(--color-gray);
+    border: 1px solid var(--color-gray);
+    border-radius: 26px;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
     }
   }
 

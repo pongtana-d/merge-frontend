@@ -15,15 +15,14 @@ block content
     .header-bar__container
       h1.header-bar__page-title UNPAID
       a.header-bar__btn-back(href="/member/" aria-label="Back")
-      button.header-bar__btn-close(aria-label="Close")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
   main.main-full
     .main-full__body
       div(class="flex flex-col gap-5")
         div
-          div(class="mb-4")
-            .tag-icon.is-red
-              +img(src="/src/images/member/ico-order-unpaid-red.svg" alt="")
-              span Paid Unsuccessfully
+          .tag-status.is-red(class="mb-4")
+            +img(src="/src/images/member/ico-order-unpaid-red.svg" alt="")
+            span Paid Unsuccessfully
           div(class="flex flex-col gap-0.5")
             .card-product-cart
               .card-product-cart__image
@@ -36,8 +35,9 @@ block content
                     p White
                     p M
                 .card-product-cart__content-lower
-                  p.card-product-cart__price THB 1,500
-                  p.card-product-cart__qty 1
+                  .card-product-cart__space-btw
+                    p.card-product-cart__price THB 1,500
+                    p.card-product-cart__qty 1
             // /.card-product-cart
             .card-product-cart
               .card-product-cart__image
@@ -50,8 +50,9 @@ block content
                     p White
                     p M
                 .card-product-cart__content-lower
-                  p.card-product-cart__price THB 1,500
-                  p.card-product-cart__qty 1
+                  .card-product-cart__space-btw
+                    p.card-product-cart__price THB 1,500
+                    p.card-product-cart__qty 1
             // /.card-product-cart
             .card-product-cart
               .card-product-cart__image
@@ -64,8 +65,9 @@ block content
                     p White/Blue
                     p XS
                 .card-product-cart__content-lower
-                  p.card-product-cart__price THB 3,000
-                  p.card-product-cart__qty 2
+                  .card-product-cart__space-btw
+                    p.card-product-cart__price THB 3,000
+                    p.card-product-cart__qty 2
             // /.card-product-cart
 
           button.btn-see-more(aria-expanded="true")
@@ -74,7 +76,7 @@ block content
           .box-cart-summary.box-cart-summary--border-btm
             .box-cart-summary__id
               p Order ID
-              a(href="#" target="_blank"): span M2024082800123
+              button.box-cart-summary__id-copy: span M2024082800123
             .box-cart-summary__detail
               .box-cart-summary__detail-item
                 p.title-sm Total: 3 Items

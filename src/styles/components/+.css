@@ -10,6 +10,7 @@
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
 @import "./box-product-instruction.scss";
+@import "./box-tracking-order.scss";
 @import "./breadcrumb.scss";
 @import "./btn-inline-sm.scss";
 @import "./btn-primary.scss";
@@ -54,7 +55,7 @@
 @import "./select-review-stars.scss";
 @import "./table-product-size.scss";
 @import "./table-product-store.scss";
-@import "./tag-icon.scss";
+@import "./tag-status.scss";
 @import "./text.scss";
 @import "./title.scss";
 @import "./wrapper.scss";

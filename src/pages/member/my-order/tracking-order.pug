@@ -1,0 +1,26 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'My Order | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title TRACKING ORDER
+      a.header-bar__btn-back(href="/member/my-order/shipped.html" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-tracking-order.box-tracking-order--delivered
+        .box-tracking-order__inner
+          +img(src="/src/images/member/ico-order-delivered-white.svg" alt="")
+          div
+            p.title-sm J&amp;T Express
+            p.box-tracking-order__number Tracking Number: 239485029402
