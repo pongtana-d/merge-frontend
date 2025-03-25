@@ -1,0 +1,32 @@
+@use "../utilities" as *;
+
+.main-visual-sub {
+  position: relative;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+    font-family: var(--font-family-fanwood);
+    font-size: calc(32 / 16 * 1rem);
+    font-style: italic;
+    font-weight: normal;
+    line-height: calc(86 / 70);
+    color: var(--color-blue-light);
+    text-align: center;
+    letter-spacing: 0.02em;
+    transform: translateY(-50%);
+
+    @include sm-gt {
+      font-size: calc(70 / 16 * 1rem);
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,64 @@
+@use "../utilities" as *;
+
+.card-about {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include sm-gt {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 30px;
+    color: var(--color-black);
+    text-align: center;
+
+    @include sm-gt {
+      gap: 24px;
+      width: calc(500 / 1005 * 100vw);
+      padding-top: calc(80 / 1005 * 100vw);
+    }
+
+    @media (min-width: 1015px) {
+      width: 500px;
+      padding-top: 80px;
+    }
+  }
+
+  &__heading {
+    font-family: var(--font-family-fanwood);
+    font-size: calc(32 / 16 * 1rem);
+    font-style: italic;
+    line-height: calc(42 / 32);
+    letter-spacing: 0.02em;
+  }
+
+  &__heading-sub {
+    @include text-title-2;
+  }
+
+  &__image {
+    @include sm-gt {
+      width: calc(400 / 1005 * 100vw);
+    }
+
+    @media (min-width: 1015px) {
+      width: 400px;
+    }
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

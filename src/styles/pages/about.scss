@@ -1,0 +1,11 @@
+@use "../utilities/index" as *;
+
+.p-about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include sm-gt {
+    gap: 120px;
+  }
+}

@@ -7,6 +7,16 @@
     padding: 60px 30px 80px;
   }
 
+  &--about {
+    padding-top: 0;
+    padding-bottom: 34px;
+
+    @include sm-gt {
+      padding-top: 30px;
+      padding-bottom: 120px;
+    }
+  }
+
   &__body {
     @include sm-gt {
       max-width: 1005px;

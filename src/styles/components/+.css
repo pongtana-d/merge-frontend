@@ -16,6 +16,7 @@
 @import "./btn-primary.scss";
 @import "./btn-see-more.scss";
 @import "./btn-view-all.scss";
+@import "./card-about.scss";
 @import "./card-address.scss";
 @import "./card-coupon-active.scss";
 @import "./card-point-condition.scss";
@@ -38,6 +39,7 @@
 @import "./list-return-info.scss";
 @import "./loader-icon.scss";
 @import "./main-full.scss";
+@import "./main-visual-sub.scss";
 @import "./main-visual.scss";
 @import "./modal-cart-added.scss";
 @import "./modal-process.scss";

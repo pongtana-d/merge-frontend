@@ -1,0 +1,43 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'About | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  .main-visual-sub
+    h1.main-visual-sub__title ABOUT MERGE
+    picture
+      source(media="(min-width:768px)" srcset="/src/images/about/main-visual-pc.webp")
+      +img(src="/src/images/about/main-visual-sp.webp" alt="")
+  .container-lg.container-lg--about
+    .container-lg__body
+      .p-about
+        .card-about
+          .card-about__content
+            h2.card-about__heading The Brand
+            h3.card-about__heading-sub “ Merge was created in 2020 as a new brand in Thailand ”
+            .card-about__description
+              p Merge presents itself as a reference point for fashion targeting this increasingly demanding public and, in just 2 years, has consolidated its brand image in 100 shops. Today, after 18 years, the chain has more than 1,000 stores in over 70 markets, with sales that represent 9% of the total revenue for the whole group.
+              br
+              p In order to always have the latest trends at the shop, Merge uses its flexible business model to adapt to any changes occurring during the seasons, responding to them by bringing new products to the shops within the shortest possible time. The models for each season are developed entirely by their creative teams, who take as their main source of inspiration the fashion trends prevailing in the market, through information received from the shops, as well as the customers themselves. The Merge design team consists of more than 60 professionals who are continuously assessing the needs, desires, and demands of consumers, offering more than 4,000 different products in their shops each year.
+          figure.card-about__image
+            +img(src="/src/images/about/img-about-01.webp" alt="")
+
+        .card-about
+          .card-about__content
+            h2.card-about__heading The Concept
+            h3.card-about__heading-sub “ Music, screens, projections, modern graphics,fashionable, colours... ”
+            .card-about__description
+              p Merge shops are distinguished throughout the world by their strategic location and well-detailed architecture. The establishments are converted into spacious trend-setting showcases with a carefully thought-through image extending from the windows to the arrangement of the goods inside. Merge selects the best commercial sites in each city and positions itself in the most notable areas of the main shopping centres. Unique buildings are often chosen, which the Merge architectural studio refurbishes and adapts to its brand image and philosophy.
+              br
+              p Music, screens, projections, modern graphics, fashionable colours, contemporary furniture design, state-of-the-art lighting and so on, are all features that turn Bershka into a shopping ‘experience’. The shop’s interior is designed to give maximum importance to displaying fashion.
+          figure.card-about__image
+            +img(src="/src/images/about/img-about-02.webp" alt="")
+
