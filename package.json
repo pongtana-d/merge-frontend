@@ -42,6 +42,6 @@
     "destyle.css": "^4.0.1",
     "jquery": "^3.7.1",
     "swiper": "^11.2.0",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.0.16"
   }
 }
