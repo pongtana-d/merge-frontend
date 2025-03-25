@@ -20,7 +20,7 @@ block content
     .main-full__body
       div(class="flex flex-col gap-5")
         div
-          div(class="flex flex-col items-start")
+          div(class="mb-4 md:mb-5 flex flex-col items-start gap-4")
             .tag-status
               +img(src="/src/images/member/ico-order-shipped.svg" alt="")
               span Ready for Shipment
@@ -35,7 +35,7 @@ block content
               span Delivered Successfully
           a.box-tracking-order(href="/member/my-order/tracking-order.html")
             p.title-sm Tracking Order
-            p.box-tracking-order__number Tracking Number: 239485029402
+            p Tracking Number: #[span.box-tracking-order__number 239485029402]
           div(class="flex flex-col gap-0.5")
             .card-product-cart
               .card-product-cart__image

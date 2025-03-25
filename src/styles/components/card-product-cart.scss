@@ -167,4 +167,22 @@
       background-image: url(/src/images/common/ico-delete-02-gray.svg);
     }
   }
+
+  &--sm {
+    #{$root}__image {
+      width: 80px;
+      aspect-ratio: 80 / 116;
+    }
+
+    #{$root}__content {
+      gap: 2px;
+      padding-top: 12px;
+      padding-bottom: 10px;
+    }
+
+    #{$root}__content-upper,
+    #{$root}__variant {
+      gap: 2px;
+    }
+  }
 }

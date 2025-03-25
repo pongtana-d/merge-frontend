@@ -20,9 +20,10 @@ block content
     .main-full__body
       div(class="flex flex-col gap-5")
         div
-          .tag-status.is-red(class="mb-4")
-            +img(src="/src/images/member/ico-order-unpaid-red.svg" alt="")
-            span Paid Unsuccessfully
+          div(class="mb-4 md:mb-5")
+            .tag-status.is-red
+              +img(src="/src/images/member/ico-order-unpaid-red.svg" alt="")
+              span Paid Unsuccessfully
           div(class="flex flex-col gap-0.5")
             .card-product-cart
               .card-product-cart__image

@@ -7,14 +7,9 @@
   gap: 5px;
   align-items: center;
   padding: 2px 11px;
-  margin-bottom: 16px;
   color: var(--color-black);
   border: 1px solid var(--color-black);
   border-radius: 26px;
-
-  @include sm-gt {
-    margin-bottom: 20px;
-  }
 
   img {
     display: block;

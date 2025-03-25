@@ -1,0 +1,100 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Return Request | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title RETURN REQUEST
+      a.header-bar__btn-back(href="/member/my-order/shipped.html" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      div(class="flex flex-col gap-5")
+        .card-product-cart.card-product-cart--sm
+          .card-product-cart__image
+            +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+          .card-product-cart__content
+            .card-product-cart__content-upper
+              .card-product-cart__head
+                p.card-product-cart__name SERENE SANCTUARY TOP
+              .card-product-cart__variant
+                p White
+                p M
+            .card-product-cart__content-lower
+              .card-product-cart__space-btw
+                p.card-product-cart__price THB 1,500
+                p.card-product-cart__qty 1
+
+        dl.list-return-info
+          .list-return-info__row
+            dt Order ID
+            dd M2024082800123
+          .list-return-info__row
+            dt Refund Amount
+            dd THB 1,500
+          .list-return-info__row
+            dt Refund Request Date
+            dd March 2, 2025
+
+        form.form-layout(novalidate)
+          fieldset
+            .form-layout__field.is-fill
+              label(for="quantity") Quantity
+              .form-selectbox
+                select(id="quantity" name="quantity" required)
+                  option(value="1") 1 Item
+                  option(value="2") 2 Items
+            .form-layout__field.is-fill
+              label(for="reason") Return Reason
+              .form-selectbox
+                select(id="reason" name="reason" required)
+                  option(value="Sizing Or Fit Issues") Sizing Or Fit Issues
+            .form-layout__field.js-input-fill
+              label(for="reasonOther") Write Your Return Reason
+              input.form-input-text(
+                type="text"
+                id="reasonOther"
+                name="reasonOther"
+                value=""
+                required
+              )
+            .form-layout__field.is-fill
+              label Upload Image Or Video
+              .form-upload
+                .form-upload__field
+                  input(type="file" name="upload")
+                  .form-upload__text
+                    +img(src="/src/images/common/ico-camera.svg" alt="")
+                    p Upload Image/Video
+            .form-layout__field.is-fill
+              label(for="refundMethod") Refund method
+              .form-selectbox
+                select(id="refundMethod" name="refundMethod" required)
+                  option(value="Bank account transfer") Bank account transfer
+            .form-layout__field.is-fill
+              label(for="bankName") Bank name
+              .form-selectbox
+                select(id="bankName" name="bankName" required)
+                  option(value="") Please select
+                  option(value="KBANK") KBANK
+                  option(value="SCB") SCB
+            .form-layout__field.js-input-fill
+              label(for="accountNo") Bank account number
+              input.form-input-text(
+                type="text"
+                id="accountNo"
+                name="accountNo"
+                value=""
+                required
+              )
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue SUBMIT
