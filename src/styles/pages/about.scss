@@ -1,11 +1,39 @@
 @use "../utilities/index" as *;
 
 .p-about {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  position: relative;
 
-  @include sm-gt {
-    gap: 120px;
+  &::after {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: 50%;
+    z-index: 0;
+    width: 467px;
+    height: 490px;
+    content: "";
+    background: url(/src/images/common/logo-about.svg) no-repeat;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: 1065px) {
+      width: calc(467 / 1065 * 100vw);
+      height: calc(490 / 1065 * 100vw);
+    }
+
+    @include sm-lte {
+      display: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include sm-gt {
+      gap: 120px;
+    }
   }
 }

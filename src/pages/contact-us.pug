@@ -1,0 +1,79 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Contact Us | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  .main-visual-sub
+    h1.main-visual-sub__title CONTACT US
+    picture
+      source(media="(min-width:768px)" srcset="/src/images/contact/main-visual-pc.webp")
+      +img(src="/src/images/contact/main-visual-sp.webp" alt="")
+  .container-md
+    .container-md__body
+      .p-contact
+        .p-contact__info
+          h2.title-lg MERGE FLAGSHIP STORE
+          div
+            p.title-sm(class="mb-1.5") SIAM SQUARE SOI 2
+            p 4-16 สยามสแควร์ ซอย 2 แขวงปทุมวัน เขตปทุมวัน กรุงเทพมหานคร 10330
+          .p-contact__button
+            a.btn-primary.is-outline(href="#" style="--gap:4;")
+              +img(src="/src/images/common/ico-tel-black.svg" alt="")
+              span.text-body-bold (+66)90 929 0499
+            a.btn-primary(href="#" target="_blank" style="--gap:4;")
+              +img(src="/src/images/common/ico-marker-white.svg" alt="")
+              span.text-body-bold Get Direction
+          ul.p-contact__sns
+            li
+              a(href="https://line.me/ti/p/%40mergeth" target="_blank")
+                +img(src="/src/images/common/ico-line-black.svg" alt="")
+            li
+              a(href="https://www.facebook.com/mergeofficials/" target="_blank")
+                +img(src="/src/images/common/ico-facebook-black.svg" alt="")
+            li
+              a(href="https://www.instagram.com/merge.official_?igsh=ZGF2cGlkNTJ3aDc2" target="_blank")
+                +img(src="/src/images/common/ico-instagram-black.svg" alt="")
+            li
+              a(href="https://www.tiktok.com/@merge.official?_t=8oJLGxiIZsY&_r=1" target="_blank")
+                +img(src="/src/images/common/ico-tiktok-black.svg" alt="")
+        .p-contact__form
+          h2.p-contact__heading-line GET IN TOUCH
+          form.form-layout(class="mt-7.5" novalidate)
+            fieldset
+              .form-layout__field.js-input-fill
+                label(for="firstName") First name
+                input.form-input-text(
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  value=""
+                  required
+                )
+              .form-layout__field.js-input-fill
+                label(for="email") Email
+                input.form-input-text(
+                  type="email"
+                  id="email"
+                  name="email"
+                  value=""
+                  required
+                )
+              .form-layout__field.js-input-fill
+                label(for="message") Message
+                input.form-input-text(
+                  type="text"
+                  id="message"
+                  name="message"
+                  value=""
+                  required
+                )
+            button.btn-primary.is-rounded.bg-blue.mt-4 SUBMIT
+          p.p-contact__note By proceeding, you agree to our #[a(href="#" target="_blank") Terms &amp; Cons] and confirm#[br]you have read our #[a(href="#" target="_blank") Private Policy]

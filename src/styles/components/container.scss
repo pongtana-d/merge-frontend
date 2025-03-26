@@ -24,3 +24,18 @@
     }
   }
 }
+
+.container-md {
+  padding: 24px 16px 32px;
+
+  @include sm-gt {
+    padding: 60px 30px;
+  }
+
+  &__body {
+    @include sm-gt {
+      max-width: 610px;
+      margin: 0 auto;
+    }
+  }
+}

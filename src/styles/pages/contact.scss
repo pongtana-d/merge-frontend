@@ -1,0 +1,90 @@
+@use "../utilities/index" as *;
+
+.p-contact {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+
+    @include sm-gt {
+      gap: 32px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include sm-gt {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+
+  &__sns {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+    a {
+      display: block;
+      transition: var(--hover-transition);
+
+      &:hover {
+        @include hover {
+          opacity: var(--hover-opacity);
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 42px;
+      height: auto;
+    }
+  }
+
+  &__heading-line {
+    @include text-title-2;
+
+    padding-bottom: 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-black);
+
+    @include sm-gt {
+      padding-bottom: 35px;
+    }
+  }
+
+  &__form {
+    margin-top: 40px;
+
+    @include sm-gt {
+      margin-top: 100px;
+    }
+  }
+
+  &__note {
+    @include text-body-small;
+
+    margin-top: 16px;
+    color: var(--color-gray);
+    text-align: center;
+
+    @include sm-gt {
+      margin-top: 32px;
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
