@@ -19,7 +19,7 @@ block content
   main.main-full
     .main-full__body
       div(class="flex flex-col gap-5")
-        div
+        .box-order-container
           div(class="mb-4 md:mb-5")
             .tag-status
               +img(src="/src/images/member/ico-order-processing.svg" alt="")
@@ -62,7 +62,7 @@ block content
             button.btn-primary PAY AGAIN
           // /.box-cart-summary
 
-        div
+        .box-order-container
           div(class="mb-4 md:mb-5")
             .tag-status
               +img(src="/src/images/member/ico-order-processing.svg" alt="")
@@ -82,9 +82,6 @@ block content
                   .card-product-cart__space-btw
                     p.card-product-cart__price THB 1,500
                     p.card-product-cart__qty 1
-
-          button.btn-see-more(aria-expanded="false")
-            span See more
 
           .box-cart-summary.box-cart-summary--border-btm
             .box-cart-summary__id

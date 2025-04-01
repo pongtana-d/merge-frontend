@@ -13,29 +13,17 @@ block modal
 block content
   header.header-bar
     .header-bar__container
-      h1.header-bar__page-title SHIPPED
+      h1.header-bar__page-title ORDER HISTORY
       a.header-bar__btn-back(href="/member/" aria-label="Back")
       a.header-bar__btn-close(href="/member/" aria-label="Close")
   main.main-full
     .main-full__body
       div(class="flex flex-col gap-5")
         .box-order-container
-          div(class="mb-4 md:mb-5 flex flex-col items-start gap-4")
-            .tag-status
-              +img(src="/src/images/member/ico-order-shipped.svg" alt="")
-              span Ready for Shipment
-            .tag-status
-              +img(src="/src/images/member/ico-order-shipped.svg" alt="")
-              span Shipping in Progress
-            .tag-status
-              +img(src="/src/images/member/ico-order-shipped.svg" alt="")
-              span Out for Delivery
-            .tag-status
-              +img(src="/src/images/member/ico-order-delivered.svg" alt="")
-              span Delivered Successfully
-          a.box-tracking-order(href="/member/my-order/tracking-order.html")
-            p.title-sm Tracking Order
-            p Tracking Number: #[span.box-tracking-order__number 239485029402]
+          .box-order-status(class="mb-1.5")
+            +img(src="/src/images/common/ico-clock.svg" alt="")
+            .box-order-status__content
+              p.box-order-status__title Jan 16, 2025 at 1.39 PM
           div(class="flex flex-col gap-0.5")
             .card-product-cart
               .card-product-cart__image
@@ -63,6 +51,45 @@ block content
               .box-cart-summary__detail-item
                 p.title-sm Total: 3 Items
                 p.title-md THB 5,400
+              .box-cart-summary__detail-item
+                p.box-cart-summary__used-coupon
+                  +img(src="/src/images/common/ico-coupon.svg" alt="")
+                  |Yey, you’ve saved THB600
+                del THB 6,000
+              .box-cart-summary__detail-item
+                p Shipping Fee
+                p THB 0
+          // /.box-cart-summary
+
+        .box-order-container
+          .box-order-status(class="mb-1.5")
+            +img(src="/src/images/common/ico-clock.svg" alt="")
+            .box-order-status__content
+              p.box-order-status__title Jan 30, 2025 at 1.39 PM
+          div(class="flex flex-col gap-0.5")
+            .card-product-cart
+              .card-product-cart__image
+                +img(src="/src/images/cart/img-product-cart-04.webp" alt="")
+              .card-product-cart__content
+                .card-product-cart__content-upper
+                  .card-product-cart__head
+                    p.card-product-cart__name SERENE SANCTUARY TOP
+                  .card-product-cart__variant
+                    p White
+                    p M
+                .card-product-cart__content-lower
+                  .card-product-cart__space-btw
+                    p.card-product-cart__price THB 1,500
+                    p.card-product-cart__qty 1
+
+          .box-cart-summary.box-cart-summary--border-btm
+            .box-cart-summary__id
+              p Order ID
+              button.box-cart-summary__id-copy: span M2024082800123
+            .box-cart-summary__detail
+              .box-cart-summary__detail-item
+                p.title-sm Total: 1 Items
+                p.title-md THB 1,500
               .box-cart-summary__detail-item
                 p.box-cart-summary__used-coupon
                   +img(src="/src/images/common/ico-coupon.svg" alt="")

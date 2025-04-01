@@ -1,0 +1,11 @@
+@use "../utilities" as *;
+
+.box-order-container {
+  .box-cart-summary {
+    margin-top: 18px;
+  }
+
+  &:has(.btn-see-more) .box-cart-summary {
+    margin-top: 0;
+  }
+}

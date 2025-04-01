@@ -6,13 +6,14 @@
 @import "./box-member-club.scss";
 @import "./box-member-head.scss";
 @import "./box-member-rank-sm.scss";
+@import "./box-order-container.scss";
 @import "./box-order-result.scss";
+@import "./box-order-status.scss";
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
 @import "./box-product-instruction.scss";
 @import "./box-refund-info.scss";
 @import "./box-return-info.scss";
-@import "./box-return-status.scss";
 @import "./box-submit-tracking.scss";
 @import "./box-tracking-order.scss";
 @import "./breadcrumb.scss";
