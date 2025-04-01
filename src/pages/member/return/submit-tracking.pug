@@ -1,0 +1,45 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Return Information | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title SUBMIT TRACKING NO.
+      a.header-bar__btn-back(href="/member/return/return-info.html" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-submit-tracking
+        .box-submit-tracking__heading
+          +img(src="/src/images/common/ico-delivery.svg" alt="")
+          .box-submit-tracking__heading-text
+            p.title-sm.mb-1 Enter the 13-digit item number
+            p [Example: EF582568151TH]
+        form.form-layout(novalidate)
+          fieldset
+            .form-layout__field(class="mb-0")
+              input.form-input-text(
+                type="text"
+                id="tracking"
+                name="tracking"
+                value=""
+                placeholder="Enter Tracking No. here"
+                required
+              )
+            .form-layout__field
+              .form-selectbox
+                select(id="type" name="type" required)
+                  option(value="" disabled selected) Types of Transportation
+                  option(value="Thai Post") Thai Post
+                  option(value="Kerry") Kerry
+    .main-full__footer
+      button.btn-primary(disabled) SUBMIT

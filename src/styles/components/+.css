@@ -10,6 +10,10 @@
 @import "./box-product-detail-head.scss";
 @import "./box-product-detail-size.scss";
 @import "./box-product-instruction.scss";
+@import "./box-refund-info.scss";
+@import "./box-return-info.scss";
+@import "./box-return-status.scss";
+@import "./box-submit-tracking.scss";
 @import "./box-tracking-order.scss";
 @import "./breadcrumb.scss";
 @import "./btn-inline-sm.scss";

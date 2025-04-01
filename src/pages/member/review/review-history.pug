@@ -1,0 +1,49 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Review | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title REVIEW
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-heading-tab
+        a.box-heading-tab__link(href="/member/review/review-waiting.html") WAITING FOR REVIEW
+        a.box-heading-tab__link.is-active(href="/member/review/review-history.html") REVIEW HISTORY
+      div(class="flex flex-col gap-2.5 mt-5 md:mt-10")
+        .card-review
+          .card-review__head
+            p.card-review__name Meena Sukjai
+            .card-review__stars(data-score="3")
+              each i in Array(5)
+                span
+          .card-review__description
+            p Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus in amet in id. Mattis neque facilisis semper parturient
+          figure.card-review__image
+            +img(src="/src/images/products/img-review-product-02.webp" alt="")
+          button.card-review__btn-edit Edit my review
+        // /.card-review
+
+        .card-review
+          .card-review__head
+            p.card-review__name Meena Sukjai
+            .card-review__stars(data-score="3")
+              each i in Array(5)
+                span
+          .card-review__description
+            p Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus in amet in id. Mattis neque facilisis semper parturient
+          figure.card-review__image
+            +img(src="/src/images/products/img-review-product-02.webp" alt="")
+          button.card-review__btn-edit Edit my review
+        // /.card-review

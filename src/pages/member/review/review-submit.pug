@@ -1,0 +1,51 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Review | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title SUBMIT A REVIEW
+      a.header-bar__btn-back(href="/member/review/review-waiting.html" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .card-product-cart.card-product-cart--sm
+        .card-product-cart__image
+          +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+        .card-product-cart__content
+          .card-product-cart__content-upper
+            .card-product-cart__head
+              p.card-product-cart__name SERENE SANCTUARY TOP
+            .card-product-cart__variant
+              p White
+              p M
+          .card-product-cart__content-lower
+            .card-product-cart__space-btw
+              p.card-product-cart__price THB 1,500
+              p.card-product-cart__qty 1
+      // /.card-product-cart
+
+      div(class="mt-5")
+        .card-review
+          p.card-review__edit-title Rate the product quality.
+          .card-review__edit-stars
+            each i in Array.from({ length: 5 }, (_, i) => i)
+              label
+                input(type="radio" name="score" value=i)
+                span
+          p.card-review__edit-note Write a review of at least 100 characters.
+          .card-review__edit-textarea.js-textarea-count
+            textarea Lorem ipsum dolor sit amet consectetur. Senectus feugiat tristique risus in amet in id. Mattis neque facilisis semper parturient
+            p.card-review__edit-textarea-count #[span.js-number 96] Character
+          button.card-review__edit-btn-save Submit
+        // /.card-review
+

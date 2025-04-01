@@ -1,0 +1,73 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Return | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title RETURN
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-heading-tab
+        a.box-heading-tab__link(href="/member/return/return-pending.html") PENDING
+        a.box-heading-tab__link.is-active(href="/member/return/refund.html") REFUND
+      div(class="flex flex-col gap-5 mt-5 md:mt-10")
+        div(class="flex flex-col gap-1.5 md:gap-2")
+          .box-return-status
+            +img(src="/src/images/common/ico-refund-process.svg" alt="")
+            .box-return-status__content
+              p.box-return-status__title Refund Processed at March 15, 2025
+              p We have received the product from you and would like to inform you that we will proceed with the refund for the specified amount.
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name MAGNETIC BLUE
+                .card-product-cart__variant
+                  p White/Blue
+                  p XS
+              .card-product-cart__content-lower
+                .card-product-cart__space-btw
+                  p.card-product-cart__price THB 1,500
+                  p.card-product-cart__qty 1
+                div
+                  a.card-product-cart__btn-icon(href="/member/return/refund-info.html")
+                    span Refund detail
+                    +img(src="/src/images/common/ico-arrow-right-black.svg" alt="")
+
+        div(class="flex flex-col gap-1.5 md:gap-2")
+          .box-return-status
+            +img(src="/src/images/common/ico-refund-process.svg" alt="")
+            .box-return-status__content
+              p.box-return-status__title Refund Processed at March 15, 2025
+              p We have received the product from you and would like to inform you that we will proceed with the refund for the specified amount.
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-04.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name MAGNETIC BLUE
+                .card-product-cart__variant
+                  p White/Blue
+                  p XS
+              .card-product-cart__content-lower
+                .card-product-cart__space-btw
+                  p.card-product-cart__price THB 1,500
+                  p.card-product-cart__qty 1
+                div
+                  a.card-product-cart__btn-icon(href="/member/return/refund-info.html")
+                    span Refund detail
+                    +img(src="/src/images/common/ico-arrow-right-black.svg" alt="")

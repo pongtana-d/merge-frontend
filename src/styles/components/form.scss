@@ -107,6 +107,11 @@
   height: 21px;
   color: var(--color-black);
   outline: none;
+
+  &::placeholder {
+    color: var(--color-gray);
+    opacity: 1;
+  }
 }
 
 // form-selectbox
@@ -253,6 +258,7 @@
 
     > img {
       display: block;
+      flex-shrink: 0;
       width: 14px;
       height: auto;
     }

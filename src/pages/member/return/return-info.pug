@@ -1,0 +1,37 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Return Information | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title RETURN INFORMATION
+      a.header-bar__btn-back(href="/member/return/return-pending.html" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-return-info
+        p Please return the item to the address provided below before #[strong.font-semibold * March 2, 2025]
+        h2.title-sm Return Information
+        .box-return-info__inner
+          h3.text-body-bold MERGE
+          p เลขที่ 50 ซ.เจริญนคร 14/1 แขวงคลองต้นไทร เขตคลองสาน กรุงเทพ 10600
+          p โทร. 086-339-8131
+          div(class="mt-2 text-right")
+            button.box-return-info__btn-copy
+              span COPY
+              +img(src="/src/images/common/ico-copy.svg" alt="")
+
+    .main-full__footer
+      a.btn-primary.is-outline(href="/member/return/submit-tracking.html") SUBMIT TRACKING NO.
+      div(class="flex justify-center gap-1 mt-4")
+        +img(src="/src/images/common/ico-warning-black.svg" class="block w-4.5 h-auto" alt="")
+        p.text-body-bold Please provide the Tracking No. of your shipment.

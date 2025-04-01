@@ -127,7 +127,10 @@
     }
   }
 
-  &__btn-return {
+  &__btn-return,
+  &__btn-icon {
+    @include text-body-bold;
+
     display: inline-flex;
     gap: 5px;
     align-items: center;
@@ -137,11 +140,26 @@
     border-radius: 26px;
     transition: var(--hover-transition);
 
+    > img {
+      display: block;
+      flex-shrink: 0;
+      width: 14px;
+      height: auto;
+    }
+
     &:hover {
       @include hover {
         opacity: var(--hover-opacity);
       }
     }
+  }
+
+  &__btn-icon {
+    gap: 2px;
+    padding-right: 6px;
+    padding-left: 12px;
+    color: var(--color-black);
+    border-color: var(--color-black);
   }
 
   &.is-sold-out {

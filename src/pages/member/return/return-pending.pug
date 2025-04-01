@@ -1,0 +1,69 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Return | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title RETURN
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-heading-tab
+        a.box-heading-tab__link.is-active(href="/member/return/return-pending.html") PENDING
+        a.box-heading-tab__link(href="/member/return/refund.html") REFUND
+      div(class="flex flex-col gap-5 mt-5 md:mt-10")
+        div(class="flex flex-col gap-1.5 md:gap-2")
+          .box-return-status
+            +img(src="/src/images/common/ico-return-review.svg" alt="")
+            .box-return-status__content
+              p.box-return-status__title Review Request Refund
+              p Once our team has completed the verification process, we will notify you within 3-4 business days to inform you to return the product to us.
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-02.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name SERENE SANCTUARY TOP
+                .card-product-cart__variant
+                  p White
+                  p M
+              .card-product-cart__content-lower
+                .card-product-cart__space-btw
+                  p.card-product-cart__price THB 1,500
+                  p.card-product-cart__qty 1
+
+        div(class="flex flex-col gap-1.5 md:gap-2")
+          .box-return-status
+            +img(src="/src/images/common/ico-checked.svg" alt="")
+            .box-return-status__content
+              p.box-return-status__title Request Refund Approve
+              p Please click the "Return Address" button to view the return shipping details. #[span.text-red-2 *** Please return within March 2, 2025 ***]
+          .card-product-cart
+            .card-product-cart__image
+              +img(src="/src/images/cart/img-product-cart-01.webp" alt="")
+            .card-product-cart__content
+              .card-product-cart__content-upper
+                .card-product-cart__head
+                  p.card-product-cart__name SERENE SANCTUARY TOP
+                .card-product-cart__variant
+                  p White
+                  p M
+              .card-product-cart__content-lower
+                .card-product-cart__space-btw
+                  p.card-product-cart__price THB 1,500
+                  p.card-product-cart__qty 1
+                div
+                  a.card-product-cart__btn-icon(href="/member/return/return-info.html")
+                    span Return Address
+                    +img(src="/src/images/common/ico-arrow-right-black.svg" alt="")

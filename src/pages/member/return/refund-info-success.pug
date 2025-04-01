@@ -1,0 +1,60 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Refund Information | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title REFUND INFORMATION
+      a.header-bar__btn-back(href="/member/return/refund.html" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-refund-info
+        .card-product-cart.card-product-cart--sm
+          .card-product-cart__image
+            +img(src="/src/images/cart/img-product-cart-03.webp" alt="")
+          .card-product-cart__content
+            .card-product-cart__content-upper
+              .card-product-cart__head
+                p.card-product-cart__name MAGNETIC BLUE
+              .card-product-cart__variant
+                p White/Blue
+                p XS
+            .card-product-cart__content-lower
+              .card-product-cart__space-btw
+                p.card-product-cart__price THB 1,500
+                p.card-product-cart__qty 1
+        .box-refund-info__inner
+          dl.box-refund-info__list
+            .box-refund-info__list-row
+              dt Refund Amount
+              dd THB 1,500
+            .box-refund-info__list-row
+              dt Refund To
+              dd Kasikorn xxx-x-x4112-x
+            .box-refund-info__list-row
+              dt Requested At
+              dd March 2, 2025 14:32:48
+            .box-refund-info__list-row
+              dt Refund Processed At
+              dd March 18, 2025 20:01:33
+            .box-refund-info__list-row
+              dt Reason
+              dd Sizing Or Fit Issues
+            .box-refund-info__list-row
+              dt
+                p(class="flex align-center gap-0.75")
+                  +img(src="/src/images/common/ico-doc.svg" class="w-3.5 h-auto" alt="")
+                  span Refund Proof
+              dd
+                a(href="#" target="_blank") click here
+      // /.box-refund-info

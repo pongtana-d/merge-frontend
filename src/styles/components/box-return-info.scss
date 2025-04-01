@@ -1,0 +1,39 @@
+@use "../utilities" as *;
+
+.box-return-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-white);
+  border-radius: 5px;
+
+  &__inner {
+    padding: 16px;
+    text-align: left;
+    background-color: var(--color-gray-3);
+    border-radius: 3px;
+  }
+
+  &__btn-copy {
+    @include text-body-small-2-bold;
+
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+
+    > img {
+      display: block;
+      width: 14px;
+      height: auto;
+    }
+  }
+}
