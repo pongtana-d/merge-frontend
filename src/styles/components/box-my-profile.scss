@@ -1,0 +1,56 @@
+@use "../utilities" as *;
+
+.box-my-profile {
+  & + & {
+    margin-top: 20px;
+
+    @include sm-gt {
+      margin-top: 40px;
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    @include text-body-bold;
+
+    display: block;
+    padding: 2px 11px;
+    border: 1px solid var(--color-black);
+    border-radius: 26px;
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+  }
+
+  &__body {
+    padding: 16px 16px 24px;
+    margin-top: 16px;
+    background-color: var(--color-white);
+    border-radius: 5px;
+  }
+
+  &__personal {
+    dt {
+      margin-bottom: 8px;
+      font-weight: normal;
+      color: var(--color-gray);
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+
+    dd {
+      @include text-title-3-regular;
+    }
+  }
+}

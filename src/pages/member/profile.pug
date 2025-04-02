@@ -1,0 +1,58 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'My Order | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title PROFILE
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      .box-my-profile
+        .box-my-profile__heading
+          h2.title-sm PROFILE
+          a.box-my-profile__button(href="/member/profile-edit.html") Edit
+        .box-my-profile__body
+          dl.box-my-profile__personal
+            dt First name
+            dd Pattara
+            dt Middle name (Optional)
+            dd Peter
+            dt Last name
+            dd Chirawanich
+            dt Tel.
+            dd
+              p(class="flex gap-1.5 items-center")
+                +img(src="/src/images/flag/thailand.svg" class="block shrink-0 w-4.5" alt="")
+                span.title-sm-normal +66 095 969 1569
+            dt Email
+            dd abcemail@gmail.com
+            dt Birth day
+            dd July 11, 2001
+            dt Gender
+            dd Male
+
+      .box-my-profile
+        .box-my-profile__heading
+          h2.title-sm DELIVERY ADDRESS
+          a.box-my-profile__button(href="/member/profile-edit.html") Change
+        .box-my-profile__body
+          div(class="flex flex-col gap-4")
+            p.title-sm Home - Life Condo Asoke
+            div(class="flex flex-col gap-1")
+              p.text-body-bold Meena Sukjai
+              p.text-gray Tel. 0921267040
+              p.text-gray Email meena_sukjai@gmail.com
+            p(class="flex gap-1.5 items-center")
+              +img(src="/src/images/common/ico-marker-lg.svg" class="block shrink-0 w-4.5" alt="")
+              span 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
