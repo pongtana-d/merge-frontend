@@ -302,7 +302,7 @@
     background-color: var(--color-white);
     border-radius: 5px;
 
-    > p :first-child {
+    > p {
       @include text-body-bold;
       flex: 1;
     }
