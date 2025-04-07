@@ -302,7 +302,7 @@
     background-color: var(--color-white);
     border-radius: 5px;
 
-    > :first-child {
+    > p :first-child {
       @include text-body-bold;
       flex: 1;
     }
@@ -314,6 +314,54 @@
         display: block;
         width: 14px;
         height: auto;
+      }
+    }
+  }
+
+  &__multiple {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      background-color: var(--color-white);
+      border-radius: 5px;
+
+      > figure {
+        position: relative;
+        flex-shrink: 0;
+        width: 90px;
+        aspect-ratio: 90 / 72;
+        border-radius: 5px;
+
+        > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+      }
+
+      > p {
+        flex: 1;
+        padding-left: 12px;
+      }
+
+      > button {
+        flex-shrink: 0;
+
+        > img {
+          display: block;
+          width: 14px;
+          height: auto;
+        }
       }
     }
   }

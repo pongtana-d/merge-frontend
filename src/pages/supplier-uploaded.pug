@@ -1,0 +1,146 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Supplier | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  .main-visual-sub
+    h1.main-visual-sub__title SUPPLIER#[br]APPLICATION
+    picture
+      source(media="(min-width:768px)" srcset="/src/images/supplier/main-visual-pc.webp")
+      +img(src="/src/images/supplier/main-visual-sp.webp" alt="")
+  section
+    h2.page-title.page-title--line(class="py-6") APPLY NOW
+    .container-md(class="pt-7.5")
+      .container-md__body
+        form.form-layout(novalidate)
+          fieldset
+            .form-layout__field.js-input-fill
+              label(for="contactName") Contact name
+              input.form-input-text(
+                type="text"
+                id="contactName"
+                name="contactName"
+                value=""
+                required
+              )
+            .form-layout__tel-code
+              .form-layout__field.is-fill
+                label Tel.
+                .form-selectbox-icon
+                  .form-selectbox-icon__text
+                    +img(src="/src/images/flag/thailand.svg" alt="")
+                    span +66
+              .form-layout__field.js-input-fill
+                input.form-input-text(
+                  type="tel"
+                  id="tel"
+                  name="tel"
+                  value=""
+                  required
+                )
+            .form-layout__field.js-input-fill
+              label(for="email") Email
+              input.form-input-text(
+                type="email"
+                id="email"
+                name="email"
+                value=""
+                required
+              )
+            .form-layout__field.js-input-fill
+              label(for="companyName") Company Name
+              input.form-input-text(
+                type="text"
+                id="companyName"
+                name="companyName"
+                value=""
+                required
+              )
+            .form-layout__field.js-input-fill
+              label(for="capacity") Monthly Production Capacity
+              input.form-input-text(
+                type="text"
+                id="capacity"
+                name="capacity"
+                value=""
+                required
+              )
+            .form-layout__field.is-fill
+              label(for="category") Service Category
+              .form-selectbox
+                select(id="category" name="category" required)
+                  option(value="" disabled selected) Please select
+                  option(value="Clothings Abc") Clothings Abc
+                  option(value="Clothings Def") Clothings Def
+                  option(value="Clothings Ghi") Clothings Ghi
+                  option(value="Other") Other
+            .form-layout__field.js-input-fill
+              label(for="other") Other (Please Specify)
+              input.form-input-text(
+                type="text"
+                id="other"
+                name="other"
+                value=""
+                required
+              )
+            .form-layout__field.js-input-fill
+              label(for="workers") Number of Production Workers
+              input.form-input-text(
+                type="text"
+                id="workers"
+                name="workers"
+                value=""
+                required
+              )
+            .form-layout__field.js-input-fill
+              label(for="sns") Social Media (FB,IG)
+              input.form-input-text(
+                type="text"
+                id="sns"
+                name="sns"
+                value=""
+                required
+              )
+            .form-layout__field.js-input-fill
+              label(for="sns") Website (Optional)
+              input.form-input-text(
+                type="text"
+                id="website"
+                name="website"
+                value=""
+              )
+            .form-layout__field.js-input-fill
+              label(for="workedWith") Companies you’ve worked with
+              input.form-input-text(
+                type="text"
+                id="workedWith"
+                name="workedWith"
+                value=""
+                required
+              )
+            .form-layout__field.is-upload
+              label Upload Image Or Video
+              .form-upload
+                .form-upload__multiple
+                  each i in Array(5)
+                    .form-upload__multiple-item
+                      figure
+                        +img(src="/src/images/supplier/img-multiple-upload.webp" alt="")
+                      p 29/8/23 - CV_2023_MeenaS.pdf
+                      button
+                        +img(src="/src/images/common/ico-trash.svg" alt="")
+                .form-upload__field
+                  input(type="file" name="upload" multiple)
+                  .form-upload__text
+                    +img(src="/src/images/common/ico-image.svg" alt="")
+                    p Choose Images
+                    p.form-upload__note File types .jpeg .png .webp (5MB limit)
+          button.btn-primary.is-rounded.bg-blue.mt-4 SUBMIT
