@@ -1,0 +1,29 @@
+extends /src/layouts/_master
+
+block variables
+  -
+    const meta = {
+      title: 'Career | Merge',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  .main-visual-sub
+    h1.main-visual-sub__title CAREER
+    picture
+      source(media="(min-width:768px)" srcset="/src/images/career/main-visual-pc.webp")
+      +img(src="/src/images/career/main-visual-sp.webp" alt="")
+
+  section
+    h2.page-title.page-title--line(class="py-6") OPEN POSITIONS
+    .container-md(class="pt-6 md:pt-10")
+      .container-md__body
+        ul(class="flex flex-col gap-3 md:gap-6")
+          li: a.btn-rounded-arrow(href="/career/job-description.html") Fashion Stylist
+          li: a.btn-rounded-arrow(href="/career/job-description.html") Visual Merchandiser
+          li: a.btn-rounded-arrow(href="/career/job-description.html") Fashion Merchandiser
+          li: a.btn-rounded-arrow(href="/career/job-description.html") Fashion designer
+          li: a.btn-rounded-arrow(href="/career/job-description.html") Marketing &amp; PR Executive

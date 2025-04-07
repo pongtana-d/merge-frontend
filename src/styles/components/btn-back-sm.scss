@@ -1,0 +1,23 @@
+@use "../utilities" as *;
+
+.btn-back-sm {
+  @include text-body;
+
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+  margin-bottom: 24px;
+  transition: var(--hover-transition);
+
+  &:hover {
+    @include hover {
+      opacity: var(--hover-opacity);
+    }
+  }
+
+  > img {
+    display: block;
+    width: 14px;
+    height: auto;
+  }
+}

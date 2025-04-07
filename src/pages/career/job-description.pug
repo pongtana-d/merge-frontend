@@ -1,0 +1,53 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Job Description | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  include /src/components/_header.pug
+
+  main.main-full
+    .main-full__body
+      a.btn-back-sm(href="/career/")
+        +img(src="/src/images/common/ico-arrow-left-black.svg" alt="")
+        span back
+      h1.page-title.page-title--line-y(class="mb-8") Marketing &amp; PR Executive
+      section(class="flex flex-col gap-4 md:gap-10")
+        section
+          h2.title-sm(class="mb-4") Job Highlights
+          ul.list-dotted
+            li Lorem ipsum dolor sit amet consectetur
+            li Ultrices aliquet tortor a aliquet eget adipiscing mauris aenean.
+            li Fermentum quis nulla vitae scelerisque aliquam consequat.
+            li Tortor maecenas habitasse vitae tempor. Vitae integer egestas auctor sit aenean rhoncus. Lobortis lectus magna sapien etiam quis enim.
+            li Gravida morbi id id lectus auctor tellus. Nisi dui vitae cursus sem morbi penatibus pellentesque congue. Turpis hendrerit mauris id enim vel velit.
+        section
+          h2.title-sm(class="mb-4") Job Descriptions
+          ul.list-dotted
+            li Lorem ipsum dolor sit amet consectetur
+            li Ultrices aliquet tortor a aliquet eget adipiscing mauris aenean.
+            li Fermentum quis nulla vitae scelerisque aliquam consequat.
+            li Tortor maecenas habitasse vitae tempor. Vitae integer egestas auctor sit aenean rhoncus. Lobortis lectus magna sapien etiam quis enim.
+            li Gravida morbi id id lectus auctor tellus. Nisi dui vitae cursus sem morbi penatibus pellentesque congue. Turpis hendrerit mauris id enim vel velit.
+        section
+          h2.title-sm(class="mb-4") Qualifications
+          ul.list-dotted
+            li Lorem ipsum dolor sit amet consectetur
+            li Ultrices aliquet tortor a aliquet eget adipiscing mauris aenean.
+            li Fermentum quis nulla vitae scelerisque aliquam consequat.
+            li Tortor maecenas habitasse vitae tempor. Vitae integer egestas auctor sit aenean rhoncus. Lobortis lectus magna sapien etiam quis enim.
+            li Gravida morbi id id lectus auctor tellus. Nisi dui vitae cursus sem morbi penatibus pellentesque congue. Turpis hendrerit mauris id enim vel velit.
+
+    .main-full__footer
+      div(class="flex flex-col gap-3")
+        a.btn-primary(href="/career/job-apply.html") APPLY NOW
+        button.btn-primary.is-outline(style="--gap: 4")
+          +img(src="/src/images/common/ico-share.svg" alt="")
+          span Share this Position

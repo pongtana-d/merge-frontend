@@ -1,0 +1,35 @@
+@use "../utilities" as *;
+
+.btn-rounded-arrow {
+  @include text-title-3;
+
+  position: relative;
+  display: block;
+  padding: 19.5px 50px 19.5px 24px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border-radius: 80px;
+  transition: var(--hover-transition);
+
+  @include sm-gt {
+    padding: 29.5px 55px 29.5px 32px;
+  }
+
+  &:hover {
+    @include hover {
+      opacity: var(--hover-opacity);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(/src/images/common/ico-arrow-right-black.svg) no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+  }
+}
