@@ -3,7 +3,7 @@ extends /src/layouts/_no-header-footer
 block variables
   -
     const meta = {
-      title: 'My Order | MERGE',
+      title: 'Profile | MERGE',
     }
 
 block append scripts
@@ -21,7 +21,7 @@ block content
       .box-my-profile
         .box-my-profile__heading
           h2.title-sm PROFILE
-          a.box-my-profile__button(href="/member/profile-edit.html") Edit
+          a.box-my-profile__button(href="/member/profile/profile-edit.html") Edit
         .box-my-profile__body
           dl.box-my-profile__personal
             dt First name
@@ -45,7 +45,7 @@ block content
       .box-my-profile
         .box-my-profile__heading
           h2.title-sm DELIVERY ADDRESS
-          a.box-my-profile__button(href="/member/profile-edit.html") Change
+          a.box-my-profile__button(href="/member/profile/my-address.html") Change
         .box-my-profile__body
           div(class="flex flex-col gap-4")
             p.title-sm Home - Life Condo Asoke
