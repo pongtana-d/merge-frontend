@@ -69,4 +69,10 @@
       }
     }
   }
+
+  &__error {
+    margin-top: 15px;
+    color: var(--color-red-2);
+    text-align: center;
+  }
 }

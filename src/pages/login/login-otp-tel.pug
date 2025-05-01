@@ -20,11 +20,12 @@ block content
           h1.title-sm Enter the 4-digit code
           p.text-gray Please enter OTP sent to your number (OTP ref: X03456)
           .box-login-otp__user: span +66 095 999 9999
-        .box-login-otp__input
-          input(type="text" value="" required)
-          input(type="text" value="" required)
-          input(type="text" value="" required)
-          input(type="text" value="" required)
+        div
+          .box-login-otp__input
+            input(type="text" value="" required)
+            input(type="text" value="" required)
+            input(type="text" value="" required)
+            input(type="text" value="" required)
         .box-login-otp__footer
           p Entering the wrong OTP more than 3 times, it will be disabled and you'll need to request a new one.
           p Resend Verifacation #[span.box-login-otp__time (90s)]

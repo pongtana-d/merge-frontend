@@ -125,4 +125,19 @@
       }
     }
   }
+
+  &__stock {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--color-gray);
+
+    > img {
+      display: block;
+      flex-shrink: 0;
+      width: 18px;
+      height: auto;
+    }
+  }
 }

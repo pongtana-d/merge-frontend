@@ -87,6 +87,9 @@ section.p-product-detail
     if isSoldOut
       button(disabled).p-product-detail__btn-add-cart SOLD OUT
     else
+      .p-product-detail__stock
+        +img(src="/src/images/common/ico-product-stock.svg" alt="")
+        p 5 items left in size XXL
       button.p-product-detail__btn-add-cart.js-btn-cart-add ADD TO CART
 
     .p-product-detail__info
