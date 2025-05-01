@@ -1,0 +1,30 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'My Order | MERGE',
+    }
+
+block append scripts
+
+block modal
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title UNPAID
+      a.header-bar__btn-back(href="/member/" aria-label="Back")
+      a.header-bar__btn-close(href="/member/" aria-label="Close")
+  main.main-full
+    .main-full__body
+      div(class="flex flex-col gap-4")
+        div
+          .tag-status.is-gray
+            +img(src="/src/images/member/ico-order-unpaid-gray.svg" alt="")
+            span Paid Unsuccessfully
+        div(class="flex flex-col items-center text-center pt-4")
+          +img(class="block mb-3" src="/src/images/member/ico-order-empty.svg" alt="")
+          h2.title-sm.mb-2 You haven’t placed any orders yet.
+          p.text-gray Start shopping now to find something you love.
+        button.btn-primary.is-outline START SHOPPING

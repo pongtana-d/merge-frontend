@@ -22,4 +22,9 @@
     color: var(--color-red-2);
     border-color: var(--color-red-2);
   }
+
+  &.is-gray {
+    color: var(--color-gray);
+    border-color: var(--color-gray);
+  }
 }
