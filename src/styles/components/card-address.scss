@@ -10,21 +10,16 @@
   border: 1px solid transparent;
   border-radius: 5px;
 
-  &.is-default {
+  &:has(button.select.is-active),
+  &:has(button.default.is-active):not(:has(button.select)) {
     border-color: var(--color-blue);
 
     #{$root}__title {
       color: var(--color-black);
     }
-
-    #{$root}__btn-set {
-      color: var(--color-black);
-      pointer-events: none;
-      border-color: var(--color-black);
-    }
   }
 
-  &.is-inactive {
+  &:has(:is(.default, select)) {
     #{$root}__title {
       color: var(--color-gray);
     }
@@ -120,10 +115,21 @@
     border-radius: 48px;
 
     > img {
-      display: block;
+      display: none;
       flex-shrink: 0;
       width: 18px;
       height: auto;
+    }
+
+    &.is-active {
+      color: var(--color-black);
+      pointer-events: none;
+      cursor: default;
+      border-color: var(--color-black);
+
+      > img {
+        display: block;
+      }
     }
   }
 }

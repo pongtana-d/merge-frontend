@@ -20,7 +20,7 @@ block content
   main.main-full
     .main-full__body
       div(class="flex flex-col gap-4")
-        .card-address.is-default
+        .card-address
           .card-address__head
             p.card-address__title Home - Life Condo Asoke
             .card-address__tool
@@ -35,12 +35,15 @@ block content
           p.card-address__location
             +img(src="/src/images/common/ico-marker.svg" alt="")
             span 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
-          div
-            button.card-address__btn-set(tabindex="-1")
+          div(class="flex justify-between")
+            button.card-address__btn-set.default.is-active
               +img(src="/src/images/common/ico-checked-03.svg" alt="")
               span Default
+            button.card-address__btn-set.select.is-active
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Selected
 
-        .card-address.is-inactive
+        .card-address
           .card-address__head
             p.card-address__title Office - ABC
             .card-address__tool
@@ -53,8 +56,55 @@ block content
             p Tel. 0921267040
             p Email meena_sukjai@gmail.com
           p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
-          div
-            button.card-address__btn-set Set As Default
+          div(class="flex justify-between")
+            button.card-address__btn-set.default
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Set As Default
+            button.card-address__btn-set.select
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Select
+
+        .card-address
+          .card-address__head
+            p.card-address__title Office - ABC
+            .card-address__tool
+              button(aria-label="Edit")
+                +img(src="/src/images/common/ico-edit.svg" alt="")
+              button(aria-label="Delete" data-modal-open="#modal-address-remove")
+                +img(src="/src/images/common/ico-trash.svg" alt="")
+          .card-address__info
+            p.card-address__name Meena Sukjai
+            p Tel. 0921267040
+            p Email meena_sukjai@gmail.com
+          p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+          div(class="flex justify-between")
+            button.card-address__btn-set.default
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Set As Default
+            button.card-address__btn-set.select.is-active
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Selected
+
+        .card-address
+          .card-address__head
+            p.card-address__title Office - ABC
+            .card-address__tool
+              button(aria-label="Edit")
+                +img(src="/src/images/common/ico-edit.svg" alt="")
+              button(aria-label="Delete" data-modal-open="#modal-address-remove")
+                +img(src="/src/images/common/ico-trash.svg" alt="")
+          .card-address__info
+            p.card-address__name Meena Sukjai
+            p Tel. 0921267040
+            p Email meena_sukjai@gmail.com
+          p.card-address__location 111/11 Lumpinee Park Jitlada road. Suan Jitlada Dusit bangkok Thailand 10300
+          div(class="flex justify-between")
+            button.card-address__btn-set.default.is-active
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Default
+            button.card-address__btn-set.select
+              +img(src="/src/images/common/ico-checked-03.svg" alt="")
+              span Select
 
     .main-full__footer
       div(class="flex flex-col gap-4")
