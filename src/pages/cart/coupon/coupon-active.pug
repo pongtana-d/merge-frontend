@@ -27,11 +27,26 @@ block content
               value="MERGE25"
             )
           button.box-coupon-search__button Search
-        .card-coupon-active
-          figure.card-coupon-active__image
-            +img(src="/src/images/cart/img-coupon.webp" alt="")
-          .card-coupon-active__content
-            p.card-coupon-active__name Name of coupon abc
-            p 25% off, minimum spend THB 25,000
+        div(class="flex flex-col gap-2.5 mt-2.5")
+          .card-coupon-active
+            figure.card-coupon-active__image
+              +img(src="/src/images/common/img-coupon.svg" alt="")
+            .card-coupon-active__content
+              p.card-coupon-active__name Name of coupon abc
+
+          .card-coupon-active
+            figure.card-coupon-active__image
+              +img(src="/src/images/common/img-coupon.svg" alt="")
+            .card-coupon-active__content
+              p.card-coupon-active__name Name of coupon abc
+              p 25% off, minimum spend THB 25,000
+
+          .card-coupon-active
+            figure.card-coupon-active__image
+              +img(src="/src/images/common/img-coupon.svg" alt="")
+            .card-coupon-active__content
+              p.card-coupon-active__name Name of coupon abc
+              p 25% off, minimum spend THB 25,000
+
     .main-full__footer
       button.btn-primary USE COUPON
