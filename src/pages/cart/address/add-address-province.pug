@@ -1,0 +1,161 @@
+extends /src/layouts/_no-header-footer
+
+block variables
+  -
+    const meta = {
+      title: 'Add Delivery Address | MERGE',
+    }
+
+block append scripts
+
+block modal
+  include /src/components/modal/_modal-close-process.pug
+
+block content
+  header.header-bar
+    .header-bar__container
+      h1.header-bar__page-title ADD DELIVERY ADDRESS
+      a.header-bar__btn-back(href="/cart/" aria-label="Back")
+      button.header-bar__btn-close(aria-label="Close" data-modal-open="#modal-close-process")
+  main.main-full
+    .main-full__body
+      form.form-layout(novalidate)
+        fieldset
+          legend Address name
+          .form-layout__field.js-input-fill
+            label(for="addressName") Address name
+            input.form-input-text(
+              type="text"
+              id="addressName"
+              name="addressName"
+              value=""
+              required
+            )
+        fieldset
+          legend Contact info
+          .form-layout__field.js-input-fill
+            label(for="firstName") First name
+            input.form-input-text(
+              type="text"
+              id="firstName"
+              name="firstName"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="lastName") Last name
+            input.form-input-text(
+              type="text"
+              id="lastName"
+              name="lastName"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="tel") Tel.
+            input.form-input-text(
+              type="tel"
+              id="tel"
+              name="tel"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="email") Email
+            input.form-input-text(
+              type="email"
+              id="email"
+              name="email"
+              value=""
+              required
+            )
+        fieldset
+          legend Address info
+          .form-layout__field.is-fill.is-valid
+            label Country
+            .form-selectbox-icon
+              .form-selectbox-icon__text
+                +img(src="/src/images/flag/thailand.svg" alt="")
+                span Thailand
+          .form-layout__field.is-fill
+            label(for="province") Province
+            .form-selectbox
+              select(id="province" name="province" required)
+                option(value="" disabled selected) Please select
+                option(value="Amnat Charoen") Amnat Charoen
+                option(value="Ang Thong") Ang Thong
+                option(value="Bangkok") Bangkok
+                option(value="Bueng Kan") Bueng Kan
+                option(value="Buri Ram") Buri Ram
+                option(value="Chachoengsao") Chachoengsao
+                option(value="Chai Nat") Chai Nat
+            .form-dropdown-search
+              input.form-dropdown-search__input(type="text" value="" placeholder="Search...")
+              ul.form-dropdown-search__list
+                li Amnat Charoen
+                li Ang Thong
+                li Bangkok
+                li Bueng Kan
+                li Buri Ram
+                li Chachoengsao
+                li Chai Nat
+                li Chaiyaphum
+                li Chanthaburi
+                li Chiang Mai
+                li Chiang Rai
+                li Chon Buri
+                li Chumphon
+                li Kalasin
+
+          .form-layout__field.js-input-fill
+            label(for="district") District
+            input.form-input-text(
+              type="text"
+              id="district"
+              name="district"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="subDistrict") Sub-District
+            input.form-input-text(
+              type="text"
+              id="subDistrict"
+              name="subDistrict"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="address1") Address 1
+            input.form-input-text(
+              type="text"
+              id="address1"
+              name="address1"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="address2") Address 2
+            input.form-input-text(
+              type="text"
+              id="address2"
+              name="address2"
+              value=""
+              required
+            )
+          .form-layout__field.js-input-fill
+            label(for="postcode") Post Code
+            input.form-input-text(
+              type="text"
+              id="postcode"
+              name="postcode"
+              value=""
+              required
+            )
+
+    .main-full__footer
+      button.btn-primary.is-rounded.bg-blue SAVE
+      nav.breadcrumb.breadcrumb--checkout
+        ul.breadcrumb__list
+          li CHECK OUT
+          li ADD DELIVERY ADDRESS
