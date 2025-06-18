@@ -1,0 +1,69 @@
+@use "../utilities" as *;
+
+.modal-size-guide {
+  @include sm-lte {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    background: url(/src/images/common/ico-close.svg) no-repeat;
+    background-size: contain;
+    transform: translateY(-50%);
+    transition: var(--hover-transition);
+
+    &:hover {
+      @include hover {
+        opacity: var(--hover-opacity);
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    height: 46px;
+
+    @include sm-lte {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      height: 56px;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include sm-lte {
+      @include text-title-3;
+
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    padding: 0 16px 24px;
+
+    @include sm-lte {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+
+    > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

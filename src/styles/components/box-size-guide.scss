@@ -1,0 +1,28 @@
+@use "../utilities" as *;
+
+.box-size-guide {
+  display: block;
+  cursor: pointer;
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__enlarge {
+    @include text-body;
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 17px;
+
+    > img {
+      display: block;
+      width: 22px;
+      height: auto;
+    }
+  }
+}

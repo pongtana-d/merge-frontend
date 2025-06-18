@@ -1,6 +1,7 @@
 @use "../utilities" as *;
 
 .modal {
+  $root: &;
   position: fixed;
   top: 0;
   left: 0;
@@ -30,5 +31,24 @@
     margin: auto;
     background-color: var(--color-white);
     border-radius: 8px;
+  }
+
+  &--size-guide {
+    #{$root}__container {
+      @include sm-lte {
+        padding: 0;
+      }
+    }
+
+    #{$root}__inner {
+      max-width: 832px;
+      padding: 0;
+
+      @include sm-lte {
+        height: 100%;
+        padding: 0;
+        border-radius: 0;
+      }
+    }
   }
 }

@@ -151,39 +151,11 @@ section.p-product-detail
         .list-accordion__item
           button.list-accordion__title(aria-expanded="false") Size guide
           .list-accordion__body(aria-hidden="true")
-            table.table-product-size
-              thead
-                tr
-                  th
-                  th S
-                  th M
-                  th L
-                  th XL
-              tbody
-                tr
-                  td BUST
-                  td 32”
-                  td 34”
-                  td 36”
-                  td 38”
-                tr
-                  td WAIST
-                  td 32”
-                  td 34”
-                  td 36”
-                  td 38”
-                tr
-                  td HIP
-                  td 32”
-                  td 34”
-                  td 36”
-                  td 38”
-                tr
-                  td LENGTH
-                  td 32”
-                  td 34”
-                  td 36”
-                  td 38”
+            .box-size-guide(role="button" tabindex="0" data-modal-open="#modal-size-guide")
+              +img(src="/src/images/products/img-size-guide.webp", alt="")
+              p.box-size-guide__enlarge
+                +img(src="/src/images/common/ico-enlarge.svg", alt="")
+                span Enlarge a photo
         .list-accordion__item
           button.list-accordion__title(aria-expanded="false") Caring Instructions
           .list-accordion__body(aria-hidden="true")

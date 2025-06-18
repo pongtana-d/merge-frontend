@@ -15,6 +15,7 @@
 @import "./box-product-instruction.scss";
 @import "./box-refund-info.scss";
 @import "./box-return-info.scss";
+@import "./box-size-guide.scss";
 @import "./box-submit-tracking.scss";
 @import "./box-tracking-order.scss";
 @import "./breadcrumb.scss";
@@ -51,6 +52,7 @@
 @import "./main-visual.scss";
 @import "./modal-cart-added.scss";
 @import "./modal-process.scss";
+@import "./modal-size-guide.scss";
 @import "./modal.scss";
 @import "./nav-favorite-slider.scss";
 @import "./nav-global-sub.scss";
